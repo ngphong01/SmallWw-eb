@@ -3,171 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Trang web demo tổng hợp đầy đủ kiến thức HTML5 và CSS3 hiện đại với hơn 50 thành phần UI, responsive design và accessibility"
+    <title>Học HTML & CSS Cơ Bản - Khóa Học Chuyên Nghiệp</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, responsive design, UI components, web development"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <meta name="author" content="Demo HTML & CSS" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#4CAF50" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="Demo HTML & CSS - Trang Web Hoàn Chỉnh"
-    />
-    <meta
-      property="og:description"
-      content="Trang web demo tổng hợp kiến thức HTML5 và CSS3 với các thành phần UI hiện đại"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com" />
-    <meta property="og:image" content="https://example.com/og-image.jpg" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Demo HTML & CSS" />
-    <meta
-      name="twitter:description"
-      content="Trang web demo với đầy đủ kiến thức HTML5 và CSS3"
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="#" as="font" type="font/woff2" crossorigin />
-
-    <title>Demo HTML & CSS - Trang Web Hoàn Chỉnh | Tổng Hợp Kiến Thức</title>
-
     <style>
-      /* CSS Variables - Comprehensive Design System */
+      /* CSS Variables */
       :root {
-        --primary-color: #4caf50;
-        --primary-dark: #388e3c;
-        --primary-light: #81c784;
-        --secondary-color: #2196f3;
-        --secondary-dark: #1976d2;
-        --secondary-light: #64b5f6;
-        --accent-color: #ff9800;
-        --accent-dark: #f57c00;
-        --accent-light: #ffb74d;
-        --danger-color: #f44336;
-        --danger-dark: #d32f2f;
-        --danger-light: #ef5350;
-        --warning-color: #ff9800;
-        --warning-dark: #f57c00;
-        --warning-light: #ffb74d;
-        --success-color: #4caf50;
-        --success-dark: #388e3c;
-        --success-light: #81c784;
-        --info-color: #2196f3;
-        --info-dark: #1976d2;
-        --info-light: #64b5f6;
-
-        /* Text Colors */
-        --text-primary: #212121;
-        --text-secondary: #757575;
-        --text-disabled: #bdbdbd;
-        --text-hint: #9e9e9e;
-        --text-white: #ffffff;
-
-        /* Background Colors */
-        --bg-primary: #fafafa;
-        --bg-secondary: #f5f5f5;
-        --bg-surface: #ffffff;
-        --bg-overlay: rgba(0, 0, 0, 0.6);
-
-        /* Border Colors */
-        --border-light: #e0e0e0;
-        --border-medium: #bdbdbd;
-        --border-dark: #757575;
-
-        /* Shadows */
-        --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.12);
-        --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-        --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
-
-        /* Border Radius */
-        --radius-xs: 2px;
-        --radius-sm: 4px;
-        --radius-md: 8px;
-        --radius-lg: 12px;
-        --radius-xl: 16px;
-        --radius-full: 50%;
-
-        /* Spacing Scale */
-        --space-1: 0.25rem;
-        --space-2: 0.5rem;
-        --space-3: 0.75rem;
-        --space-4: 1rem;
-        --space-5: 1.25rem;
-        --space-6: 1.5rem;
-        --space-8: 2rem;
-        --space-10: 2.5rem;
-        --space-12: 3rem;
-        --space-16: 4rem;
-        --space-20: 5rem;
-        --space-24: 6rem;
-
-        /* Typography Scale */
-        --font-size-xs: 0.75rem;
-        --font-size-sm: 0.875rem;
-        --font-size-base: 1rem;
-        --font-size-lg: 1.125rem;
-        --font-size-xl: 1.25rem;
-        --font-size-2xl: 1.5rem;
-        --font-size-3xl: 1.875rem;
-        --font-size-4xl: 2.25rem;
-        --font-size-5xl: 3rem;
-        --font-size-6xl: 3.75rem;
-
-        /* Font Weights */
-        --font-weight-light: 300;
-        --font-weight-normal: 400;
-        --font-weight-medium: 500;
-        --font-weight-semibold: 600;
-        --font-weight-bold: 700;
-        --font-weight-extrabold: 800;
-
-        /* Line Heights */
-        --line-height-tight: 1.25;
-        --line-height-snug: 1.375;
-        --line-height-normal: 1.5;
-        --line-height-relaxed: 1.625;
-        --line-height-loose: 2;
-
-        /* Transitions */
-        --transition-fast: 150ms ease;
-        --transition-base: 250ms ease;
-        --transition-slow: 350ms ease;
-
-        /* Z-Index Scale */
-        --z-dropdown: 1000;
-        --z-sticky: 1020;
-        --z-fixed: 1030;
-        --z-modal-backdrop: 1040;
-        --z-modal: 1050;
-        --z-popover: 1060;
-        --z-tooltip: 1070;
-        --z-toast: 1080;
-
-        /* Breakpoints */
-        --breakpoint-sm: 576px;
-        --breakpoint-md: 768px;
-        --breakpoint-lg: 992px;
-        --breakpoint-xl: 1200px;
-        --breakpoint-xxl: 1400px;
+        --primary-color: #6366f1;
+        --primary-hover: #4f46e5;
+        --secondary-color: #1f2937;
+        --accent-color: #f59e0b;
+        --background-color: #f8fafc;
+        --surface-color: #ffffff;
+        --text-primary: #1f2937;
+        --text-secondary: #6b7280;
+        --border-color: #e5e7eb;
+        --code-bg: #f1f5f9;
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        --border-radius: 12px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      /* CSS Reset & Base Styles */
+      [data-theme="dark"] {
+        --background-color: #0f172a;
+        --surface-color: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --border-color: #334155;
+        --code-bg: #1e293b;
+      }
+
+      /* Box Sizing và Base Styles */
       *,
       *::before,
       *::after {
@@ -175,5481 +47,883 @@
         margin: 0;
         padding: 0;
       }
-
+      ul,
+      ol {
+        list-style-type: none;
+      }
       html {
-        font-size: 16px;
         scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
       }
-
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        line-height: var(--line-height-normal);
+        font-family: "Inter", sans-serif;
+        line-height: 1.7;
         color: var(--text-primary);
-        background-color: var(--bg-primary);
-        font-size: var(--font-size-base);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
+        background: linear-gradient(135deg, var(--background-color), #e2e8f0);
+        font-size: 16px;
       }
-
-      /* Focus Management for Accessibility */
-      *:focus {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 2px;
-      }
-
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-
-      /* Skip Link for Accessibility */
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: var(--primary-color);
-        color: var(--text-white);
-        padding: var(--space-2) var(--space-4);
-        border-radius: var(--radius-md);
+      a{
         text-decoration: none;
-        z-index: var(--z-toast);
-        transition: var(--transition-fast);
+        color: inherit;
       }
 
-      .skip-link:focus {
-        top: 6px;
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
       }
-
-      /* Typography */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin-bottom: var(--space-4);
-        font-weight: var(--font-weight-semibold);
-        line-height: var(--line-height-tight);
-        color: var(--text-primary);
+      ::-webkit-scrollbar-track {
+        background: var(--background-color);
       }
-
-      h1 {
-        font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
-      }
-      h2 {
-        font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
-      }
-      h3 {
-        font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-3xl));
-      }
-      h4 {
-        font-size: clamp(var(--font-size-lg), 2.5vw, var(--font-size-2xl));
-      }
-      h5 {
-        font-size: var(--font-size-xl);
-      }
-      h6 {
-        font-size: var(--font-size-lg);
-      }
-
-      p {
-        margin-bottom: var(--space-4);
-        line-height: var(--line-height-relaxed);
-        max-width: 65ch;
-      }
-
-      a {
-        color: var(--primary-color);
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
-        transition: var(--transition-fast);
-      }
-
-      a:hover,
-      a:focus {
-        color: var(--primary-dark);
-        text-decoration-thickness: 2px;
-      }
-
-      /* Container System */
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 var(--space-4);
-      }
-
-      .container-fluid {
-        width: 100%;
-        padding: 0 var(--space-4);
-      }
-
-      /* Grid System */
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 calc(-1 * var(--space-2));
-      }
-
-      .col {
-        flex: 1;
-        padding: 0 var(--space-2);
-        min-width: 0;
-      }
-
-      .col-1 {
-        flex: 0 0 8.333333%;
-        max-width: 8.333333%;
-      }
-      .col-2 {
-        flex: 0 0 16.666667%;
-        max-width: 16.666667%;
-      }
-      .col-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-      }
-      .col-4 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-      }
-      .col-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
-      .col-8 {
-        flex: 0 0 66.666667%;
-        max-width: 66.666667%;
-      }
-      .col-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-      }
-      .col-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 4px;
       }
 
       /* Header */
-      .site-header {
+      header {
         background: linear-gradient(
           135deg,
           var(--primary-color),
-          var(--primary-dark)
+          var(--primary-hover)
         );
-        color: var(--text-white);
-        padding: var(--space-4) 0;
-        position: sticky;
-        top: 0;
-        z-index: var(--z-sticky);
-        box-shadow: var(--shadow-md);
+        color: white;
+        text-align: center;
+        padding: 3rem 1rem;
       }
-
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: var(--space-4);
+      header h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 1rem;
       }
-
-      .site-logo {
-        font-size: var(--font-size-2xl);
-        font-weight: var(--font-weight-bold);
-        display: flex;
-        align-items: center;
-        gap: var(--space-2);
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .site-logo:hover,
-      .site-logo:focus {
-        color: inherit;
-        text-decoration: none;
+      header p {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        max-width: 600px;
+        margin: 0 auto;
       }
 
       /* Navigation */
-      .main-nav ul {
-        display: flex;
-        list-style: none;
-        gap: var(--space-6);
-        margin: 0;
-        padding: 0;
-      }
-
-      .main-nav a {
-        color: var(--text-white);
-        text-decoration: none;
-        transition: var(--transition-base);
-        padding: var(--space-2) var(--space-4);
-        border-radius: var(--radius-md);
-        position: relative;
-        font-weight: var(--font-weight-medium);
-      }
-
-      .main-nav a:hover,
-      .main-nav a:focus {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-1px);
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .main-nav a::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: var(--text-white);
-        transition: var(--transition-base);
-        transform: translateX(-50%);
-      }
-
-      .main-nav a:hover::after,
-      .main-nav a:focus::after {
-        width: 80%;
-      }
-
-      /* Mobile Menu */
-      .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--text-white);
-        font-size: var(--font-size-2xl);
-        cursor: pointer;
-        padding: var(--space-2);
-        border-radius: var(--radius-md);
-        transition: var(--transition-base);
-      }
-
-      .mobile-menu-toggle:hover,
-      .mobile-menu-toggle:focus {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .mobile-menu-toggle[aria-expanded="true"] .hamburger-icon {
-        transform: rotate(90deg);
-      }
-
-      .mobile-nav {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: min(320px, 80vw);
-        height: 100vh;
-        background: var(--bg-surface);
-        transition: var(--transition-base);
-        z-index: var(--z-modal);
-        padding: var(--space-8) var(--space-4);
-        box-shadow: var(--shadow-xl);
-        overflow-y: auto;
-      }
-
-      .mobile-nav.active {
-        left: 0;
-      }
-
-      .mobile-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .mobile-nav li {
-        margin-bottom: var(--space-2);
-      }
-
-      .mobile-nav a {
-        color: var(--text-primary);
-        padding: var(--space-3) var(--space-4);
-        border-radius: var(--radius-md);
-        display: block;
-        font-weight: var(--font-weight-medium);
-        transition: var(--transition-base);
-      }
-
-      .mobile-nav a:hover,
-      .mobile-nav a:focus {
-        background: var(--bg-secondary);
-        color: var(--primary-color);
-        text-decoration: none;
-      }
-
-      .mobile-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--bg-overlay);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-base);
-        z-index: var(--z-modal-backdrop);
-      }
-
-      .mobile-overlay.active {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      /* Breadcrumb */
-      .breadcrumb {
-        display: flex;
-        align-items: center;
-        gap: var(--space-2);
-        margin: var(--space-4) 0;
-        font-size: var(--font-size-sm);
-        color: var(--text-secondary);
-      }
-
-      .breadcrumb-item {
-        display: flex;
-        align-items: center;
-      }
-
-      .breadcrumb-item:not(:last-child)::after {
-        content: "/";
-        margin-left: var(--space-2);
-        color: var(--text-hint);
-      }
-
-      .breadcrumb-item.active {
-        color: var(--text-primary);
-        font-weight: var(--font-weight-medium);
-      }
-
-      /* Hero Section với Slider */
-      .hero {
-        position: relative;
-        height: clamp(400px, 60vh, 600px);
-        overflow: hidden;
-        margin-bottom: var(--space-12);
-      }
-
-      .slider-track {
-        display: flex;
-        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        height: 100%;
-      }
-
-      .slide {
-        flex: 0 0 100%;
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-white);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .slide::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-          circle at 30% 70%,
-          rgba(255, 255, 255, 0.1) 0%,
-          transparent 50%
-        );
-        pointer-events: none;
-      }
-
-      .slide:nth-child(2) {
-        background: linear-gradient(
-          135deg,
-          var(--secondary-color),
-          var(--accent-color)
-        );
-      }
-
-      .slide:nth-child(3) {
-        background: linear-gradient(
-          135deg,
-          var(--accent-color),
-          var(--danger-color)
-        );
-      }
-
-      .slide-content {
-        position: relative;
-        z-index: 2;
-        max-width: 800px;
-        padding: var(--space-8);
-      }
-
-      .slide h2 {
-        margin-bottom: var(--space-6);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .slide p {
-        font-size: var(--font-size-xl);
-        margin-bottom: var(--space-8);
-        opacity: 0.95;
-        max-width: none;
-      }
-
-      .cta-button {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        background: var(--bg-surface);
-        color: var(--primary-color);
-        padding: var(--space-4) var(--space-8);
-        border-radius: var(--radius-lg);
-        font-weight: var(--font-weight-semibold);
-        text-decoration: none;
-        transition: var(--transition-base);
-        box-shadow: var(--shadow-md);
-        border: 2px solid transparent;
-      }
-
-      .cta-button:hover,
-      .cta-button:focus {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-lg);
-        color: var(--primary-color);
-        text-decoration: none;
-        border-color: var(--bg-surface);
-      }
-
-      .slider-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: var(--text-white);
-        border: none;
-        padding: var(--space-4);
-        cursor: pointer;
-        transition: var(--transition-base);
-        border-radius: var(--radius-full);
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: var(--font-size-lg);
-      }
-
-      .slider-nav:hover,
-      .slider-nav:focus {
-        background: rgba(0, 0, 0, 0.8);
-        transform: translateY(-50%) scale(1.1);
-      }
-
-      .slider-nav:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        transform: translateY(-50%);
-      }
-
-      .slider-prev {
-        left: var(--space-4);
-      }
-      .slider-next {
-        right: var(--space-4);
-      }
-
-      .slider-dots {
-        position: absolute;
-        bottom: var(--space-4);
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: var(--space-2);
-      }
-
-      .slider-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: var(--radius-full);
-        background: rgba(255, 255, 255, 0.5);
-        cursor: pointer;
-        transition: var(--transition-base);
-        border: none;
-        padding: 0;
-      }
-
-      .slider-dot.active,
-      .slider-dot:hover,
-      .slider-dot:focus {
-        background: var(--text-white);
-        transform: scale(1.2);
-      }
-
-      /* Main Content Layout */
-      .main-content {
-        display: flex;
-        gap: var(--space-8);
-        margin-bottom: var(--space-12);
-        align-items: flex-start;
-      }
-
-      .content-primary {
-        flex: 2;
-        min-width: 0;
-      }
-
-      .content-sidebar {
-        flex: 1;
-        background: var(--bg-surface);
-        padding: var(--space-8);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
+      nav {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         position: sticky;
-        top: calc(80px + var(--space-4));
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-      }
-
-      /* Cards */
-      .cards-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-        gap: var(--space-8);
-        margin-bottom: var(--space-12);
-      }
-
-      .card {
-        background: var(--bg-surface);
-        padding: var(--space-8);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-        transition: var(--transition-base);
-        position: relative;
-        overflow: hidden;
-        border: 1px solid var(--border-light);
-      }
-
-      .card::before {
-        content: "";
-        position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(
-          90deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
+        z-index: 1000;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
       }
-
-      .card:hover,
-      .card:focus-within {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-color);
-      }
-
-      .card-header {
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: var(--space-3);
-        margin-bottom: var(--space-4);
       }
-
-      .card-icon {
-        font-size: var(--font-size-2xl);
-        width: 48px;
-        height: 48px;
+      .logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+      }
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+      }
+      nav a {
+        color: var(--text-primary);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: var(--transition);
+      }
+      nav a:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+      .theme-toggle {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(
-          135deg,
-          var(--primary-light),
-          var(--primary-color)
-        );
-        border-radius: var(--radius-md);
-        color: var(--text-white);
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--text-primary);
+        margin: 3px 0;
       }
 
-      .card h3 {
+      /* Main Content */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      section {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: var(--surface-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+      }
+      section h2 {
         color: var(--primary-color);
-        margin: 0;
-        font-size: var(--font-size-xl);
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 1.5rem;
       }
-
-      .card-content {
-        color: var(--text-secondary);
-        line-height: var(--line-height-relaxed);
-      }
-
-      /* Badges */
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-1);
-        padding: var(--space-1) var(--space-3);
-        border-radius: var(--radius-full);
-        font-size: var(--font-size-xs);
-        font-weight: var(--font-weight-semibold);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height: 1;
-      }
-
-      .badge-primary {
-        background: var(--primary-light);
-        color: var(--primary-dark);
-      }
-      .badge-secondary {
-        background: var(--secondary-light);
-        color: var(--secondary-dark);
-      }
-      .badge-success {
-        background: var(--success-light);
-        color: var(--success-dark);
-      }
-      .badge-warning {
-        background: var(--warning-light);
-        color: var(--warning-dark);
-      }
-      .badge-danger {
-        background: var(--danger-light);
-        color: var(--danger-dark);
-      }
-      .badge-info {
-        background: var(--info-light);
-        color: var(--info-dark);
-      }
-
-      /* Alerts */
-      .alert {
-        padding: var(--space-4);
-        border-radius: var(--radius-md);
-        margin-bottom: var(--space-4);
-        border-left: 4px solid;
-        background: var(--bg-surface);
-        display: flex;
-        align-items: flex-start;
-        gap: var(--space-3);
-      }
-
-      .alert-icon {
-        font-size: var(--font-size-lg);
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-
-      .alert-content {
-        flex: 1;
-      }
-
-      .alert-info {
-        border-color: var(--info-color);
-        background: #e3f2fd;
-        color: var(--info-dark);
-      }
-
-      .alert-success {
-        border-color: var(--success-color);
-        background: #e8f5e8;
-        color: var(--success-dark);
-      }
-
-      .alert-warning {
-        border-color: var(--warning-color);
-        background: #fff3e0;
-        color: var(--warning-dark);
-      }
-
-      .alert-danger {
-        border-color: var(--danger-color);
-        background: #ffebee;
-        color: var(--danger-dark);
-      }
-
-      /* Form Styles */
-      .form-section {
-        background: var(--bg-surface);
-        padding: var(--space-8);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-        margin-bottom: var(--space-12);
-        border: 1px solid var(--border-light);
-      }
-
-      .form-header {
-        margin-bottom: var(--space-6);
-      }
-
-      .form-header h2 {
-        margin-bottom: var(--space-2);
-      }
-
-      .form-description {
-        color: var(--text-secondary);
-        margin-bottom: 0;
-      }
-
-      .form-group {
-        margin-bottom: var(--space-6);
-      }
-
-      .form-row {
-        display: flex;
-        gap: var(--space-4);
-        margin-bottom: var(--space-6);
-      }
-
-      .form-row .form-group {
-        flex: 1;
-        margin-bottom: 0;
-      }
-
-      .form-label {
-        display: block;
-        margin-bottom: var(--space-2);
-        font-weight: var(--font-weight-medium);
+      section h3 {
+        margin: 1.5rem 0 1rem;
         color: var(--text-primary);
-        font-size: var(--font-size-sm);
+        font-size: 1.3rem;
       }
-
-      .form-label-required::after {
-        content: " *";
-        color: var(--danger-color);
+      p,
+      ul {
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
       }
-
-      .form-input,
-      .form-select,
-      .form-textarea {
-        width: 100%;
-        padding: var(--space-3) var(--space-4);
-        border: 2px solid var(--border-light);
-        border-radius: var(--radius-md);
-        font-size: var(--font-size-base);
-        transition: var(--transition-base);
-        background: var(--bg-surface);
-        color: var(--text-primary);
-        font-family: inherit;
-      }
-
-      .form-input:focus,
-      .form-select:focus,
-      .form-textarea:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
-      }
-
-      .form-input:invalid:not(:focus),
-      .form-select:invalid:not(:focus),
-      .form-textarea:invalid:not(:focus) {
-        border-color: var(--danger-color);
-      }
-
-      .form-input:valid:not(:focus),
-      .form-select:valid:not(:focus),
-      .form-textarea:valid:not(:focus) {
-        border-color: var(--success-color);
-      }
-
-      .input-group {
+      ul li {
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
         position: relative;
       }
-      .input-group-icon {
-        position: absolute;
-        left: var(--space-4);
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--text-hint);
-        pointer-events: none;
-        font-size: var(--font-size-lg);
-      }
-      .input-group .form-input {
-        padding-left: calc(var(--space-4) * 2 + 20px);
-      }
-
-      .form-textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      .form-help {
-        margin-top: var(--space-2);
-        font-size: var(--font-size-sm);
-        color: var(--text-hint);
-      }
-
-      .form-error {
-        margin-top: var(--space-2);
-        font-size: var(--font-size-sm);
-        color: var(--danger-color);
-        display: none;
-      }
-
-      .form-input:invalid:not(:focus) + .form-error {
-        display: block;
-      }
-
-      /* Custom Radio and Checkbox */
-      .form-check-group {
-        display: flex;
-        gap: var(--space-6);
-        flex-wrap: wrap;
-      }
-
-      .form-check {
-        display: flex;
-        align-items: center;
-        gap: var(--space-2);
-        cursor: pointer;
-        font-size: var(--font-size-sm);
-      }
-
-      .form-check-input {
-        width: 18px;
-        height: 18px;
-        margin: 0;
-        cursor: pointer;
-        accent-color: var(--primary-color);
-      }
-
-      .form-check-label {
-        margin: 0;
-        cursor: pointer;
-        font-weight: var(--font-weight-normal);
-        user-select: none;
-      }
-
-      /* Buttons */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-2);
-        padding: var(--space-3) var(--space-6);
-        border: 2px solid transparent;
-        border-radius: var(--radius-md);
-        cursor: pointer;
-        font-size: var(--font-size-base);
-        font-weight: var(--font-weight-medium);
-        text-decoration: none;
-        transition: var(--transition-base);
-        text-align: center;
-        vertical-align: middle;
-        user-select: none;
-        line-height: 1;
-        min-height: 44px;
-        font-family: inherit;
-      }
-
-      .btn:focus {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 2px;
-      }
-
-      .btn-primary {
-        background: var(--primary-color);
-        color: var(--text-white);
-        border-color: var(--primary-color);
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background: var(--primary-dark);
-        border-color: var(--primary-dark);
-        transform: translateY(-1px);
-        box-shadow: var(--shadow-md);
-        color: var(--text-white);
-        text-decoration: none;
-      }
-
-      .btn-secondary {
-        background: var(--secondary-color);
-        color: var(--text-white);
-        border-color: var(--secondary-color);
-      }
-
-      .btn-secondary:hover,
-      .btn-secondary:focus {
-        background: var(--secondary-dark);
-        border-color: var(--secondary-dark);
-        color: var(--text-white);
-        text-decoration: none;
-      }
-
-      .btn-outline {
-        background: transparent;
+      ul li::before {
+        content: "•";
         color: var(--primary-color);
-        border-color: var(--primary-color);
+        position: absolute;
+        left: -1.5rem;
       }
 
-      .btn-outline:hover,
-      .btn-outline:focus {
-        background: var(--primary-color);
-        color: var(--text-white);
-        text-decoration: none;
+      /* Code Blocks */
+      pre,
+      code {
+        background: var(--code-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: "Consolas", monospace;
+        font-size: 0.9rem;
       }
-
-      .btn-danger {
-        background: var(--danger-color);
-        color: var(--text-white);
-        border-color: var(--danger-color);
-      }
-
-      .btn-danger:hover,
-      .btn-danger:focus {
-        background: var(--danger-dark);
-        border-color: var(--danger-dark);
-        color: var(--text-white);
-        text-decoration: none;
-      }
-
-      .btn-lg {
-        padding: var(--space-4) var(--space-8);
-        font-size: var(--font-size-lg);
-        min-height: 52px;
-      }
-
-      .btn-sm {
-        padding: var(--space-2) var(--space-4);
-        font-size: var(--font-size-sm);
-        min-height: 36px;
-      }
-
-      .btn-block {
-        width: 100%;
-      }
-
-      .btn:disabled,
-      .btn[aria-disabled="true"] {
-        opacity: 0.6;
-        cursor: not-allowed;
-        transform: none !important;
-        box-shadow: none !important;
-      }
-
-      .btn-group {
-        display: flex;
-        gap: var(--space-2);
-        flex-wrap: wrap;
-      }
-
-      /* Table Styles */
-      .table-section {
-        background: var(--bg-surface);
-        padding: var(--space-8);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-        margin-bottom: var(--space-12);
-        border: 1px solid var(--border-light);
-      }
-
-      .table-header {
-        margin-bottom: var(--space-6);
-      }
-
-      .table-header h2 {
-        margin-bottom: var(--space-2);
-      }
-
-      .table-description {
-        color: var(--text-secondary);
-        margin-bottom: 0;
-      }
-
-      .table-container {
+      pre {
+        padding: 1rem;
         overflow-x: auto;
-        margin: var(--space-4) 0;
-        border-radius: var(--radius-md);
-        border: 1px solid var(--border-light);
+        margin-bottom: 1rem;
+      }
+      code {
+        padding: 0.2rem 0.4rem;
+        color: var(--primary-color);
       }
 
-      .data-table {
+      /* Table */
+      table {
         width: 100%;
         border-collapse: collapse;
-        font-size: var(--font-size-sm);
-        background: var(--bg-surface);
+        margin-bottom: 1rem;
       }
-
-      .data-table caption {
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-semibold);
-        color: var(--text-primary);
-        margin-bottom: var(--space-4);
+      th,
+      td {
+        padding: 0.8rem;
+        border: 1px solid var(--border-color);
         text-align: left;
-        caption-side: top;
       }
-
-      .data-table th,
-      .data-table td {
-        padding: var(--space-4);
-        text-align: left;
-        border-bottom: 1px solid var(--border-light);
-        vertical-align: middle;
-      }
-
-      .data-table th {
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--primary-dark)
-        );
-        color: var(--text-white);
-        font-weight: var(--font-weight-semibold);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: var(--font-size-xs);
-        position: sticky;
-        top: 0;
-        z-index: var(--z-sticky);
-      }
-
-      .data-table tbody tr {
-        transition: var(--transition-fast);
-      }
-
-      .data-table tbody tr:hover {
-        background: var(--bg-secondary);
-      }
-
-      .data-table tbody tr:nth-child(even) {
-        background: rgba(76, 175, 80, 0.02);
-      }
-
-      .data-table tbody tr:nth-child(even):hover {
-        background: var(--bg-secondary);
-      }
-
-      .data-table tfoot td {
-        background: var(--bg-secondary);
-        font-weight: var(--font-weight-semibold);
-        border-top: 2px solid var(--primary-color);
-        border-bottom: none;
-      }
-
-      .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: var(--radius-full);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-white);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-sm);
-      }
-
-      /* Pagination */
-      .pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: var(--space-2);
-        margin: var(--space-8) 0;
-        flex-wrap: wrap;
-      }
-
-      .page-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--space-2) var(--space-3);
-        border: 1px solid var(--border-medium);
-        border-radius: var(--radius-md);
-        color: var(--text-primary);
-        text-decoration: none;
-        transition: var(--transition-base);
-        min-width: 40px;
-        height: 40px;
-        font-size: var(--font-size-sm);
-      }
-
-      .page-link:hover,
-      .page-link:focus {
+      th {
         background: var(--primary-color);
-        color: var(--text-white);
-        border-color: var(--primary-color);
-        text-decoration: none;
+        color: white;
+      }
+      tr:hover {
+        background: var(--background-color);
       }
 
-      .page-link.active {
-        background: var(--primary-color);
-        color: var(--text-white);
-        border-color: var(--primary-color);
-      }
-
-      .page-link:disabled,
-      .page-link[aria-disabled="true"] {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-      }
-
-      /* UI Components */
-      .components-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-        gap: var(--space-8);
-        margin-bottom: var(--space-12);
-      }
-
-      .component-card {
-        background: var(--bg-surface);
-        padding: var(--space-8);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-        text-align: center;
-        transition: var(--transition-base);
-        border: 1px solid var(--border-light);
-      }
-
-      .component-card:hover,
-      .component-card:focus-within {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--primary-color);
-      }
-
-      .component-card h4 {
-        color: var(--primary-color);
-        margin-bottom: var(--space-6);
-        font-size: var(--font-size-xl);
-      }
-
-      /* Tooltip */
-      .tooltip-container {
-        position: relative;
-        display: inline-block;
-        margin: var(--space-4);
-      }
-
-      .tooltip-trigger {
-        background: var(--primary-color);
-        color: var(--text-white);
-        padding: var(--space-3) var(--space-6);
-        border-radius: var(--radius-md);
-        cursor: pointer;
-        transition: var(--transition-base);
-        border: none;
-        font-size: var(--font-size-sm);
-      }
-
-      .tooltip-trigger:hover,
-      .tooltip-trigger:focus {
-        background: var(--primary-dark);
-      }
-
-      .tooltip {
-        position: absolute;
-        bottom: 125%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.9);
-        color: var(--text-white);
-        padding: var(--space-2) var(--space-4);
-        border-radius: var(--radius-md);
-        white-space: nowrap;
-        visibility: hidden;
-        opacity: 0;
-        transition: var(--transition-base);
-        z-index: var(--z-tooltip);
-        font-size: var(--font-size-sm);
-        box-shadow: var(--shadow-md);
-        pointer-events: none;
-      }
-
-      .tooltip::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 6px solid transparent;
-        border-top-color: rgba(0, 0, 0, 0.9);
-      }
-
-      .tooltip-container:hover .tooltip,
-      .tooltip-container:focus-within .tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(-50%) translateY(-4px);
-      }
-
-      /* Switch Toggle */
-      .switch-container {
+      /* Form */
+      form {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: var(--space-2);
+        gap: 1rem;
+        max-width: 500px;
+        padding: 1.5rem;
+        background: var(--background-color);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
       }
-
-      .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
+      input,
+      select,
+      textarea {
+        padding: 0.8rem;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        font-size: 1rem;
       }
-
-      .switch-input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-        position: absolute;
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
       }
-
-      .switch-slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--border-medium);
-        transition: var(--transition-base);
-        border-radius: 34px;
-      }
-
-      .switch-slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: var(--text-white);
-        transition: var(--transition-base);
-        border-radius: 50%;
-        box-shadow: var(--shadow-sm);
-      }
-
-      .switch-input:checked + .switch-slider {
-        background-color: var(--primary-color);
-      }
-
-      .switch-input:checked + .switch-slider:before {
-        transform: translateX(26px);
-      }
-
-      .switch-input:focus + .switch-slider {
-        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-      }
-
-      .switch-label {
-        font-size: var(--font-size-sm);
-        font-weight: var(--font-weight-medium);
-        color: var(--text-primary);
-        transition: var(--transition-base);
-      }
-
-      /* Progress Bar */
-      .progress {
-        width: 100%;
-        height: 20px;
-        background: var(--bg-secondary);
-        border-radius: var(--radius-full);
-        overflow: hidden;
-        margin: var(--space-4) 0;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-
-      .progress-bar {
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        transition: width 0.6s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-white);
-        font-size: var(--font-size-xs);
-        font-weight: var(--font-weight-semibold);
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Tabs */
-      .tabs {
-        margin-bottom: var(--space-8);
-      }
-
-      .tab-nav {
-        display: flex;
-        border-bottom: 2px solid var(--border-light);
-        margin-bottom: var(--space-6);
-        overflow-x: auto;
-      }
-
-      .tab-button {
-        background: none;
-        border: none;
-        padding: var(--space-4) var(--space-6);
-        cursor: pointer;
-        font-size: var(--font-size-base);
-        color: var(--text-secondary);
-        border-bottom: 2px solid transparent;
-        transition: var(--transition-base);
-        white-space: nowrap;
-        font-weight: var(--font-weight-medium);
-      }
-
-      .tab-button:hover,
-      .tab-button:focus {
-        color: var(--text-primary);
-        background: var(--bg-secondary);
-      }
-
-      .tab-button.active {
-        color: var(--primary-color);
-        border-bottom-color: var(--primary-color);
-        background: none;
-      }
-
-      .tab-content {
-        display: none;
-        animation: fadeIn 0.3s ease;
-      }
-
-      .tab-content.active {
-        display: block;
-      }
-
-      /* Accordion */
-      .accordion {
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        margin-bottom: var(--space-4);
-      }
-
-      .accordion-item {
-        border-bottom: 1px solid var(--border-light);
-      }
-
-      .accordion-item:last-child {
-        border-bottom: none;
-      }
-
-      .accordion-header {
-        background: var(--bg-secondary);
-        padding: var(--space-4);
-        cursor: pointer;
-        transition: var(--transition-base);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: var(--font-weight-semibold);
-        border: none;
-        width: 100%;
-        text-align: left;
-      }
-
-      .accordion-header:hover,
-      .accordion-header:focus {
-        background: var(--border-light);
-      }
-
-      .accordion-header.active {
+      button {
         background: var(--primary-color);
-        color: var(--text-white);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      button:hover {
+        background: var(--primary-hover);
+        transform: translateY(-2px);
       }
 
-      .accordion-icon {
-        transition: var(--transition-base);
-        font-size: var(--font-size-lg);
+      /* Position Demo */
+      .position-demo {
+        border: 2px dashed var(--border-color);
+        padding: 1rem;
+        margin: 1rem 0;
+        position: relative;
+        height: 200px;
+        background: var(--background-color);
       }
-
-      .accordion-header.active .accordion-icon {
-        transform: rotate(180deg);
-      }
-
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-
-      .accordion-content.active {
-        max-height: 1000px;
-      }
-
-      .accordion-body {
-        padding: var(--space-4);
-        background: var(--bg-surface);
-      }
-
-      /* Modal */
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--bg-overlay);
+      .box {
+        width: 100px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: var(--z-modal);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-base);
+        border: 2px solid var(--primary-color);
+        background: var(--surface-color);
+        font-size: 0.9rem;
+        transition: var(--transition);
+      }
+      .box:hover {
+        transform: scale(1.05);
+      }
+      .static {
+        background: #fef3c7;
+      }
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 30px;
+        background: #fecaca;
+      }
+      .absolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #bbf7d0;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #bfdbfe;
+        z-index: 1000;
+      }
+      .sticky {
+        position: sticky;
+        top: 10px;
+        background: #fde68a;
       }
 
-      .modal.active {
-        opacity: 1;
-        visibility: visible;
+      /* Card Hover Effect (Code Trong Hình) */
+      .card {
+        position: relative;
+        max-width: 300px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        margin: 1rem auto;
+        background: var(--surface-color);
+        transition: var(--transition);
       }
-
-      .modal-content {
-        background: var(--bg-surface);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-xl);
-        max-width: min(500px, 90vw);
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+      }
+      .card img {
         width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-        transform: scale(0.8);
-        transition: var(--transition-base);
+        height: 180px;
+        object-fit: cover;
+        transition: var(--transition);
       }
-
-      .modal.active .modal-content {
-        transform: scale(1);
+      .card:hover img {
+        transform: scale(1.05);
       }
-
-      .modal-header {
-        padding: var(--space-6);
-        border-bottom: 1px solid var(--border-light);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .card-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
       }
-
-      .modal-title {
-        margin: 0;
-        color: var(--text-primary);
-        font-size: var(--font-size-xl);
+      .card-content {
+        padding: 1rem;
       }
-
-      .modal-close {
-        background: none;
-        border: none;
-        font-size: var(--font-size-2xl);
-        cursor: pointer;
-        color: var(--text-secondary);
-        transition: var(--transition-base);
-        padding: var(--space-1);
-        border-radius: var(--radius-md);
-        line-height: 1;
+      .card-hover-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.7)
+        );
+        color: white;
+        padding: 1.5rem 1rem;
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 3;
       }
-
-      .modal-close:hover,
-      .modal-close:focus {
-        color: var(--text-primary);
-        background: var(--bg-secondary);
+      .card:hover .card-hover-info {
+        transform: translateY(0);
       }
-
-      .modal-body {
-        padding: var(--space-6);
-      }
-
-      .modal-footer {
-        padding: var(--space-6);
-        border-top: 1px solid var(--border-light);
-        display: flex;
-        justify-content: flex-end;
-        gap: var(--space-4);
-      }
-
-      /* Loading Spinner */
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid var(--border-light);
-        border-top: 4px solid var(--primary-color);
-        border-radius: var(--radius-full);
-        animation: spin 1s linear infinite;
-        margin: var(--space-4) auto;
-      }
-
-      .spinner-lg {
-        width: 60px;
-        height: 60px;
-        border-width: 6px;
-      }
-
-      .spinner-sm {
-        width: 20px;
-        height: 20px;
-        border-width: 2px;
-      }
-
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+      @media (max-width: 768px) {
+        .card-hover-info {
+          position: static;
+          transform: none;
+          background: var(--surface-color);
+          color: var(--text-primary);
+          display: none;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        .card:hover .card-hover-info {
+          display: block;
         }
-      }
-
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes bounce {
-        0%,
-        20%,
-        53%,
-        80%,
-        100% {
-          transform: translate3d(0, 0, 0);
-        }
-        40%,
-        43% {
-          transform: translate3d(0, -30px, 0);
-        }
-        70% {
-          transform: translate3d(0, -15px, 0);
-        }
-        90% {
-          transform: translate3d(0, -4px, 0);
-        }
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      .fade-in {
-        animation: fadeIn 0.6s ease-out;
-      }
-      .slide-in-left {
-        animation: slideInLeft 0.6s ease-out;
-      }
-      .slide-in-right {
-        animation: slideInRight 0.6s ease-out;
-      }
-      .bounce {
-        animation: bounce 2s infinite;
-      }
-      .pulse {
-        animation: pulse 2s infinite;
-      }
-
-      /* Code Styling */
-      pre {
-        background: var(--bg-secondary);
-        padding: var(--space-4);
-        border-radius: var(--radius-md);
-        overflow-x: auto;
-        margin: var(--space-4) 0;
-        border-left: 4px solid var(--primary-color);
-        font-family: "Courier New", Consolas, Monaco, monospace;
-      }
-
-      code {
-        background: var(--bg-secondary);
-        padding: var(--space-1) var(--space-2);
-        border-radius: var(--radius-sm);
-        font-family: "Courier New", Consolas, Monaco, monospace;
-        font-size: 0.9em;
-        color: var(--danger-color);
-      }
-
-      pre code {
-        background: none;
-        padding: 0;
-        color: var(--text-primary);
       }
 
       /* Footer */
-      .site-footer {
-        background: linear-gradient(135deg, var(--text-primary), #2c2c2c);
-        color: var(--text-white);
-        padding: var(--space-12) 0 var(--space-8);
-        margin-top: var(--space-12);
-      }
-
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--space-8);
-        margin-bottom: var(--space-8);
-      }
-
-      .footer-section h4 {
-        color: var(--text-white);
-        margin-bottom: var(--space-4);
-        font-size: var(--font-size-lg);
-      }
-
-      .footer-section ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .footer-section ul li {
-        margin-bottom: var(--space-2);
-      }
-
-      .footer-section a {
-        color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition-base);
-      }
-
-      .footer-section a:hover,
-      .footer-section a:focus {
-        color: var(--text-white);
-        text-decoration: none;
-      }
-
-      .footer-bottom {
+      footer {
+        background: var(--secondary-color);
+        color: white;
         text-align: center;
-        padding-top: var(--space-8);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: rgba(255, 255, 255, 0.8);
+        padding: 2rem 1rem;
       }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: var(--space-4);
-        margin-bottom: var(--space-4);
-      }
-
-      .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: var(--radius-full);
-        color: var(--text-white);
-        text-decoration: none;
-        transition: var(--transition-base);
-        font-size: var(--font-size-lg);
-      }
-
-      .social-link:hover,
-      .social-link:focus {
-        background: var(--primary-color);
-        transform: translateY(-2px);
-        color: var(--text-white);
-        text-decoration: none;
-      }
-
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: var(--space-4);
-        right: var(--space-4);
-        border-radius: var(--radius-full);
-        width: 50px;
-        height: 50px;
-        z-index: var(--z-fixed);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-base);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .back-to-top:hover,
-      .back-to-top:focus {
-        transform: translateY(-2px);
-      }
-
-      /* Utility Classes */
-      .text-center {
-        text-align: center;
-      }
-      .text-left {
-        text-align: left;
-      }
-      .text-right {
-        text-align: right;
-      }
-      .text-justify {
-        text-align: justify;
-      }
-
-      .font-weight-light {
-        font-weight: var(--font-weight-light);
-      }
-      .font-weight-normal {
-        font-weight: var(--font-weight-normal);
-      }
-      .font-weight-medium {
-        font-weight: var(--font-weight-medium);
-      }
-      .font-weight-semibold {
-        font-weight: var(--font-weight-semibold);
-      }
-      .font-weight-bold {
-        font-weight: var(--font-weight-bold);
-      }
-
-      .text-primary {
+      footer a {
         color: var(--primary-color);
+        text-decoration: none;
       }
-      .text-secondary {
-        color: var(--text-secondary);
-      }
-      .text-success {
-        color: var(--success-color);
-      }
-      .text-warning {
-        color: var(--warning-color);
-      }
-      .text-danger {
-        color: var(--danger-color);
-      }
-      .text-info {
-        color: var(--info-color);
-      }
-      .text-muted {
-        color: var(--text-hint);
+      footer a:hover {
+        color: white;
       }
 
-      .bg-primary {
-        background-color: var(--primary-color);
-      }
-      .bg-secondary {
-        background-color: var(--bg-secondary);
-      }
-      .bg-surface {
-        background-color: var(--bg-surface);
-      }
-
-      .d-none {
-        display: none;
-      }
-      .d-block {
-        display: block;
-      }
-      .d-inline {
-        display: inline;
-      }
-      .d-inline-block {
-        display: inline-block;
-      }
-      .d-flex {
-        display: flex;
-      }
-      .d-grid {
-        display: grid;
-      }
-
-      .justify-content-start {
-        justify-content: flex-start;
-      }
-      .justify-content-center {
-        justify-content: center;
-      }
-      .justify-content-end {
-        justify-content: flex-end;
-      }
-      .justify-content-between {
-        justify-content: space-between;
-      }
-      .justify-content-around {
-        justify-content: space-around;
-      }
-      .justify-content-evenly {
-        justify-content: space-evenly;
-      }
-
-      .align-items-start {
-        align-items: flex-start;
-      }
-      .align-items-center {
-        align-items: center;
-      }
-      .align-items-end {
-        align-items: flex-end;
-      }
-      .align-items-stretch {
-        align-items: stretch;
-      }
-
-      .flex-direction-row {
-        flex-direction: row;
-      }
-      .flex-direction-column {
-        flex-direction: column;
-      }
-      .flex-wrap {
-        flex-wrap: wrap;
-      }
-      .flex-nowrap {
-        flex-wrap: nowrap;
-      }
-
-      .gap-1 {
-        gap: var(--space-1);
-      }
-      .gap-2 {
-        gap: var(--space-2);
-      }
-      .gap-3 {
-        gap: var(--space-3);
-      }
-      .gap-4 {
-        gap: var(--space-4);
-      }
-      .gap-6 {
-        gap: var(--space-6);
-      }
-      .gap-8 {
-        gap: var(--space-8);
-      }
-
-      /* Margin utilities */
-      .m-0 {
-        margin: 0;
-      }
-      .m-1 {
-        margin: var(--space-1);
-      }
-      .m-2 {
-        margin: var(--space-2);
-      }
-      .m-3 {
-        margin: var(--space-3);
-      }
-      .m-4 {
-        margin: var(--space-4);
-      }
-      .m-6 {
-        margin: var(--space-6);
-      }
-      .m-8 {
-        margin: var(--space-8);
-      }
-
-      .mt-0 {
-        margin-top: 0;
-      }
-      .mt-1 {
-        margin-top: var(--space-1);
-      }
-      .mt-2 {
-        margin-top: var(--space-2);
-      }
-      .mt-3 {
-        margin-top: var(--space-3);
-      }
-      .mt-4 {
-        margin-top: var(--space-4);
-      }
-      .mt-6 {
-        margin-top: var(--space-6);
-      }
-      .mt-8 {
-        margin-top: var(--space-8);
-      }
-
-      .mb-0 {
-        margin-bottom: 0;
-      }
-      .mb-1 {
-        margin-bottom: var(--space-1);
-      }
-      .mb-2 {
-        margin-bottom: var(--space-2);
-      }
-      .mb-3 {
-        margin-bottom: var(--space-3);
-      }
-      .mb-4 {
-        margin-bottom: var(--space-4);
-      }
-      .mb-6 {
-        margin-bottom: var(--space-6);
-      }
-      .mb-8 {
-        margin-bottom: var(--space-8);
-      }
-
-      .ml-0 {
-        margin-left: 0;
-      }
-      .ml-1 {
-        margin-left: var(--space-1);
-      }
-      .ml-2 {
-        margin-left: var(--space-2);
-      }
-      .ml-3 {
-        margin-left: var(--space-3);
-      }
-      .ml-4 {
-        margin-left: var(--space-4);
-      }
-
-      .mr-0 {
-        margin-right: 0;
-      }
-      .mr-1 {
-        margin-right: var(--space-1);
-      }
-      .mr-2 {
-        margin-right: var(--space-2);
-      }
-      .mr-3 {
-        margin-right: var(--space-3);
-      }
-      .mr-4 {
-        margin-right: var(--space-4);
-      }
-
-      /* Padding utilities */
-      .p-0 {
-        padding: 0;
-      }
-      .p-1 {
-        padding: var(--space-1);
-      }
-      .p-2 {
-        padding: var(--space-2);
-      }
-      .p-3 {
-        padding: var(--space-3);
-      }
-      .p-4 {
-        padding: var(--space-4);
-      }
-      .p-6 {
-        padding: var(--space-6);
-      }
-      .p-8 {
-        padding: var(--space-8);
-      }
-
-      .pt-0 {
-        padding-top: 0;
-      }
-      .pt-1 {
-        padding-top: var(--space-1);
-      }
-      .pt-2 {
-        padding-top: var(--space-2);
-      }
-      .pt-3 {
-        padding-top: var(--space-3);
-      }
-      .pt-4 {
-        padding-top: var(--space-4);
-      }
-
-      .pb-0 {
-        padding-bottom: 0;
-      }
-      .pb-1 {
-        padding-bottom: var(--space-1);
-      }
-      .pb-2 {
-        padding-bottom: var(--space-2);
-      }
-      .pb-3 {
-        padding-bottom: var(--space-3);
-      }
-      .pb-4 {
-        padding-bottom: var(--space-4);
-      }
-
-      .pl-0 {
-        padding-left: 0;
-      }
-      .pl-1 {
-        padding-left: var(--space-1);
-      }
-      .pl-2 {
-        padding-left: var(--space-2);
-      }
-      .pl-3 {
-        padding-left: var(--space-3);
-      }
-      .pl-4 {
-        padding-left: var(--space-4);
-      }
-
-      .pr-0 {
-        padding-right: 0;
-      }
-      .pr-1 {
-        padding-right: var(--space-1);
-      }
-      .pr-2 {
-        padding-right: var(--space-2);
-      }
-      .pr-3 {
-        padding-right: var(--space-3);
-      }
-      .pr-4 {
-        padding-right: var(--space-4);
-      }
-
-      /* Width and Height utilities */
-      .w-25 {
-        width: 25%;
-      }
-      .w-50 {
-        width: 50%;
-      }
-      .w-75 {
-        width: 75%;
-      }
-      .w-100 {
-        width: 100%;
-      }
-      .w-auto {
-        width: auto;
-      }
-
-      .h-25 {
-        height: 25%;
-      }
-      .h-50 {
-        height: 50%;
-      }
-      .h-75 {
-        height: 75%;
-      }
-      .h-100 {
-        height: 100%;
-      }
-      .h-auto {
-        height: auto;
-      }
-
-      /* Border utilities */
-      .rounded {
-        border-radius: var(--radius-md);
-      }
-      .rounded-lg {
-        border-radius: var(--radius-lg);
-      }
-      .rounded-full {
-        border-radius: var(--radius-full);
-      }
-
-      .shadow {
-        box-shadow: var(--shadow-sm);
-      }
-      .shadow-md {
-        box-shadow: var(--shadow-md);
-      }
-      .shadow-lg {
-        box-shadow: var(--shadow-lg);
-      }
-      .shadow-none {
-        box-shadow: none;
-      }
-
-      .border {
-        border: 1px solid var(--border-light);
-      }
-      .border-0 {
-        border: 0;
-      }
-      .border-top {
-        border-top: 1px solid var(--border-light);
-      }
-      .border-bottom {
-        border-bottom: 1px solid var(--border-light);
-      }
-      .border-left {
-        border-left: 1px solid var(--border-light);
-      }
-      .border-right {
-        border-right: 1px solid var(--border-light);
-      }
-
-      /* Position utilities */
-      .position-relative {
-        position: relative;
-      }
-      .position-absolute {
-        position: absolute;
-      }
-      .position-fixed {
+      /* Loading, Progress Bar, Scroll to Top */
+      .loading {
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--surface-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s;
       }
-      .position-sticky {
-        position: sticky;
+      .loading.hidden {
+        opacity: 0;
+        pointer-events: none;
       }
-
-      .overflow-hidden {
-        overflow: hidden;
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid var(--border-color);
+        border-top: 4px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
       }
-      .overflow-auto {
-        overflow: auto;
-      }
-      .overflow-scroll {
-        overflow: scroll;
-      }
-      .overflow-visible {
-        overflow: visible;
-      }
-
-      /* Special Effects */
-      .gradient-text {
-        background: linear-gradient(
-          45deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: var(--font-weight-bold);
-      }
-
-      .highlight {
-        background: var(--accent-color);
-        color: var(--text-white);
-        padding: var(--space-1) var(--space-2);
-        border-radius: var(--radius-sm);
-        font-weight: var(--font-weight-semibold);
-      }
-
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-
-      .hover-lift {
-        transition: var(--transition-base);
-      }
-
-      .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .hover-scale {
-        transition: var(--transition-base);
-      }
-
-      .hover-scale:hover {
-        transform: scale(1.05);
-      }
-
-      /* Responsive Design */
-      @media (max-width: 1200px) {
-        .container {
-          padding: 0 var(--space-3);
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-
-        .cards-grid {
-          grid-template-columns: repeat(
-            auto-fit,
-            minmax(min(100%, 280px), 1fr)
-          );
-          gap: var(--space-6);
+        100% {
+          transform: rotate(360deg);
         }
       }
-
-      @media (max-width: 992px) {
-        .main-content {
-          flex-direction: column;
-          gap: var(--space-6);
-        }
-
-        .content-sidebar {
-          position: static;
-          max-height: none;
-        }
-
-        .hero {
-          height: clamp(350px, 50vh, 500px);
-        }
-
-        .slide h2 {
-          font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl));
-        }
-
-        .slide p {
-          font-size: var(--font-size-lg);
-        }
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        background: var(--primary-color);
+        z-index: 9999;
+        transition: width 0.1s ease;
+      }
+      .scroll-to-top {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: var(--transition);
+      }
+      .scroll-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
+      /* Responsive */
       @media (max-width: 768px) {
-        .mobile-menu-toggle {
-          display: block;
+        .hamburger {
+          display: flex;
         }
-
-        .main-nav {
+        nav ul {
           display: none;
-        }
-
-        .hero {
-          height: clamp(300px, 40vh, 400px);
-        }
-
-        .slide h2 {
-          font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl));
-        }
-
-        .slide p {
-          font-size: var(--font-size-base);
-        }
-
-        .cards-grid,
-        .components-grid {
-          grid-template-columns: 1fr;
-          gap: var(--space-4);
-        }
-
-        .slider-nav {
-          width: 40px;
-          height: 40px;
-          padding: var(--space-2);
-        }
-
-        .form-row {
-          flex-direction: column;
-          gap: 0;
-        }
-
-        .form-check-group {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: var(--space-3);
-        }
-
-        .col-1,
-        .col-2,
-        .col-3,
-        .col-4,
-        .col-6,
-        .col-8,
-        .col-9 {
-          flex: 0 0 100%;
-          max-width: 100%;
-        }
-
-        .footer-content {
-          grid-template-columns: 1fr;
-          gap: var(--space-6);
-          text-align: center;
-        }
-
-        .tab-nav {
-          flex-wrap: wrap;
-        }
-
-        .btn-group {
-          flex-direction: column;
-        }
-
-        .btn-group .btn {
+          position: absolute;
+          top: 100%;
+          left: 0;
           width: 100%;
+          background: var(--surface-color);
+          flex-direction: column;
+          padding: 1rem;
         }
-      }
-
-      @media (max-width: 576px) {
-        .container {
-          padding: 0 var(--space-2);
+        nav ul.active {
+          display: flex;
         }
-
-        .hero {
-          height: clamp(250px, 35vh, 350px);
+        section {
+          padding: 1.5rem;
         }
-
-        .slide h2 {
-          font-size: clamp(var(--font-size-lg), 8vw, var(--font-size-xl));
-        }
-
-        .card,
-        .form-section,
-        .table-section,
-        .component-card {
-          padding: var(--space-4);
-        }
-
-        .modal-content {
-          width: 95%;
-          margin: var(--space-4);
-        }
-
-        .modal-header,
-        .modal-body,
-        .modal-footer {
-          padding: var(--space-4);
-        }
-
-        .pagination {
-          flex-wrap: wrap;
-          gap: var(--space-1);
-        }
-
-        .page-link {
-          padding: var(--space-1) var(--space-2);
-          min-width: 32px;
-          height: 32px;
-          font-size: var(--font-size-xs);
-        }
-
-        .data-table th,
-        .data-table td {
-          padding: var(--space-2);
-          font-size: var(--font-size-xs);
-        }
-
-        .btn {
-          padding: var(--space-2) var(--space-4);
-          font-size: var(--font-size-sm);
-          min-height: 40px;
-        }
-
-        .btn-lg {
-          padding: var(--space-3) var(--space-6);
-          font-size: var(--font-size-base);
-          min-height: 48px;
-        }
-      }
-
-      /* Print Styles */
-      @media print {
-        * {
-          background: transparent !important;
-          color: black !important;
-          box-shadow: none !important;
-          text-shadow: none !important;
-        }
-
-        .site-header,
-        .mobile-menu-toggle,
-        .mobile-nav,
-        .mobile-overlay,
-        .slider-nav,
-        .slider-dots,
-        .back-to-top,
-        .site-footer {
-          display: none !important;
-        }
-
-        .container {
-          width: auto;
-          margin: 0;
-          padding: 0;
-        }
-
-        .card,
-        .form-section,
-        .table-section {
-          box-shadow: none;
-          border: 1px solid #000;
-          break-inside: avoid;
-        }
-
-        .hero {
-          height: auto;
-          background: none !important;
-        }
-
-        .slide {
-          background: none !important;
-          color: black !important;
-        }
-
-        a {
-          text-decoration: underline;
-        }
-
-        a[href^="http"]:after {
-          content: " (" attr(href) ")";
-        }
-
-        thead {
-          display: table-header-group;
-        }
-
-        tr,
-        img {
-          break-inside: avoid;
-        }
-
-        p,
-        h2,
-        h3 {
-          orphans: 3;
-          widows: 3;
-        }
-
-        h2,
-        h3 {
-          break-after: avoid;
-        }
-      }
-
-      /* Dark Mode Support */
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --text-primary: #e0e0e0;
-          --text-secondary: #b0b0b0;
-          --text-disabled: #6e6e6e;
-          --text-hint: #8e8e8e;
-          --bg-primary: #121212;
-          --bg-secondary: #1e1e1e;
-          --bg-surface: #2a2a2a;
-          --border-light: #3a3a3a;
-          --border-medium: #4a4a4a;
-          --border-dark: #5a5a5a;
-        }
-
-        .card,
-        .form-section,
-        .table-section,
-        .component-card,
-        .content-sidebar {
-          background: var(--bg-surface);
-          color: var(--text-primary);
-          border-color: var(--border-light);
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-          background: var(--bg-surface);
-          color: var(--text-primary);
-          border-color: var(--border-medium);
-        }
-
-        .data-table th {
-          background: linear-gradient(
-            135deg,
-            var(--primary-color),
-            var(--primary-dark)
-          );
-        }
-
-        .modal-content {
-          background: var(--bg-surface);
-          color: var(--text-primary);
-        }
-
-        .accordion-header {
-          background: var(--bg-secondary);
-          color: var(--text-primary);
-        }
-
-        .accordion-header:hover,
-        .accordion-header:focus {
-          background: var(--border-light);
-        }
-
-        .tab-button {
-          color: var(--text-secondary);
-        }
-
-        .tab-button:hover,
-        .tab-button:focus {
-          color: var(--text-primary);
-          background: var(--bg-secondary);
-        }
-      }
-
-      /* High Contrast Mode */
-      @media (prefers-contrast: high) {
-        :root {
-          --primary-color: #000080;
-          --secondary-color: #008000;
-          --danger-color: #800000;
-          --warning-color: #808000;
-          --border-light: #000000;
-          --border-medium: #000000;
-          --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
-          --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
-          --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .card,
-        .form-section,
-        .table-section,
-        .component-card {
-          border: 2px solid var(--border-light);
-        }
-
-        .btn {
-          border-width: 2px;
-        }
-      }
-
-      /* Reduced Motion */
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
-
-        .fade-in,
-        .slide-in-left,
-        .slide-in-right,
-        .bounce,
-        .pulse {
-          animation: none;
+        .fixed {
+          display: none;
         }
       }
     </style>
   </head>
   <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Bỏ qua đến nội dung chính</a>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+    </div>
 
-    <!-- Header -->
-    <header class="site-header" role="banner">
-      <div class="container">
-        <div class="header-content">
-          <a
-            href="#home"
-            class="site-logo"
-            aria-label="Trang chủ Demo HTML & CSS"
-          >
-            🌟 <span class="gradient-text">Demo HTML & CSS</span>
-          </a>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
-          <nav class="main-nav" role="navigation" aria-label="Menu chính">
-            <ul>
-              <li><a href="#home">Trang Chủ</a></li>
-              <li><a href="#about">Giới Thiệu</a></li>
-              <li><a href="#services">Dịch Vụ</a></li>
-              <li><a href="#components">Components</a></li>
-              <li><a href="#contact">Liên Hệ</a></li>
-            </ul>
-          </nav>
-
-          <button
-            class="mobile-menu-toggle"
-            aria-expanded="false"
-            aria-controls="mobile-nav"
-            aria-label="Mở menu điều hướng"
-          >
-            <span class="hamburger-icon">☰</span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Navigation -->
-    <nav
-      class="mobile-nav"
-      id="mobile-nav"
-      role="navigation"
-      aria-label="Menu di động"
+    <!-- Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      onclick="scrollToTop()"
+      aria-label="Cuộn lên đầu"
     >
-      <ul>
-        <li><a href="#home">🏠 Trang Chủ</a></li>
-        <li><a href="#about">ℹ️ Giới Thiệu</a></li>
-        <li><a href="#services">⚙️ Dịch Vụ</a></li>
-        <li><a href="#components">🧩 Components</a></li>
-        <li><a href="#contact">📞 Liên Hệ</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-overlay" aria-hidden="true"></div>
-
-    <!-- Breadcrumb -->
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <span class="breadcrumb-item"><a href="#home">Trang chủ</a></span>
-        <span class="breadcrumb-item active" aria-current="page"
-          >Demo HTML & CSS</span
-        >
-      </nav>
-    </div>
-
-    <!-- Hero Section với Slider -->
-    <section class="hero" id="home" aria-label="Hero slider">
-      <div
-        class="slider-track"
-        id="sliderTrack"
-        role="region"
-        aria-live="polite"
-      >
-        <div
-          class="slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="Slide 1 of 3"
-        >
-          <div class="slide-content">
-            <h1 class="bounce">Chào Mừng Đến Với Demo HTML & CSS</h1>
-            <p>
-              Khám phá các tính năng hiện đại và responsive design với hơn 50+
-              thành phần UI
-            </p>
-            <a href="#about" class="cta-button">
-              <span>Khám Phá Ngay</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="Slide 2 of 3"
-        >
-          <div class="slide-content">
-            <h1>Thành Phần UI Hiện Đại</h1>
-            <p>
-              Tooltip, Switch, Modal, Accordion, Tabs và nhiều thành phần tương
-              tác khác
-            </p>
-            <a href="#components" class="cta-button">
-              <span>Xem Components</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="Slide 3 of 3"
-        >
-          <div class="slide-content">
-            <h1>Responsive & Accessible</h1>
-            <p>
-              Tương thích với mọi thiết bị và tuân thủ tiêu chuẩn accessibility
-            </p>
-            <a href="#contact" class="cta-button">
-              <span>Liên Hệ Ngay</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <button class="slider-nav slider-prev" aria-label="Slide trước">
-        <span aria-hidden="true">◄</span>
-      </button>
-      <button class="slider-nav slider-next" aria-label="Slide tiếp theo">
-        <span aria-hidden="true">►</span>
-      </button>
-
-      <div class="slider-dots" role="tablist" aria-label="Chọn slide">
-        <button
-          class="slider-dot active"
-          role="tab"
-          aria-selected="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          class="slider-dot"
-          role="tab"
-          aria-selected="false"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          class="slider-dot"
-          role="tab"
-          aria-selected="false"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-    </section>
-
-    <div class="container">
-      <!-- Alert Messages -->
-      <div class="alert alert-info fade-in" role="alert">
-        <span class="alert-icon" aria-hidden="true">ℹ️</span>
-        <div class="alert-content">
-          <strong>Thông báo:</strong> Đây là trang web demo tổng hợp kiến thức
-          HTML và CSS với đầy đủ tính năng hiện đại.
-        </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="main-content">
-        <main class="content-primary" id="main-content">
-          <!-- Cards Section -->
-          <section
-            class="cards-grid fade-in"
-            id="about"
-            aria-labelledby="about-heading"
-          >
-            <h2 id="about-heading" class="sr-only">
-              Giới thiệu về các tính năng
-            </h2>
-
-            <article class="card hover-lift">
-              <div class="card-header">
-                <div class="card-icon" aria-hidden="true">🎨</div>
-                <h3>CSS Hiện Đại</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  Sử dụng <strong>CSS Variables</strong>, <em>Flexbox</em>,
-                  <code>Grid Layout</code>, và các tính năng CSS3 tiên tiến để
-                  tạo giao diện đẹp mắt và linh hoạt.
-                </p>
-
-                <div class="alert alert-success">
-                  <span class="alert-icon" aria-hidden="true">✅</span>
-                  <div class="alert-content">
-                    <strong>Tính năng nổi bật:</strong> Custom Properties, Math
-                    Functions, Advanced Selectors
-                  </div>
-                </div>
-
-                <pre><code>:root {
-  --primary-color: #4CAF50;
-  --spacing: calc(1rem * 1.5);
-}</code></pre>
-
-                <div class="mt-4 d-flex gap-2 flex-wrap">
-                  <span class="badge badge-primary">CSS3</span>
-                  <span class="badge badge-secondary">Variables</span>
-                  <span class="badge badge-success">Modern</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card hover-lift">
-              <div class="card-header">
-                <div class="card-icon" aria-hidden="true">📱</div>
-                <h3>Responsive Design</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  Thiết kế <span class="highlight">responsive</span> với Media
-                  Queries, Mobile-First approach, và Flexible Grid System đảm
-                  bảo hiển thị tốt trên mọi thiết bị.
-                </p>
-
-                <div
-                  class="progress"
-                  role="progressbar"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  aria-label="Tỷ lệ tương thích"
-                >
-                  <div class="progress-bar" style="width: 95%">
-                    95% Tương thích
-                  </div>
-                </div>
-
-                <blockquote class="mt-4">
-                  <q
-                    >Mobile-first design is not just a trend, it's a
-                    necessity</q
-                  >
-                  <cite> - Web Design Best Practices</cite>
-                </blockquote>
-
-                <small class="text-muted"
-                  >Hỗ trợ từ mobile 320px đến desktop 4K</small
-                >
-              </div>
-            </article>
-
-            <article class="card hover-lift">
-              <div class="card-header">
-                <div class="card-icon" aria-hidden="true">⚡</div>
-                <h3>Hiệu Ứng Động</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  Animations, Transitions và Transform tạo trải nghiệm người
-                  dùng mượt mà và tương tác sinh động.
-                </p>
-
-                <div
-                  class="d-flex justify-content-center align-items-center"
-                  style="height: 100px"
-                >
-                  <div
-                    class="spinner pulse"
-                    aria-label="Loading animation"
-                  ></div>
-                </div>
-
-                <div class="btn-group mt-4">
-                  <button class="btn btn-primary btn-sm hover-scale">
-                    Hover Effect
-                  </button>
-                  <button class="btn btn-outline btn-sm">Outline Button</button>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <!-- Tabs Section -->
-          <section
-            class="tabs mb-8"
-            id="services"
-            aria-labelledby="services-heading"
-          >
-            <h2 id="services-heading" class="text-center mb-4">
-              🛠️ Dịch Vụ & Tính Năng
-            </h2>
-
-            <div class="tab-nav" role="tablist">
-              <button
-                class="tab-button active"
-                role="tab"
-                aria-selected="true"
-                aria-controls="html-features"
-                id="tab-html"
-              >
-                HTML Features
-              </button>
-              <button
-                class="tab-button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="css-features"
-                id="tab-css"
-              >
-                CSS Features
-              </button>
-              <button
-                class="tab-button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="js-features"
-                id="tab-js"
-              >
-                JavaScript Features
-              </button>
-            </div>
-
-            <div
-              id="html-features"
-              class="tab-content active"
-              role="tabpanel"
-              aria-labelledby="tab-html"
-            >
-              <div class="row">
-                <div class="col-6">
-                  <h4>🏗️ Semantic HTML</h4>
-                  <ul>
-                    <li>
-                      <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
-                      <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>
-                    </li>
-                    <li>
-                      <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
-                      <code>&lt;footer&gt;</code>
-                    </li>
-                    <li>
-                      <code>&lt;figure&gt;</code>,
-                      <code>&lt;figcaption&gt;</code>, <code>&lt;time&gt;</code>
-                    </li>
-                    <li>
-                      Accessibility attributes: <code>aria-label</code>,
-                      <code>role</code>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <h4>📝 Form Elements</h4>
-                  <ul>
-                    <li>
-                      Input types: <code>email</code>, <code>tel</code>,
-                      <code>number</code>, <code>date</code>
-                    </li>
-                    <li>
-                      Form validation: <code>required</code>,
-                      <code>pattern</code>
-                    </li>
-                    <li>Custom form controls với CSS</li>
-                    <li>File upload và progress tracking</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="css-features"
-              class="tab-content"
-              role="tabpanel"
-              aria-labelledby="tab-css"
-            >
-              <div class="row">
-                <div class="col-4">
-                  <h4>🎯 Layout Systems</h4>
-                  <ul>
-                    <li>Flexbox Layout</li>
-                    <li>CSS Grid System</li>
-                    <li>Float & Clear</li>
-                    <li>Position: sticky, absolute, fixed</li>
-                  </ul>
-                </div>
-                <div class="col-4">
-                  <h4>🎨 Visual Effects</h4>
-                  <ul>
-                    <li>CSS Variables & Custom Properties</li>
-                    <li>Gradients & Shadows</li>
-                    <li>Transform & Transition</li>
-                    <li>Animations & Keyframes</li>
-                  </ul>
-                </div>
-                <div class="col-4">
-                  <h4>📐 Advanced Selectors</h4>
-                  <ul>
-                    <li>
-                      Pseudo-classes: <code>:nth-child</code>,
-                      <code>:hover</code>
-                    </li>
-                    <li>
-                      Pseudo-elements: <code>::before</code>,
-                      <code>::after</code>
-                    </li>
-                    <li>Attribute selectors</li>
-                    <li>Combinator selectors</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="js-features"
-              class="tab-content"
-              role="tabpanel"
-              aria-labelledby="tab-js"
-            >
-              <div class="alert alert-warning">
-                <span class="alert-icon" aria-hidden="true">⚠️</span>
-                <div class="alert-content">
-                  <strong>JavaScript Interactions:</strong> Slider, Mobile Menu,
-                  Modal, Accordion, Form Validation
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h4>🔧 DOM Manipulation</h4>
-                  <ul>
-                    <li>Event handling: click, hover, focus</li>
-                    <li>Class toggling & style changes</li>
-                    <li>Form data processing</li>
-                    <li>Dynamic content updates</li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <h4>🎮 Interactive Components</h4>
-                  <ul>
-                    <li>Image slider với auto-play</li>
-                    <li>Responsive mobile menu</li>
-                    <li>Modal dialogs</li>
-                    <li>Accordion & tabs</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- UI Components -->
-          <section
-            class="components-grid slide-in-left"
-            id="components"
-            aria-labelledby="components-heading"
-          >
-            <h2 id="components-heading" class="text-center mb-6">
-              🧩 UI Components Demo
-            </h2>
-
-            <article class="component-card">
-              <h4>💬 Tooltip</h4>
-              <p>Hiển thị thông tin bổ sung khi hover hoặc focus</p>
-              <div class="tooltip-container">
-                <button class="tooltip-trigger">Hover để xem tooltip!</button>
-                <div class="tooltip" role="tooltip">
-                  Đây là tooltip với thông tin hữu ích
-                </div>
-              </div>
-              <div class="tooltip-container ml-3">
-                <button class="tooltip-trigger">Tooltip khác</button>
-                <div class="tooltip" role="tooltip">
-                  Tooltip có thể chứa nhiều thông tin khác nhau
-                </div>
-              </div>
-            </article>
-
-            <article class="component-card">
-              <h4>🔘 Switch Toggle</h4>
-              <p>Công tắc bật/tắt với hiệu ứng mượt mà</p>
-              <div class="switch-container">
-                <label class="switch">
-                  <input
-                    type="checkbox"
-                    class="switch-input"
-                    aria-describedby="switch-status-1"
-                  />
-                  <span class="switch-slider"></span>
-                </label>
-                <span class="switch-label" id="switch-status-1">Tắt</span>
-              </div>
-              <div class="switch-container mt-3">
-                <label class="switch">
-                  <input
-                    type="checkbox"
-                    class="switch-input"
-                    checked
-                    aria-describedby="switch-status-2"
-                  />
-                  <span class="switch-slider"></span>
-                </label>
-                <span class="switch-label" id="switch-status-2">Bật</span>
-              </div>
-            </article>
-
-            <article class="component-card">
-              <h4>📊 Progress Bars</h4>
-              <p>Thanh tiến trình với các mức độ khác nhau</p>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div class="progress-bar" style="width: 25%">25%</div>
-              </div>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  style="
-                    width: 60%;
-                    background: linear-gradient(
-                      90deg,
-                      var(--secondary-color),
-                      var(--accent-color)
-                    );
-                  "
-                >
-                  60%
-                </div>
-              </div>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  style="
-                    width: 90%;
-                    background: linear-gradient(
-                      90deg,
-                      var(--success-color),
-                      var(--primary-color)
-                    );
-                  "
-                >
-                  90%
-                </div>
-              </div>
-            </article>
-
-            <article class="component-card">
-              <h4>🎯 Text Effects</h4>
-              <p>Các hiệu ứng văn bản đặc biệt</p>
-              <p>
-                Văn bản với <sup>chỉ số trên</sup> và <sub>chỉ số dưới</sub>
-              </p>
-              <p><del>Giá cũ: 200,000đ</del></p>
-              <p><span class="highlight">Giá mới: 150,000đ</span></p>
-              <p class="gradient-text">Gradient Text Effect</p>
-              <p>
-                <abbr title="HyperText Markup Language">HTML</abbr> và
-                <abbr title="Cascading Style Sheets">CSS</abbr>
-              </p>
-            </article>
-
-            <article class="component-card">
-              <h4>🏷️ Badges & Alerts</h4>
-              <p>Nhãn và thông báo với nhiều màu sắc</p>
-              <div class="mb-3 d-flex gap-2 flex-wrap justify-content-center">
-                <span class="badge badge-primary">Primary</span>
-                <span class="badge badge-secondary">Secondary</span>
-                <span class="badge badge-success">Success</span>
-                <span class="badge badge-warning">Warning</span>
-                <span class="badge badge-danger">Danger</span>
-                <span class="badge badge-info">Info</span>
-              </div>
-              <div class="alert alert-success" role="alert">
-                <span class="alert-icon" aria-hidden="true">✅</span>
-                <div class="alert-content">
-                  <strong>Thành công!</strong> Thao tác đã được thực hiện.
-                </div>
-              </div>
-            </article>
-
-            <article class="component-card">
-              <h4>🎛️ Modal Dialog</h4>
-              <p>Hộp thoại phương thức với overlay</p>
-              <div class="btn-group">
-                <button class="btn btn-primary" data-modal="demo-modal">
-                  Mở Modal
-                </button>
-                <button class="btn btn-secondary" data-modal="confirm-modal">
-                  Confirm Modal
-                </button>
-              </div>
-            </article>
-          </section>
-
-          <!-- Accordion Section -->
-          <section class="mb-8" aria-labelledby="accordion-heading">
-            <h2 id="accordion-heading" class="text-center mb-4">
-              📋 Accordion Component
-            </h2>
-            <div class="accordion">
-              <div class="accordion-item">
-                <button
-                  class="accordion-header"
-                  aria-expanded="false"
-                  aria-controls="accordion-content-1"
-                >
-                  <span>HTML Semantic Elements</span>
-                  <span class="accordion-icon" aria-hidden="true">▼</span>
-                </button>
-                <div class="accordion-content" id="accordion-content-1">
-                  <div class="accordion-body">
-                    <p>
-                      HTML5 cung cấp nhiều thẻ semantic giúp cấu trúc trang web
-                      rõ ràng hơn:
-                    </p>
-                    <ul>
-                      <li>
-                        <code>&lt;header&gt;</code>: Phần đầu trang hoặc section
-                      </li>
-                      <li><code>&lt;nav&gt;</code>: Menu điều hướng</li>
-                      <li><code>&lt;main&gt;</code>: Nội dung chính</li>
-                      <li><code>&lt;article&gt;</code>: Bài viết độc lập</li>
-                      <li><code>&lt;section&gt;</code>: Phần của trang web</li>
-                      <li><code>&lt;aside&gt;</code>: Thanh bên</li>
-                      <li><code>&lt;footer&gt;</code>: Phần cuối trang</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-header"
-                  aria-expanded="false"
-                  aria-controls="accordion-content-2"
-                >
-                  <span>CSS Selectors Advanced</span>
-                  <span class="accordion-icon" aria-hidden="true">▼</span>
-                </button>
-                <div class="accordion-content" id="accordion-content-2">
-                  <div class="accordion-body">
-                    <p>CSS cung cấp nhiều selector mạnh mẽ:</p>
-                    <pre><code>/* Pseudo-classes */
-:nth-child(odd) { background: #f0f0f0; }
-:hover, :focus { color: blue; }
-:not(.exclude) { margin: 10px; }
-
-/* Pseudo-elements */
-::before, ::after { content: ""; }
-::first-letter { font-size: 2em; }
-::selection { background: yellow; }</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-header"
-                  aria-expanded="false"
-                  aria-controls="accordion-content-3"
-                >
-                  <span>Responsive Design Principles</span>
-                  <span class="accordion-icon" aria-hidden="true">▼</span>
-                </button>
-                <div class="accordion-content" id="accordion-content-3">
-                  <div class="accordion-body">
-                    <p>Nguyên tắc thiết kế responsive:</p>
-                    <ol>
-                      <li>
-                        <strong>Mobile First:</strong> Thiết kế cho mobile trước
-                      </li>
-                      <li>
-                        <strong>Flexible Grid:</strong> Sử dụng % thay vì px
-                      </li>
-                      <li>
-                        <strong>Media Queries:</strong> Breakpoints cho các
-                        thiết bị
-                      </li>
-                      <li><strong>Flexible Images:</strong> max-width: 100%</li>
-                      <li>
-                        <strong>Touch-friendly:</strong> Kích thước tối thiểu
-                        44px
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Form Section -->
-          <section
-            class="form-section slide-in-right"
-            id="contact"
-            aria-labelledby="contact-heading"
-          >
-            <div class="form-header">
-              <h2 id="contact-heading">📝 Form Liên Hệ Nâng Cao</h2>
-              <p class="form-description">
-                Biểu mẫu với validation, custom styling và responsive design
-              </p>
-            </div>
-
-            <form novalidate aria-labelledby="contact-heading">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="full-name" class="form-label form-label-required"
-                    >Họ và Tên</label
-                  >
-                  <div class="input-group">
-                    <span class="input-group-icon" aria-hidden="true">👤</span>
-                    <input
-                      type="text"
-                      id="full-name"
-                      name="fullName"
-                      class="form-input"
-                      required
-                      placeholder="Nhập họ và tên"
-                      minlength="2"
-                      maxlength="50"
-                      aria-describedby="full-name-error"
-                    />
-                  </div>
-                  <div class="form-error" id="full-name-error">
-                    Vui lòng nhập họ và tên (2-50 ký tự)
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="email" class="form-label form-label-required"
-                    >Email</label
-                  >
-                  <div class="input-group">
-                    <span class="input-group-icon" aria-hidden="true">📧</span>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="form-input"
-                      required
-                      placeholder="example@email.com"
-                      aria-describedby="email-error"
-                    />
-                  </div>
-                  <div class="form-error" id="email-error">
-                    Vui lòng nhập email hợp lệ
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="phone" class="form-label">Số Điện Thoại</label>
-                  <div class="input-group">
-                    <span class="input-group-icon" aria-hidden="true">📱</span>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      class="form-input"
-                      placeholder="0123456789"
-                      pattern="[0-9]{10,11}"
-                      aria-describedby="phone-help"
-                    />
-                  </div>
-                  <div class="form-help" id="phone-help">Nhập 10-11 chữ số</div>
-                </div>
-
-                <div class="form-group">
-                  <label for="age" class="form-label">Tuổi</label>
-                  <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    class="form-input"
-                    min="13"
-                    max="120"
-                    placeholder="25"
-                  />
-                </div>
-              </div>
-
-              <fieldset class="form-group">
-                <legend class="form-label">Giới Tính</legend>
-                <div class="form-check-group" role="radiogroup">
-                  <div class="form-check">
-                    <input
-                      type="radio"
-                      name="gender"
-                      value="male"
-                      id="gender-male"
-                      class="form-check-input"
-                    />
-                    <label for="gender-male" class="form-check-label"
-                      >Nam</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="radio"
-                      name="gender"
-                      value="female"
-                      id="gender-female"
-                      class="form-check-input"
-                    />
-                    <label for="gender-female" class="form-check-label"
-                      >Nữ</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="radio"
-                      name="gender"
-                      value="other"
-                      id="gender-other"
-                      class="form-check-input"
-                    />
-                    <label for="gender-other" class="form-check-label"
-                      >Khác</label
-                    >
-                  </div>
-                </div>
-              </fieldset>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="country" class="form-label">Quốc Gia</label>
-                  <select id="country" name="country" class="form-select">
-                    <option value="">Chọn quốc gia</option>
-                    <option value="vn" selected>🇻🇳 Việt Nam</option>
-                    <option value="us">🇺🇸 Hoa Kỳ</option>
-                    <option value="jp">🇯🇵 Nhật Bản</option>
-                    <option value="kr">🇰🇷 Hàn Quốc</option>
-                    <option value="cn">🇨🇳 Trung Quốc</option>
-                    <option value="th">🇹🇭 Thái Lan</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="birthdate" class="form-label">Ngày Sinh</label>
-                  <input
-                    type="date"
-                    id="birthdate"
-                    name="birthdate"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-
-              <fieldset class="form-group">
-                <legend class="form-label">Sở Thích</legend>
-                <div class="form-check-group">
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="interests[]"
-                      value="programming"
-                      id="interest-programming"
-                      class="form-check-input"
-                    />
-                    <label for="interest-programming" class="form-check-label"
-                      >Lập trình</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="interests[]"
-                      value="design"
-                      id="interest-design"
-                      class="form-check-input"
-                    />
-                    <label for="interest-design" class="form-check-label"
-                      >Thiết kế</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="interests[]"
-                      value="music"
-                      id="interest-music"
-                      class="form-check-input"
-                    />
-                    <label for="interest-music" class="form-check-label"
-                      >Âm nhạc</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="interests[]"
-                      value="sports"
-                      id="interest-sports"
-                      class="form-check-input"
-                    />
-                    <label for="interest-sports" class="form-check-label"
-                      >Thể thao</label
-                    >
-                  </div>
-                </div>
-              </fieldset>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Tin Nhắn</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-textarea"
-                  rows="4"
-                  placeholder="Nhập tin nhắn của bạn..."
-                  maxlength="500"
-                  aria-describedby="message-help"
-                ></textarea>
-                <div class="form-help" id="message-help">Tối đa 500 ký tự</div>
-              </div>
-
-              <div class="form-group">
-                <label for="attachment" class="form-label">Đính Kèm File</label>
-                <input
-                  type="file"
-                  id="attachment"
-                  name="attachment"
-                  class="form-input"
-                  accept=".pdf,.doc,.docx,.jpg,.png"
-                  multiple
-                  aria-describedby="attachment-help"
-                />
-                <div class="form-help" id="attachment-help">
-                  Chấp nhận: PDF, DOC, DOCX, JPG, PNG
-                </div>
-              </div>
-
-              <fieldset class="form-group">
-                <legend class="sr-only">Điều khoản và tùy chọn</legend>
-                <div class="form-check-group">
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="newsletter"
-                      id="newsletter"
-                      class="form-check-input"
-                    />
-                    <label for="newsletter" class="form-check-label"
-                      >Đăng ký nhận bản tin hàng tuần</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      type="checkbox"
-                      name="terms"
-                      id="terms"
-                      class="form-check-input"
-                      required
-                    />
-                    <label for="terms" class="form-check-label">
-                      Tôi đồng ý với
-                      <a href="#" target="_blank">điều khoản sử dụng</a>
-                      <span class="text-danger">*</span>
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-
-              <div
-                class="d-flex justify-content-between align-items-center gap-4 flex-wrap"
-              >
-                <button type="submit" class="btn btn-primary btn-lg">
-                  <span aria-hidden="true">📤</span>
-                  <span>Gửi Liên Hệ</span>
-                </button>
-                <button type="reset" class="btn btn-outline">
-                  <span aria-hidden="true">🔄</span>
-                  <span>Đặt Lại</span>
-                </button>
-              </div>
-            </form>
-          </section>
-
-          <!-- Table Section -->
-          <section class="table-section" aria-labelledby="table-heading">
-            <div class="table-header">
-              <h2 id="table-heading">📊 Bảng Dữ Liệu Nâng Cao</h2>
-              <p class="table-description">
-                Bảng với sticky header, hover effects và responsive design
-              </p>
-            </div>
-
-            <div class="table-container">
-              <table class="data-table">
-                <caption>
-                  Danh Sách Người Dùng Đăng Ký - Cập nhật
-                  <time datetime="2025-06-09">9/6/2025</time>
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Avatar</th>
-                    <th scope="col">Họ Tên</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Số Điện Thoại</th>
-                    <th scope="col">Quốc Gia</th>
-                    <th scope="col">Ngày Đăng Ký</th>
-                    <th scope="col">Trạng Thái</th>
-                    <th scope="col">Hành Động</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <div
-                        class="avatar"
-                        style="
-                          background: linear-gradient(45deg, #4caf50, #2196f3);
-                        "
-                        aria-label="Avatar của Nguyễn Văn An"
-                      >
-                        A
-                      </div>
-                    </td>
-                    <td><strong>Nguyễn Văn An</strong></td>
-                    <td><a href="mailto:an@example.com">an@example.com</a></td>
-                    <td><a href="tel:0123456789">0123456789</a></td>
-                    <td>🇻🇳 Việt Nam</td>
-                    <td><time datetime="2025-01-15">15/01/2025</time></td>
-                    <td><span class="badge badge-success">Hoạt động</span></td>
-                    <td>
-                      <div class="btn-group">
-                        <button
-                          class="btn btn-sm btn-primary"
-                          aria-label="Sửa thông tin Nguyễn Văn An"
-                        >
-                          Sửa
-                        </button>
-                        <button
-                          class="btn btn-sm btn-outline"
-                          aria-label="Xóa Nguyễn Văn An"
-                        >
-                          Xóa
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>
-                      <div
-                        class="avatar"
-                        style="
-                          background: linear-gradient(45deg, #ff9800, #f44336);
-                        "
-                        aria-label="Avatar của Trần Thị Bình"
-                      >
-                        B
-                      </div>
-                    </td>
-                    <td><strong>Trần Thị Bình</strong></td>
-                    <td>
-                      <a href="mailto:binh@example.com">binh@example.com</a>
-                    </td>
-                    <td><a href="tel:0987654321">0987654321</a></td>
-                    <td>🇻🇳 Việt Nam</td>
-                    <td><time datetime="2025-02-20">20/02/2025</time></td>
-                    <td><span class="badge badge-success">Hoạt động</span></td>
-                    <td>
-                      <div class="btn-group">
-                        <button
-                          class="btn btn-sm btn-primary"
-                          aria-label="Sửa thông tin Trần Thị Bình"
-                        >
-                          Sửa
-                        </button>
-                        <button
-                          class="btn btn-sm btn-outline"
-                          aria-label="Xóa Trần Thị Bình"
-                        >
-                          Xóa
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>
-                      <div
-                        class="avatar"
-                        style="
-                          background: linear-gradient(45deg, #9c27b0, #3f51b5);
-                        "
-                        aria-label="Avatar của Lê Minh Cường"
-                      >
-                        C
-                      </div>
-                    </td>
-                    <td><strong>Lê Minh Cường</strong></td>
-                    <td>
-                      <a href="mailto:cuong@example.com">cuong@example.com</a>
-                    </td>
-                    <td><a href="tel:0369852147">0369852147</a></td>
-                    <td>🇺🇸 Hoa Kỳ</td>
-                    <td><time datetime="2025-03-10">10/03/2025</time></td>
-                    <td><span class="badge badge-warning">Tạm dừng</span></td>
-                    <td>
-                      <div class="btn-group">
-                        <button
-                          class="btn btn-sm btn-primary"
-                          aria-label="Sửa thông tin Lê Minh Cường"
-                        >
-                          Sửa
-                        </button>
-                        <button
-                          class="btn btn-sm btn-outline"
-                          aria-label="Xóa Lê Minh Cường"
-                        >
-                          Xóa
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>
-                      <div
-                        class="avatar"
-                        style="
-                          background: linear-gradient(45deg, #00bcd4, #4caf50);
-                        "
-                        aria-label="Avatar của Phạm Thu Dung"
-                      >
-                        D
-                      </div>
-                    </td>
-                    <td><strong>Phạm Thu Dung</strong></td>
-                    <td>
-                      <a href="mailto:dung@example.com">dung@example.com</a>
-                    </td>
-                    <td><a href="tel:0912345678">0912345678</a></td>
-                    <td>🇯🇵 Nhật Bản</td>
-                    <td><time datetime="2025-04-05">05/04/2025</time></td>
-                    <td><span class="badge badge-danger">Khóa</span></td>
-                    <td>
-                      <div class="btn-group">
-                        <button
-                          class="btn btn-sm btn-primary"
-                          aria-label="Sửa thông tin Phạm Thu Dung"
-                        >
-                          Sửa
-                        </button>
-                        <button
-                          class="btn btn-sm btn-outline"
-                          aria-label="Xóa Phạm Thu Dung"
-                        >
-                          Xóa
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>
-                      <div
-                        class="avatar"
-                        style="
-                          background: linear-gradient(45deg, #ff5722, #795548);
-                        "
-                        aria-label="Avatar của Hoàng Văn Em"
-                      >
-                        E
-                      </div>
-                    </td>
-                    <td><strong>Hoàng Văn Em</strong></td>
-                    <td><a href="mailto:em@example.com">em@example.com</a></td>
-                    <td><a href="tel:0834567890">0834567890</a></td>
-                    <td>🇰🇷 Hàn Quốc</td>
-                    <td><time datetime="2025-05-12">12/05/2025</time></td>
-                    <td><span class="badge badge-success">Hoạt động</span></td>
-                    <td>
-                      <div class="btn-group">
-                        <button
-                          class="btn btn-sm btn-primary"
-                          aria-label="Sửa thông tin Hoàng Văn Em"
-                        >
-                          Sửa
-                        </button>
-                        <button
-                          class="btn btn-sm btn-outline"
-                          aria-label="Xóa Hoàng Văn Em"
-                        >
-                          Xóa
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="9">
-                      <strong
-                        >📈 Tổng cộng: 5 người dùng | Hoạt động: 3 | Tạm dừng: 1
-                        | Khóa: 1</strong
-                      >
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-
-            <!-- Pagination -->
-            <nav class="pagination" aria-label="Phân trang bảng dữ liệu">
-              <a
-                href="#"
-                class="page-link"
-                aria-label="Trang trước"
-                aria-disabled="true"
-              >
-                <span aria-hidden="true">◄</span> Trước
-              </a>
-              <a
-                href="#"
-                class="page-link active"
-                aria-label="Trang 1"
-                aria-current="page"
-                >1</a
-              >
-              <a href="#" class="page-link" aria-label="Trang 2">2</a>
-              <a href="#" class="page-link" aria-label="Trang 3">3</a>
-              <span class="page-link" aria-hidden="true">...</span>
-              <a href="#" class="page-link" aria-label="Trang 10">10</a>
-              <a href="#" class="page-link" aria-label="Trang sau">
-                Sau <span aria-hidden="true">►</span>
-              </a>
-            </nav>
-          </section>
-        </main>
-
-        <!-- Sidebar -->
-        <aside
-          class="content-sidebar"
-          role="complementary"
-          aria-labelledby="sidebar-heading"
-        >
-          <h3 id="sidebar-heading">📋 Thông Tin Bổ Sung</h3>
-
-          <div class="alert alert-info">
-            <span class="alert-icon" aria-hidden="true">💡</span>
-            <div class="alert-content">
-              <strong>Ghi chú:</strong> Trang web này demo đầy đủ kiến thức
-              HTML5 và CSS3 hiện đại.
-            </div>
-          </div>
-
-          <h4>🛠️ Công Nghệ Sử Dụng</h4>
-          <ul style="list-style-type: none; padding-left: 0">
-            <li>✅ HTML5 Semantic Elements</li>
-            <li>✅ CSS3 Modern Properties</li>
-            <li>✅ Flexbox & Grid Layout</li>
-            <li>✅ CSS Variables & Math Functions</li>
-            <li>✅ Advanced Selectors</li>
-            <li>✅ Responsive Design</li>
-            <li>✅ Mobile-First Approach</li>
-            <li>✅ Accessibility Features</li>
-            <li>✅ Cross-browser Compatibility</li>
-            <li>✅ Performance Optimization</li>
-          </ul>
-          <h4 class="mt-4">🔗 Tài Liệu Tham Khảo</h4>
-          <nav aria-labelledby="reference-links">
-            <ul style="list-style: none; padding-left: 0">
-              <li class="mb-2">
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  📖 MDN HTML Documentation
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  🎨 MDN CSS Documentation
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="https://caniuse.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  🔍 Can I Use - Browser Support
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="https://www.w3.org/WAI/WCAG21/quickref/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ♿ WCAG Guidelines
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="https://css-tricks.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  💡 CSS-Tricks
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="https://flexboxfroggy.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  🐸 Flexbox Froggy Game
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <h4 class="mt-4">📊 Thống Kê Trang Web</h4>
-          <div class="mb-3">
-            <small class="text-muted">HTML Elements:</small>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-valuenow="85"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div class="progress-bar" style="width: 85%">50+ Elements</div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <small class="text-muted">CSS Properties:</small>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-valuenow="92"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar"
-                style="
-                  width: 92%;
-                  background: linear-gradient(
-                    90deg,
-                    var(--secondary-color),
-                    var(--accent-color)
-                  );
-                "
-              >
-                100+ Properties
-              </div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <small class="text-muted">UI Components:</small>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-valuenow="78"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar"
-                style="
-                  width: 78%;
-                  background: linear-gradient(
-                    90deg,
-                    var(--success-color),
-                    var(--primary-color)
-                  );
-                "
-              >
-                15+ Components
-              </div>
-            </div>
-          </div>
-
-          <h4 class="mt-4">📅 Cập Nhật</h4>
-          <dl>
-            <dt><strong>Lần cuối:</strong></dt>
-            <dd><time datetime="2025-06-09">9 tháng 6, 2025</time></dd>
-            <dt><strong>Phiên bản:</strong></dt>
-            <dd><span class="badge badge-primary">v2.0</span></dd>
-          </dl>
-
-          <div class="mt-4 p-3 bg-secondary rounded">
-            <h5>💡 Mẹo Học Tập</h5>
-            <small class="text-muted">
-              Hãy thực hành coding thường xuyên và tham khảo DevTools của trình
-              duyệt để hiểu rõ hơn về CSS.
-            </small>
-          </div>
-
-          <address class="mt-4">
-            <strong>📞 Liên hệ hỗ trợ:</strong><br />
-            Email: <a href="mailto:support@example.com">phong@triennguyen.com</a
-            ><br />
-            Điện thoại: <a href="tel:+84123456789">0868156***</a><br />
-            Website:
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >google.com</a
-            >
-          </address>
-        </aside>
-      </div>
-    </div>
-
-    <!-- Modal Components -->
-    <div
-      class="modal"
-      id="demo-modal"
-      role="dialog"
-      aria-labelledby="demo-modal-title"
-      aria-hidden="true"
-    >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="demo-modal-title">🎉 Demo Modal</h4>
-          <button class="modal-close" aria-label="Đóng modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>Đây là một modal dialog với overlay và hiệu ứng mượt mà.</p>
-          <div class="alert alert-success">
-            <span class="alert-icon" aria-hidden="true">✅</span>
-            <div class="alert-content">
-              <strong>Tính năng:</strong> Auto-focus, ESC key support, click
-              outside to close
-            </div>
-          </div>
-          <p>
-            Modal có thể chứa bất kỳ nội dung HTML nào như form, bảng, hình ảnh,
-            video...
-          </p>
-          <div class="d-flex justify-content-center">
-            <div class="spinner-sm" aria-label="Đang tải..."></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline modal-close-btn">Đóng</button>
-          <button class="btn btn-primary modal-confirm-btn">Xác nhận</button>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal"
-      id="confirm-modal"
-      role="dialog"
-      aria-labelledby="confirm-modal-title"
-      aria-hidden="true"
-    >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="confirm-modal-title">⚠️ Xác Nhận</h4>
-          <button class="modal-close" aria-label="Đóng modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>Bạn có chắc chắn muốn thực hiện hành động này không?</p>
-          <div class="alert alert-warning">
-            <span class="alert-icon" aria-hidden="true">⚠️</span>
-            <div class="alert-content">
-              <strong>Cảnh báo:</strong> Hành động này không thể hoàn tác.
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline modal-close-btn">Hủy</button>
-          <button class="btn btn-danger confirm-action-btn">Xác nhận</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>🌟 Demo HTML & CSS</h4>
-            <p>
-              Trang web demo tổng hợp kiến thức HTML5 và CSS3 hiện đại với hơn
-              50+ thành phần UI và tính năng responsive design.
-            </p>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">📘</a>
-              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-              <a href="#" class="social-link" aria-label="GitHub">🐙</a>
-              <a href="#" class="social-link" aria-label="YouTube">📺</a>
-            </div>
-          </div>
-
-          <div class="footer-section">
-            <h4>📚 Tài Liệu</h4>
-            <ul>
-              <li><a href="#about">HTML Cơ Bản</a></li>
-              <li><a href="#services">CSS Selectors</a></li>
-              <li><a href="#components">UI Components</a></li>
-              <li><a href="#contact">Responsive Design</a></li>
-              <li><a href="#">Accessibility</a></li>
-              <li><a href="#">Best Practices</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h4>🛠️ Công Cụ</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://code.visualstudio.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >VS Code</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://developer.chrome.com/docs/devtools/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Chrome DevTools</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://validator.w3.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >W3C Validator</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://jigsaw.w3.org/css-validator/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >CSS Validator</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://wave.webaim.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >WAVE Accessibility</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://pagespeed.web.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >PageSpeed Insights</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h4>📞 Liên Hệ</h4>
-            <address>
-              <p>📍 160 Tân Triều, Thanh Trì, Hà Nội<br />Việt Nam</p>
-              <p>
-                📧 Email:
-                <a href="mailto:contact@example.com">phong@triennguyen.com</a>
-              </p>
-              <p>📱 Hotline: <a href="tel:+84123456789">0868156***</a></p>
-              <p>
-                🌐 Website:
-                <a
-                  href="https://google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >google.com</a
-                >
-              </p>
-            </address>
-
-            <div class="mt-3">
-              <h5>📧 Đăng Ký Nhận Tin</h5>
-              <form class="d-flex gap-2" aria-label="Đăng ký newsletter">
-                <label for="newsletter-email" class="sr-only"
-                  >Email để nhận bản tin</label
-                >
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  placeholder="Email của bạn"
-                  required
-                  class="form-input"
-                  style="flex: 1"
-                />
-                <button type="submit" class="btn btn-primary btn-sm">
-                  Đăng ký
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2025 Demo HTML & CSS. Tất cả quyền được bảo lưu.</p>
-          <p>
-            Được tạo với ❤️ sử dụng <strong>HTML5</strong>,
-            <strong>CSS3</strong> và <strong>JavaScript</strong>
-          </p>
-          <p>
-            <a href="#" style="color: rgba(255, 255, 255, 0.8)"
-              >Chính sách bảo mật</a
-            >
-            |
-            <a href="#" style="color: rgba(255, 255, 255, 0.8)"
-              >Điều khoản sử dụng</a
-            >
-            |
-            <a href="#" style="color: rgba(255, 255, 255, 0.8)">Sitemap</a>
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="btn btn-primary back-to-top" aria-label="Quay về đầu trang">
-      <span aria-hidden="true">↑</span>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript -->
+    <!-- Header -->
+    <header>
+      <h1><i class="fas fa-code"></i> Học HTML & CSS Cơ Bản</h1>
+      <p>Khóa học chuyên nghiệp với kiến thức nền tảng</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><i class="fas fa-graduation-cap"></i> WebLearn</div>
+        <ul id="nav-menu">
+          <li>
+            <a href="#html"><i class="fab fa-html5"></i> HTML</a>
+          </li>
+          <li>
+            <a href="#css"><i class="fab fa-css3-alt"></i> CSS</a>
+          </li>
+          <li>
+            <a href="#position"><i class="fas fa-arrows-alt"></i> Position</a>
+          </li>
+          <li>
+            <a href="#tips"><i class="fas fa-lightbulb"></i> Mẹo</a>
+          </li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 1rem">
+          <button
+            class="theme-toggle"
+            onclick="toggleTheme()"
+            aria-label="Chuyển chế độ sáng/tối"
+          >
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- HTML Section -->
+      <section id="html">
+        <h2><i class="fab fa-html5"></i> HTML Cơ Bản</h2>
+        <p>HTML là ngôn ngữ đánh dấu tạo cấu trúc website.</p>
+
+        <h3>Thẻ HTML</h3>
+        <ul>
+          <li><code>&lt;p&gt;</code>: Đoạn văn</li>
+          <li><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>: Tiêu đề</li>
+          <li><code>&lt;a&gt;</code>: Liên kết</li>
+          <li><code>&lt;img&gt;</code>: Hình ảnh</li>
+          <li>
+            <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>,
+            <code>&lt;li&gt;</code>: Danh sách
+          </li>
+          <li>
+            <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>: Container
+          </li>
+        </ul>
+
+        <h3>Bảng HTML</h3>
+        <table>
+          <caption>
+            Khóa Học 2025
+          </caption>
+          <thead>
+            <tr>
+              <th>Khóa</th>
+              <th>Giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML & CSS</td>
+              <td>2.500.000₫</td>
+            </tr>
+            <tr>
+              <td colspan="2">Đăng ký sớm giảm 10%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Form HTML</h3>
+        <form>
+          <label for="name">Họ Tên:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nhập họ tên"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+          <label>Giới Tính:</label>
+          <div style="display: flex; gap: 1rem">
+            <label><input type="radio" name="gender" value="male" /> Nam</label>
+            <label
+              ><input type="radio" name="gender" value="female" /> Nữ</label
+            >
+          </div>
+          <label for="course">Khóa Học:</label>
+          <select id="course" name="course">
+            <option value="">Chọn khóa học</option>
+            <option value="html">HTML & CSS</option>
+            <option value="js">JavaScript</option>
+          </select>
+          <label for="message">Tin Nhắn:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Mục tiêu học tập"
+          ></textarea>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Đăng Ký
+          </button>
+        </form>
+
+        <h3>Nested Layout</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col">Cột 1</div>
+            <div class="col">Cột 2</div>
+          </div>
+        </div>
+        <pre><code>.container { display: flex; }
+.row { display: flex; gap: 1rem; }
+.col { flex: 1; padding: 1rem; background: var(--code-bg); }</code></pre>
+      </section>
+
+      <!-- CSS Section -->
+      <section id="css">
+        <h2><i class="fab fa-css3-alt"></i> CSS Cơ Bản</h2>
+        <p>CSS định dạng giao diện website.</p>
+
+        <h3>Selectors</h3>
+        <ul>
+          <li>Tag: <code>p { color: blue; }</code></li>
+          <li>ID: <code>#header { background: yellow; }</code></li>
+          <li>Class: <code>.btn { font-size: 16px; }</code></li>
+          <li>Descendant: <code>div p { color: green; }</code></li>
+          <li>Child: <code>div > p { color: red; }</code></li>
+          <li>Adjacent Sibling: <code>h2 + p { color: blue; }</code></li>
+          <li>General Sibling: <code>h2 ~ p { color: purple; }</code></li>
+          <li>Pseudo-class: <code>a:hover { color: red; }</code></li>
+          <li>
+            Pseudo-element: <code>p::first-letter { font-size: 2em; }</code>
+          </li>
+        </ul>
+        <p class="example">Ví dụ: <span class="highlight">Chữ nổi bật</span></p>
+        <pre><code>.highlight { color: var(--primary-color); }
+.example::first-letter { font-weight: bold; }</code></pre>
+
+        <h3>Box Model</h3>
+        <p>Mọi phần tử là một hộp với content, padding, border, margin.</p>
+        <div class="box-model-example">Box Model</div>
+        <pre><code>.box-model-example {
+  width: 100px;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  margin: 10px;
+}</code></pre>
+
+        <h3>Display</h3>
+        <ul>
+          <li><code>block</code>: Chiếm toàn bộ chiều rộng.</li>
+          <li><code>inline</code>: Nằm cùng dòng.</li>
+          <li><code>inline-block</code>: Nằm cùng dòng, có width/height.</li>
+          <li><code>flex</code>: Sắp xếp linh hoạt.</li>
+          <li><code>grid</code>: Bố cục lưới.</li>
+        </ul>
+        <div class="flex-example">
+          <div>Item 1</div>
+          <div>Item 2</div>
+        </div>
+        <pre><code>.flex-example { display: flex; gap: 1rem; }
+.flex-example div { padding: 0.5rem; background: var(--code-bg); }</code></pre>
+
+        <h3>Media Queries</h3>
+        <p>Responsive design cho các màn hình khác nhau.</p>
+        <pre><code>@media (max-width: 768px) {
+  body { font-size: 14px; }
+}</code></pre>
+
+        <h3>Transition & Animation</h3>
+        <div class="transition-example">Hover tôi!</div>
+        <pre><code>.transition-example {
+  transition: background 0.3s ease;
+}
+.transition-example:hover { background: var(--primary-color); color: white; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}</code></pre>
+      </section>
+
+      <!-- Position Section -->
+      <section id="position">
+        <h2><i class="fas fa-arrows-alt"></i> CSS Position</h2>
+        <p>Position kiểm soát vị trí phần tử.</p>
+
+        <h3>Static</h3>
+        <div class="position-demo">
+          <div class="box static">Static</div>
+        </div>
+
+        <h3>Relative</h3>
+        <div class="position-demo">
+          <div class="box relative">Relative</div>
+        </div>
+
+        <h3>Absolute</h3>
+        <div class="position-demo">
+          <div class="box absolute">Absolute</div>
+        </div>
+
+        <h3>Fixed</h3>
+        <div class="position-demo">
+          <div class="box fixed">Fixed</div>
+        </div>
+
+        <h3>Sticky</h3>
+        <div class="position-demo" style="height: 300px; overflow-y: auto">
+          <div class="box sticky">Sticky</div>
+          <p>Nội dung dài để cuộn...</p>
+        </div>
+
+        <h3>Ví Dụ Thực Tế: Product Card</h3>
+        <div class="card">
+          <div class="card-badge">Mới</div>
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=180&fit=crop"
+            alt="Sản phẩm"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <h3>MacBook Pro</h3>
+            <p>Laptop cao cấp.</p>
+            <div style="display: flex; justify-content: space-between">
+              <span style="font-size: 1.2rem; color: var(--primary-color)"
+                >45.990.000₫</span
+              >
+              <span style="text-decoration: line-through">52.990.000₫</span>
+            </div>
+          </div>
+          <div class="card-hover-info">
+            <h4>Chi Tiết</h4>
+            <ul style="font-size: 0.8rem">
+              <li>Chip M3</li>
+              <li>16GB RAM</li>
+              <li>512GB SSD</li>
+            </ul>
+            <button><i class="fas fa-shopping-cart"></i> Mua Ngay</button>
+          </div>
+        </div>
+        <pre><code>.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card-hover-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1.5rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+.card:hover .card-hover-info {
+  transform: translateY(0);
+}</code></pre>
+      </section>
+
+      <!-- Tips Section -->
+      <section id="tips">
+        <h2><i class="fas fa-lightbulb"></i> Mẹo & Thủ Thuật</h2>
+        <ul>
+          <li>Áp dụng <code>box-sizing: border-box</code> toàn cục.</li>
+          <li>Thiết kế mobile-first với media queries.</li>
+          <li>Sử dụng shorthand: <code>margin: 10px 20px;</code></li>
+          <li>
+            Tối ưu hiệu ứng với <code>transition</code> và
+            <code>transform</code>.
+          </li>
+        </ul>
+        <pre><code>* { box-sizing: border-box; }
+@media (max-width: 768px) { body { font-size: 14px; } }
+div { transition: transform 0.3s ease; }
+div:hover { transform: scale(1.05); }</code></pre>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 WebLearn.
+        <a href="mailto:contact@weblearn.vn">contact@weblearn.vn</a>
+      </p>
+    </footer>
+
     <script>
-      "use strict";
-
-      // Application State
-      const AppState = {
-        currentSlide: 0,
-        totalSlides: 3,
-        autoSlideInterval: null,
-        currentModal: null,
-        isMenuOpen: false,
-      };
-
-      // Utility Functions
-      const Utils = {
-        // Debounce function for performance optimization
-        debounce(func, wait) {
-          let timeout;
-          return function executedFunction(...args) {
-            const later = () => {
-              clearTimeout(timeout);
-              func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-          };
-        },
-
-        // Throttle function for scroll events
-        throttle(func, limit) {
-          let inThrottle;
-          return function (...args) {
-            if (!inThrottle) {
-              func.apply(this, args);
-              inThrottle = true;
-              setTimeout(() => (inThrottle = false), limit);
-            }
-          };
-        },
-
-        // Get element safely
-        getElement(selector) {
-          const element = document.querySelector(selector);
-          if (!element) {
-            console.warn(`Element not found: ${selector}`);
-          }
-          return element;
-        },
-
-        // Get elements safely
-        getElements(selector) {
-          return document.querySelectorAll(selector);
-        },
-
-        // Add event listener with error handling
-        addEventListenerSafe(element, event, handler, options = {}) {
-          if (element) {
-            try {
-              element.addEventListener(event, handler, options);
-            } catch (error) {
-              console.error(`Error adding event listener:`, error);
-            }
-          }
-        },
-
-        // Focus management for accessibility
-        trapFocus(element) {
-          const focusableElements = element.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
-          const firstElement = focusableElements[0];
-          const lastElement = focusableElements[focusableElements.length - 1];
-
-          const handleTabKey = (e) => {
-            if (e.key === "Tab") {
-              if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                  e.preventDefault();
-                  lastElement.focus();
-                }
-              } else {
-                if (document.activeElement === lastElement) {
-                  e.preventDefault();
-                  firstElement.focus();
-                }
-              }
-            }
-          };
-
-          element.addEventListener("keydown", handleTabKey);
-          return () => element.removeEventListener("keydown", handleTabKey);
-        },
-
-        // Announce to screen readers
-        announce(message) {
-          const announcement = document.createElement("div");
-          announcement.setAttribute("aria-live", "polite");
-          announcement.setAttribute("aria-atomic", "true");
-          announcement.className = "sr-only";
-          announcement.textContent = message;
-          document.body.appendChild(announcement);
-          setTimeout(() => document.body.removeChild(announcement), 1000);
-        },
-      };
-
-      // Slider Module
-      const SliderModule = {
-        init() {
-          this.sliderTrack = Utils.getElement("#sliderTrack");
-          this.dots = Utils.getElements(".slider-dot");
-          this.prevBtn = Utils.getElement(".slider-prev");
-          this.nextBtn = Utils.getElement(".slider-next");
-
-          if (!this.sliderTrack) return;
-
-          this.bindEvents();
-          this.startAutoSlide();
-          this.setupKeyboardNavigation();
-        },
-
-        bindEvents() {
-          Utils.addEventListenerSafe(this.prevBtn, "click", () =>
-            this.previousSlide()
-          );
-          Utils.addEventListenerSafe(this.nextBtn, "click", () =>
-            this.nextSlide()
-          );
-
-          this.dots.forEach((dot, index) => {
-            Utils.addEventListenerSafe(dot, "click", () =>
-              this.goToSlide(index)
-            );
-          });
-
-          // Pause auto-slide on hover
-          const heroSection = Utils.getElement(".hero");
-          Utils.addEventListenerSafe(heroSection, "mouseenter", () =>
-            this.pauseAutoSlide()
-          );
-          Utils.addEventListenerSafe(heroSection, "mouseleave", () =>
-            this.startAutoSlide()
-          );
-
-          // Touch/swipe support
-          this.setupTouchEvents();
-        },
-
-        setupTouchEvents() {
-          let startX = 0;
-          let endX = 0;
-
-          Utils.addEventListenerSafe(
-            this.sliderTrack,
-            "touchstart",
-            (e) => {
-              startX = e.touches[0].clientX;
-            },
-            { passive: true }
-          );
-
-          Utils.addEventListenerSafe(
-            this.sliderTrack,
-            "touchend",
-            (e) => {
-              endX = e.changedTouches[0].clientX;
-              this.handleSwipe(startX, endX);
-            },
-            { passive: true }
-          );
-        },
-
-        handleSwipe(startX, endX) {
-          const threshold = 50;
-          const diff = startX - endX;
-
-          if (Math.abs(diff) > threshold) {
-            if (diff > 0) {
-              this.nextSlide();
-            } else {
-              this.previousSlide();
-            }
-          }
-        },
-
-        setupKeyboardNavigation() {
-          Utils.addEventListenerSafe(document, "keydown", (e) => {
-            if (e.target.closest(".hero")) {
-              switch (e.key) {
-                case "ArrowLeft":
-                  e.preventDefault();
-                  this.previousSlide();
-                  break;
-                case "ArrowRight":
-                  e.preventDefault();
-                  this.nextSlide();
-                  break;
-              }
-            }
-          });
-        },
-
-        goToSlide(index) {
-          if (index < 0 || index >= AppState.totalSlides) return;
-
-          AppState.currentSlide = index;
-          this.updateSlider();
-          this.updateDots();
-          this.updateAriaAttributes();
-          Utils.announce(`Slide ${index + 1} of ${AppState.totalSlides}`);
-        },
-
-        nextSlide() {
-          const nextIndex = (AppState.currentSlide + 1) % AppState.totalSlides;
-          this.goToSlide(nextIndex);
-        },
-
-        previousSlide() {
-          const prevIndex =
-            (AppState.currentSlide - 1 + AppState.totalSlides) %
-            AppState.totalSlides;
-          this.goToSlide(prevIndex);
-        },
-
-        updateSlider() {
-          if (this.sliderTrack) {
-            this.sliderTrack.style.transform = `translateX(-${
-              AppState.currentSlide * 100
-            }%)`;
-          }
-        },
-
-        updateDots() {
-          this.dots.forEach((dot, index) => {
-            const isActive = index === AppState.currentSlide;
-            dot.classList.toggle("active", isActive);
-            dot.setAttribute("aria-selected", isActive.toString());
-          });
-        },
-
-        updateAriaAttributes() {
-          const slides = Utils.getElements(".slide");
-          slides.forEach((slide, index) => {
-            const isActive = index === AppState.currentSlide;
-            slide.setAttribute("aria-hidden", (!isActive).toString());
-          });
-        },
-
-        startAutoSlide() {
-          this.pauseAutoSlide();
-          AppState.autoSlideInterval = setInterval(() => {
-            this.nextSlide();
-          }, 5000);
-        },
-
-        pauseAutoSlide() {
-          if (AppState.autoSlideInterval) {
-            clearInterval(AppState.autoSlideInterval);
-            AppState.autoSlideInterval = null;
-          }
-        },
-      };
-
-      // Mobile Menu Module
-      const MobileMenuModule = {
-        init() {
-          this.menuToggle = Utils.getElement(".mobile-menu-toggle");
-          this.mobileNav = Utils.getElement(".mobile-nav");
-          this.overlay = Utils.getElement(".mobile-overlay");
-
-          if (!this.menuToggle || !this.mobileNav) return;
-
-          this.bindEvents();
-        },
-
-        bindEvents() {
-          Utils.addEventListenerSafe(this.menuToggle, "click", () =>
-            this.toggleMenu()
-          );
-          Utils.addEventListenerSafe(this.overlay, "click", () =>
-            this.closeMenu()
-          );
-
-          // Close menu on escape key
-          Utils.addEventListenerSafe(document, "keydown", (e) => {
-            if (e.key === "Escape" && AppState.isMenuOpen) {
-              this.closeMenu();
-            }
-          });
-
-          // Close menu on navigation link click
-          const navLinks = Utils.getElements(".mobile-nav a");
-          navLinks.forEach((link) => {
-            Utils.addEventListenerSafe(link, "click", () => this.closeMenu());
-          });
-
-          // Close menu on window resize
-          Utils.addEventListenerSafe(
-            window,
-            "resize",
-            Utils.debounce(() => {
-              if (window.innerWidth > 768 && AppState.isMenuOpen) {
-                this.closeMenu();
-              }
-            }, 250)
-          );
-        },
-
-        toggleMenu() {
-          if (AppState.isMenuOpen) {
-            this.closeMenu();
-          } else {
-            this.openMenu();
-          }
-        },
-
-        openMenu() {
-          AppState.isMenuOpen = true;
-          this.mobileNav.classList.add("active");
-          this.overlay.classList.add("active");
-          this.menuToggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-
-          // Focus first menu item
-          const firstMenuItem = this.mobileNav.querySelector("a");
-          if (firstMenuItem) {
-            firstMenuItem.focus();
-          }
-
-          // Setup focus trap
-          this.focusTrapCleanup = Utils.trapFocus(this.mobileNav);
-          Utils.announce("Menu đã mở");
-        },
-
-        closeMenu() {
-          AppState.isMenuOpen = false;
-          this.mobileNav.classList.remove("active");
-          this.overlay.classList.remove("active");
-          this.menuToggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-
-          // Return focus to toggle button
-          this.menuToggle.focus();
-
-          // Cleanup focus trap
-          if (this.focusTrapCleanup) {
-            this.focusTrapCleanup();
-            this.focusTrapCleanup = null;
-          }
-
-          Utils.announce("Menu đã đóng");
-        },
-      };
-
-      // Modal Module
-      const ModalModule = {
-        init() {
-          this.bindEvents();
-        },
-
-        bindEvents() {
-          // Modal triggers
-          const modalTriggers = Utils.getElements("[data-modal]");
-          modalTriggers.forEach((trigger) => {
-            Utils.addEventListenerSafe(trigger, "click", (e) => {
-              e.preventDefault();
-              const modalId = trigger.getAttribute("data-modal");
-              this.openModal(modalId);
-            });
-          });
-
-          // Modal close buttons
-          const closeButtons = Utils.getElements(
-            ".modal-close, .modal-close-btn"
-          );
-          closeButtons.forEach((button) => {
-            Utils.addEventListenerSafe(button, "click", () =>
-              this.closeModal()
-            );
-          });
-
-          // Modal confirm buttons
-          const confirmButtons = Utils.getElements(".modal-confirm-btn");
-          confirmButtons.forEach((button) => {
-            Utils.addEventListenerSafe(button, "click", () =>
-              this.handleConfirm()
-            );
-          });
-
-          const actionButtons = Utils.getElements(".confirm-action-btn");
-          actionButtons.forEach((button) => {
-            Utils.addEventListenerSafe(button, "click", () =>
-              this.handleAction()
-            );
-          });
-
-          // Close modal on escape key
-          Utils.addEventListenerSafe(document, "keydown", (e) => {
-            if (e.key === "Escape" && AppState.currentModal) {
-              this.closeModal();
-            }
-          });
-
-          // Close modal on overlay click
-          const modals = Utils.getElements(".modal");
-          modals.forEach((modal) => {
-            Utils.addEventListenerSafe(modal, "click", (e) => {
-              if (e.target === modal) {
-                this.closeModal();
-              }
-            });
-          });
-        },
-
-        openModal(modalId) {
-          const modal = Utils.getElement(`#${modalId}`);
-          if (!modal) return;
-
-          AppState.currentModal = modal;
-          modal.classList.add("active");
-          modal.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
-
-          // Focus first focusable element
-          const focusableElements = modal.querySelectorAll(
-            'button, input, select, textarea, a[href], [tabindex]:not([tabindex="-1"])'
-          );
-          if (focusableElements.length > 0) {
-            focusableElements[0].focus();
-          }
-
-          // Setup focus trap
-          this.focusTrapCleanup = Utils.trapFocus(modal);
-          Utils.announce("Modal đã mở");
-        },
-
-        closeModal() {
-          if (!AppState.currentModal) return;
-
-          AppState.currentModal.classList.remove("active");
-          AppState.currentModal.setAttribute("aria-hidden", "true");
-          document.body.style.overflow = "";
-
-          // Cleanup focus trap
-          if (this.focusTrapCleanup) {
-            this.focusTrapCleanup();
-            this.focusTrapCleanup = null;
-          }
-
-          AppState.currentModal = null;
-          Utils.announce("Modal đã đóng");
-        },
-
-        handleConfirm() {
-          Utils.announce("Đã xác nhận thành công!");
-          this.closeModal();
-        },
-
-        handleAction() {
-          Utils.announce("Hành động đã được thực hiện!");
-          this.closeModal();
-        },
-      };
-
-      // Tab Module
-      const TabModule = {
-        init() {
-          this.bindEvents();
-        },
-
-        bindEvents() {
-          const tabButtons = Utils.getElements(".tab-button");
-          tabButtons.forEach((button) => {
-            Utils.addEventListenerSafe(button, "click", (e) =>
-              this.handleTabClick(e)
-            );
-            Utils.addEventListenerSafe(button, "keydown", (e) =>
-              this.handleTabKeydown(e)
-            );
-          });
-        },
-
-        handleTabClick(e) {
-          const button = e.target;
-          const targetId = button.getAttribute("aria-controls");
-          this.activateTab(button, targetId);
-        },
-
-        handleTabKeydown(e) {
-          const tabButtons = Array.from(Utils.getElements(".tab-button"));
-          const currentIndex = tabButtons.indexOf(e.target);
-
-          let nextIndex;
-          switch (e.key) {
-            case "ArrowLeft":
-              e.preventDefault();
-              nextIndex =
-                currentIndex > 0 ? currentIndex - 1 : tabButtons.length - 1;
-              break;
-            case "ArrowRight":
-              e.preventDefault();
-              nextIndex =
-                currentIndex < tabButtons.length - 1 ? currentIndex + 1 : 0;
-              break;
-            case "Home":
-              e.preventDefault();
-              nextIndex = 0;
-              break;
-            case "End":
-              e.preventDefault();
-              nextIndex = tabButtons.length - 1;
-              break;
-            default:
-              return;
-          }
-
-          const nextButton = tabButtons[nextIndex];
-          nextButton.focus();
-          const targetId = nextButton.getAttribute("aria-controls");
-          this.activateTab(nextButton, targetId);
-        },
-
-        activateTab(activeButton, targetId) {
-          // Update buttons
-          const tabButtons = Utils.getElements(".tab-button");
-          tabButtons.forEach((button) => {
-            const isActive = button === activeButton;
-            button.classList.toggle("active", isActive);
-            button.setAttribute("aria-selected", isActive.toString());
-          });
-
-          // Update content
-          const tabContents = Utils.getElements(".tab-content");
-          tabContents.forEach((content) => {
-            const isActive = content.id === targetId;
-            content.classList.toggle("active", isActive);
-            content.setAttribute("aria-hidden", (!isActive).toString());
-          });
-
-          Utils.announce(`Tab ${activeButton.textContent} đã được chọn`);
-        },
-      };
-
-      // Accordion Module
-      const AccordionModule = {
-        init() {
-          this.bindEvents();
-        },
-
-        bindEvents() {
-          const accordionHeaders = Utils.getElements(".accordion-header");
-          accordionHeaders.forEach((header) => {
-            Utils.addEventListenerSafe(header, "click", () =>
-              this.toggleAccordion(header)
-            );
-            Utils.addEventListenerSafe(header, "keydown", (e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                this.toggleAccordion(header);
-              }
-            });
-          });
-        },
-
-        toggleAccordion(header) {
-          const content = header.nextElementSibling;
-          const icon = header.querySelector(".accordion-icon");
-          const isExpanded = header.getAttribute("aria-expanded") === "true";
-
-          // Close all other accordions
-          const allHeaders = Utils.getElements(".accordion-header");
-          allHeaders.forEach((h) => {
-            if (h !== header) {
-              h.classList.remove("active");
-              h.setAttribute("aria-expanded", "false");
-              h.nextElementSibling.classList.remove("active");
-              const otherIcon = h.querySelector(".accordion-icon");
-              if (otherIcon) {
-                otherIcon.style.transform = "rotate(0deg)";
-              }
-            }
-          });
-
-          // Toggle current accordion
-          const newState = !isExpanded;
-          header.classList.toggle("active", newState);
-          header.setAttribute("aria-expanded", newState.toString());
-          content.classList.toggle("active", newState);
-          if (icon) {
-            icon.style.transform = newState ? "rotate(180deg)" : "rotate(0deg)";
-          }
-          if (newState) {
-            content.style.maxHeight = content.scrollHeight + "px";
-            Utils.announce(`Mở rộng ${header.textContent.trim()}`);
-          } else {
-            content.style.maxHeight = "0";
-            Utils.announce(`Thu gọn ${header.textContent.trim()}`);
-          }
-        },
-      };
-
-      // Form Module
-      const FormModule = {
-        init() {
-          this.bindEvents();
-          this.setupValidation();
-        },
-
-        bindEvents() {
-          const forms = Utils.getElements("form");
-          forms.forEach((form) => {
-            Utils.addEventListenerSafe(form, "submit", (e) =>
-              this.handleSubmit(e)
-            );
-            Utils.addEventListenerSafe(form, "reset", (e) =>
-              this.handleReset(e)
-            );
-          });
-
-          // Switch toggles
-          const switches = Utils.getElements(".switch-input");
-          switches.forEach((switchInput) => {
-            Utils.addEventListenerSafe(switchInput, "change", (e) =>
-              this.handleSwitchChange(e)
-            );
-          });
-
-          // Newsletter form
-          const newsletterForm = Utils.getElement(".footer-section form");
-          if (newsletterForm) {
-            Utils.addEventListenerSafe(newsletterForm, "submit", (e) =>
-              this.handleNewsletterSubmit(e)
-            );
-          }
-        },
-
-        setupValidation() {
-          const inputs = Utils.getElements("input, textarea, select");
-          inputs.forEach((input) => {
-            Utils.addEventListenerSafe(input, "blur", (e) =>
-              this.validateField(e.target)
-            );
-            Utils.addEventListenerSafe(input, "input", (e) =>
-              this.clearValidation(e.target)
-            );
-          });
-        },
-
-        validateField(field) {
-          const value = field.value.trim();
-          let isValid = true;
-          let errorMessage = "";
-
-          // Remove existing validation classes
-          field.classList.remove("is-valid", "is-invalid");
-
-          // Check if field is required and empty
-          if (field.hasAttribute("required") && !value) {
-            isValid = false;
-            errorMessage = "Trường này là bắt buộc";
-          }
-
-          // Email validation
-          if (field.type === "email" && value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(value)) {
-              isValid = false;
-              errorMessage = "Email không hợp lệ";
-            }
-          }
-
-          // Phone validation
-          if (field.type === "tel" && value) {
-            const phoneRegex = /^[0-9]{10,11}$/;
-            if (!phoneRegex.test(value.replace(/\s/g, ""))) {
-              isValid = false;
-              errorMessage = "Số điện thoại không hợp lệ";
-            }
-          }
-
-          // Length validation
-          if (field.minLength && value.length < field.minLength) {
-            isValid = false;
-            errorMessage = `Tối thiểu ${field.minLength} ký tự`;
-          }
-
-          if (field.maxLength && value.length > field.maxLength) {
-            isValid = false;
-            errorMessage = `Tối đa ${field.maxLength} ký tự`;
-          }
-
-          // Number validation
-          if (field.type === "number" && value) {
-            const numValue = parseFloat(value);
-            if (field.min && numValue < parseFloat(field.min)) {
-              isValid = false;
-              errorMessage = `Giá trị tối thiểu là ${field.min}`;
-            }
-            if (field.max && numValue > parseFloat(field.max)) {
-              isValid = false;
-              errorMessage = `Giá trị tối đa là ${field.max}`;
-            }
-          }
-
-          // Update field state
-          if (value) {
-            field.classList.add(isValid ? "is-valid" : "is-invalid");
-          }
-
-          // Update error message
-          const errorElement = document.getElementById(
-            field.getAttribute("aria-describedby")
-          );
-          if (errorElement && errorElement.classList.contains("form-error")) {
-            errorElement.textContent = errorMessage;
-            errorElement.style.display = isValid ? "none" : "block";
-          }
-
-          return isValid;
-        },
-
-        clearValidation(field) {
-          field.classList.remove("is-invalid");
-          const errorElement = document.getElementById(
-            field.getAttribute("aria-describedby")
-          );
-          if (errorElement && errorElement.classList.contains("form-error")) {
-            errorElement.style.display = "none";
-          }
-        },
-
-        validateForm(form) {
-          const inputs = form.querySelectorAll(
-            "input[required], textarea[required], select[required]"
-          );
-          let isFormValid = true;
-
-          inputs.forEach((input) => {
-            if (!this.validateField(input)) {
-              isFormValid = false;
-            }
-          });
-
-          return isFormValid;
-        },
-
-        handleSubmit(e) {
-          e.preventDefault();
-          const form = e.target;
-
-          if (!this.validateForm(form)) {
-            Utils.announce("Vui lòng kiểm tra lại thông tin trong form");
-            return;
-          }
-
-          // Show loading state
-          const submitButton = form.querySelector('button[type="submit"]');
-          const originalText = submitButton.innerHTML;
-          submitButton.innerHTML =
-            '<div class="spinner-sm" style="display: inline-block; margin-right: 8px;"></div>Đang gửi...';
-          submitButton.disabled = true;
-
-          // Simulate form submission
-          setTimeout(() => {
-            Utils.announce("Form đã được gửi thành công!");
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-            form.reset();
-
-            // Clear validation states
-            const inputs = form.querySelectorAll("input, textarea, select");
-            inputs.forEach((input) => {
-              input.classList.remove("is-valid", "is-invalid");
-              this.clearValidation(input);
-            });
-          }, 2000);
-        },
-
-        handleReset(e) {
-          const form = e.target;
-          setTimeout(() => {
-            const inputs = form.querySelectorAll("input, textarea, select");
-            inputs.forEach((input) => {
-              input.classList.remove("is-valid", "is-invalid");
-              this.clearValidation(input);
-            });
-            Utils.announce("Form đã được đặt lại");
-          }, 0);
-        },
-
-        handleSwitchChange(e) {
-          const switchInput = e.target;
-          const statusElement = document.getElementById(
-            switchInput.getAttribute("aria-describedby")
-          );
-
-          if (statusElement) {
-            const isChecked = switchInput.checked;
-            statusElement.textContent = isChecked ? "Bật" : "Tắt";
-            statusElement.style.color = isChecked
-              ? "var(--success-color)"
-              : "var(--text-secondary)";
-            Utils.announce(`Switch ${isChecked ? "đã bật" : "đã tắt"}`);
-          }
-        },
-
-        handleNewsletterSubmit(e) {
-          e.preventDefault();
-          const emailInput = e.target.querySelector('input[type="email"]');
-          const email = emailInput.value.trim();
-
-          if (!email) {
-            Utils.announce("Vui lòng nhập email");
-            return;
-          }
-
-          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            Utils.announce("Email không hợp lệ");
-            return;
-          }
-
-          Utils.announce(`Cảm ơn bạn đã đăng ký với email: ${email}`);
-          e.target.reset();
-        },
-      };
-
-      // Smooth Scroll Module
-      const SmoothScrollModule = {
-        init() {
-          this.bindEvents();
-        },
-
-        bindEvents() {
-          const anchors = Utils.getElements('a[href^="#"]');
-          anchors.forEach((anchor) => {
-            Utils.addEventListenerSafe(anchor, "click", (e) =>
-              this.handleAnchorClick(e)
-            );
-          });
-        },
-
-        handleAnchorClick(e) {
-          e.preventDefault();
-          const href = e.target.getAttribute("href");
-          const target = Utils.getElement(href);
-
-          if (target) {
-            const headerHeight =
-              Utils.getElement(".site-header")?.offsetHeight || 0;
-            const targetPosition = target.offsetTop - headerHeight - 20;
-
-            window.scrollTo({
-              top: targetPosition,
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            if (AppState.isMenuOpen) {
-              MobileMenuModule.closeMenu();
-            }
-
-            // Update focus for accessibility
-            target.setAttribute("tabindex", "-1");
-            target.focus();
-            target.addEventListener(
-              "blur",
-              () => {
-                target.removeAttribute("tabindex");
-              },
-              { once: true }
-            );
-
-            Utils.announce(`Đã di chuyển đến ${target.textContent || href}`);
-          }
-        },
-      };
-
-      // Back to Top Module
-      const BackToTopModule = {
-        init() {
-          this.button = Utils.getElement(".back-to-top");
-          if (!this.button) return;
-
-          this.bindEvents();
-          this.handleScroll(); // Initial check
-        },
-
-        bindEvents() {
-          Utils.addEventListenerSafe(this.button, "click", () =>
-            this.scrollToTop()
-          );
-          Utils.addEventListenerSafe(
-            window,
-            "scroll",
-            Utils.throttle(() => this.handleScroll(), 100)
-          );
-        },
-
-        handleScroll() {
-          const isVisible = window.pageYOffset > 300;
-          this.button.classList.toggle("visible", isVisible);
-          this.button.setAttribute("aria-hidden", (!isVisible).toString());
-        },
-
-        scrollToTop() {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-          Utils.announce("Đã quay về đầu trang");
-        },
-      };
-
-      // Animation Module
-      const AnimationModule = {
-        init() {
-          this.setupIntersectionObserver();
-        },
-
-        setupIntersectionObserver() {
-          if (!("IntersectionObserver" in window)) {
-            // Fallback for older browsers
-            this.showAllElements();
-            return;
-          }
-
-          const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px",
-          };
-
-          this.observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                this.animateElement(entry.target);
-                this.observer.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
-
-          // Observe elements for animation
-          const animatedElements = Utils.getElements(
-            ".fade-in, .slide-in-left, .slide-in-right"
-          );
-          animatedElements.forEach((el) => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-            this.observer.observe(el);
-          });
-        },
-
-        animateElement(element) {
-          element.style.opacity = "1";
-          element.style.transform = "translateY(0)";
-        },
-
-        showAllElements() {
-          const animatedElements = Utils.getElements(
-            ".fade-in, .slide-in-left, .slide-in-right"
-          );
-          animatedElements.forEach((el) => {
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
-          });
-        },
-      };
-
-      // Performance Module
-      const PerformanceModule = {
-        init() {
-          this.monitorPerformance();
-          this.setupImageLoading();
-        },
-
-        monitorPerformance() {
-          if ("performance" in window) {
-            window.addEventListener("load", () => {
-              const loadTime = performance.now();
-              console.log(
-                `⚡ Trang web đã tải xong trong ${Math.round(loadTime)}ms`
-              );
-
-              if (performance.getEntriesByType) {
-                const navigation =
-                  performance.getEntriesByType("navigation")[0];
-                if (navigation) {
-                  console.log(
-                    `📊 DOM Content Loaded: ${Math.round(
-                      navigation.domContentLoadedEventEnd
-                    )}ms`
-                  );
-                  console.log(
-                    `🎨 Load Complete: ${Math.round(navigation.loadEventEnd)}ms`
-                  );
-                }
-              }
-            });
-          }
-        },
-
-        setupImageLoading() {
-          const images = Utils.getElements("img");
-          images.forEach((img) => {
-            if (img.complete) {
-              img.style.opacity = "1";
-            } else {
-              img.style.opacity = "0";
-              img.style.transition = "opacity 0.3s ease";
-              Utils.addEventListenerSafe(img, "load", () => {
-                img.style.opacity = "1";
-              });
-              Utils.addEventListenerSafe(img, "error", () => {
-                img.style.opacity = "1";
-                console.warn("Image failed to load:", img.src);
-              });
-            }
-          });
-        },
-      };
-
-      // Error Handling Module
-      const ErrorHandlingModule = {
-        init() {
-          this.setupGlobalErrorHandling();
-        },
-
-        setupGlobalErrorHandling() {
-          window.addEventListener("error", (e) => {
-            console.error("❌ JavaScript Error:", e.error);
-            this.logError("JavaScript Error", e.error);
-          });
-
-          window.addEventListener("unhandledrejection", (e) => {
-            console.error("❌ Unhandled Promise Rejection:", e.reason);
-            this.logError("Promise Rejection", e.reason);
-          });
-        },
-
-        logError(type, error) {
-          // In a real application, you would send this to your error tracking service
-          const errorInfo = {
-            type,
-            message: error?.message || error,
-            stack: error?.stack,
-            timestamp: new Date().toISOString(),
-            userAgent: navigator.userAgent,
-            url: window.location.href,
-          };
-
-          console.group("🐛 Error Details");
-          console.table(errorInfo);
-          console.groupEnd();
-        },
-      };
-
-      // Accessibility Module
-      const AccessibilityModule = {
-        init() {
-          this.setupKeyboardNavigation();
-          this.setupFocusManagement();
-          this.setupReducedMotion();
-        },
-
-        setupKeyboardNavigation() {
-          // Skip to main content
-          const skipLink = Utils.getElement(".skip-link");
-          if (skipLink) {
-            Utils.addEventListenerSafe(skipLink, "click", (e) => {
-              e.preventDefault();
-              const mainContent = Utils.getElement("#main-content");
-              if (mainContent) {
-                mainContent.setAttribute("tabindex", "-1");
-                mainContent.focus();
-                mainContent.addEventListener(
-                  "blur",
-                  () => {
-                    mainContent.removeAttribute("tabindex");
-                  },
-                  { once: true }
-                );
-              }
-            });
-          }
-
-          // Global keyboard shortcuts
-          Utils.addEventListenerSafe(document, "keydown", (e) => {
-            // Alt + M: Open mobile menu
-            if (e.altKey && e.key === "m") {
-              e.preventDefault();
-              if (window.innerWidth <= 768) {
-                MobileMenuModule.toggleMenu();
-              }
-            }
-
-            // Alt + T: Back to top
-            if (e.altKey && e.key === "t") {
-              e.preventDefault();
-              BackToTopModule.scrollToTop();
-            }
-          });
-        },
-
-        setupFocusManagement() {
-          // Ensure all interactive elements are focusable
-          const interactiveElements = Utils.getElements(
-            "button, a, input, select, textarea, [tabindex]"
-          );
-          interactiveElements.forEach((element) => {
-            if (!element.hasAttribute("tabindex") && element.tabIndex === -1) {
-              element.setAttribute("tabindex", "0");
-            }
-          });
-
-          // Add focus indicators for keyboard users
-          let isUsingKeyboard = false;
-
-          Utils.addEventListenerSafe(document, "keydown", (e) => {
-            if (e.key === "Tab") {
-              isUsingKeyboard = true;
-              document.body.classList.add("keyboard-navigation");
-            }
-          });
-
-          Utils.addEventListenerSafe(document, "mousedown", () => {
-            isUsingKeyboard = false;
-            document.body.classList.remove("keyboard-navigation");
-          });
-        },
-
-        setupReducedMotion() {
-          if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-reduced-motion: reduce)").matches
-          ) {
-            // Disable auto-slide for users who prefer reduced motion
-            SliderModule.pauseAutoSlide();
-
-            // Add class to disable animations
-            document.body.classList.add("reduced-motion");
-          }
-        },
-      };
-
-      // App Initialization
-      const App = {
-        async init() {
-          try {
-            // Wait for DOM to be ready
-            if (document.readyState === "loading") {
-              await new Promise((resolve) => {
-                document.addEventListener("DOMContentLoaded", resolve);
-              });
-            }
-
-            console.log(
-              "%c🌟 Chào mừng đến với Demo HTML & CSS!",
-              "color: #4CAF50; font-size: 18px; font-weight: bold;"
-            );
-            console.log(
-              "%cTrang web này demo đầy đủ kiến thức HTML5 và CSS3 hiện đại.",
-              "color: #2196F3; font-size: 14px;"
-            );
-            console.log(
-              "%cHãy mở DevTools để khám phá code! 🔍",
-              "color: #FF9800; font-size: 14px;"
-            );
-
-            // Initialize modules
-            await this.initializeModules();
-
-            // Setup service worker (if available)
-            this.setupServiceWorker();
-
-            console.log("✅ App initialized successfully");
-          } catch (error) {
-            console.error("❌ App initialization failed:", error);
-            ErrorHandlingModule.logError("App Initialization", error);
-          }
-        },
-
-        async initializeModules() {
-          const modules = [
-            ErrorHandlingModule,
-            AccessibilityModule,
-            SliderModule,
-            MobileMenuModule,
-            ModalModule,
-            TabModule,
-            AccordionModule,
-            FormModule,
-            SmoothScrollModule,
-            BackToTopModule,
-            AnimationModule,
-            PerformanceModule,
-          ];
-
-          for (const module of modules) {
-            try {
-              await module.init();
-            } catch (error) {
-              console.error(
-                `Failed to initialize ${module.constructor.name}:`,
-                error
-              );
-            }
-          }
-        },
-
-        setupServiceWorker() {
-          if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-              // In a real application, you would register a service worker here
-              console.log("🔧 Service Worker support detected");
-            });
-          }
-        },
-      };
-
-      // Initialize the app
-      App.init().catch((error) => {
-        console.error("Critical error during app initialization:", error);
+      // Loading Screen
+      window.addEventListener("load", () => {
+        const loading = document.getElementById("loading");
+        loading.classList.add("hidden");
+        setTimeout(() => loading.remove(), 500);
       });
 
-      // Expose utilities for debugging
-      if (process?.env?.NODE_ENV === "development") {
-        window.AppDebug = {
-          AppState,
-          Utils,
-          SliderModule,
-          MobileMenuModule,
-          ModalModule,
-          TabModule,
-          AccordionModule,
-          FormModule,
-        };
+      // Progress Bar
+      window.addEventListener("scroll", () => {
+        const progressBar = document.getElementById("progressBar");
+        const scrollPercent =
+          (window.pageYOffset /
+            (document.body.scrollHeight - window.innerHeight)) *
+          100;
+        progressBar.style.width = scrollPercent + "%";
+      });
+
+      // Scroll to Top
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("scrollToTop")
+          .classList.toggle("visible", window.pageYOffset > 300);
+      });
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
+
+      // Mobile Menu
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+      }
+
+      // Theme Toggle
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById("themeIcon");
+        const isDark = body.getAttribute("data-theme") === "dark";
+        body.setAttribute("data-theme", isDark ? "" : "dark");
+        themeIcon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+        localStorage.setItem("theme", isDark ? "light" : "dark");
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.setAttribute("data-theme", "dark");
+          document.getElementById("themeIcon").className = "fas fa-sun";
+        }
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          e.preventDefault();
+          document
+            .querySelector(anchor.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+          document.getElementById("nav-menu").classList.remove("active");
+        });
+      });
+
+      // Form Submission
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Đăng ký thành công!");
+      });
+
+      // Fade-in Animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        observer.observe(section);
+      });
     </script>
   </body>
 </html>
