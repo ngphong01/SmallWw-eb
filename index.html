@@ -3,927 +3,2668 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Học HTML & CSS Cơ Bản - Khóa Học Chuyên Nghiệp</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Tài liệu học HTML & CSS toàn diện từ cơ bản đến nâng cao"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <meta name="keywords" content="HTML, CSS, web development, frontend" />
+    <meta name="author" content="WebLearn Academy" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Học HTML & CSS Toàn Diện" />
+    <meta
+      property="og:description"
+      content="Tài liệu học tập hoàn chỉnh cho Frontend Developer"
     />
-    <style>
-      /* CSS Variables */
-      :root {
-        --primary-color: #6366f1;
-        --primary-hover: #4f46e5;
-        --secondary-color: #1f2937;
-        --accent-color: #f59e0b;
-        --background-color: #f8fafc;
-        --surface-color: #ffffff;
-        --text-primary: #1f2937;
-        --text-secondary: #6b7280;
-        --border-color: #e5e7eb;
-        --code-bg: #f1f5f9;
-        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        --border-radius: 12px;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      [data-theme="dark"] {
-        --background-color: #0f172a;
-        --surface-color: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #cbd5e1;
-        --border-color: #334155;
-        --code-bg: #1e293b;
-      }
-
-      /* Box Sizing và Base Styles */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      ul,
-      ol {
-        list-style-type: none;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.7;
-        color: var(--text-primary);
-        background: linear-gradient(135deg, var(--background-color), #e2e8f0);
-        font-size: 16px;
-      }
-      a{
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--background-color);
-      }
-      ::-webkit-scrollbar-thumb {
-        background: var(--primary-color);
-        border-radius: 4px;
-      }
-
-      /* Header */
-      header {
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--primary-hover)
-        );
-        color: white;
-        text-align: center;
-        padding: 3rem 1rem;
-      }
-      header h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        margin-bottom: 1rem;
-      }
-      header p {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* Navigation */
-      nav {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 1rem;
-        border-bottom: 1px solid var(--border-color);
-      }
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .logo {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--primary-color);
-      }
-      nav ul {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-      }
-      nav a {
-        color: var(--text-primary);
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        transition: var(--transition);
-      }
-      nav a:hover {
-        background: var(--primary-color);
-        color: white;
-      }
-      .theme-toggle {
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        padding: 0.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        width: 36px;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-      }
-      .hamburger span {
-        width: 25px;
-        height: 3px;
-        background: var(--text-primary);
-        margin: 3px 0;
-      }
-
-      /* Main Content */
-      main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem;
-      }
-      section {
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: var(--surface-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border-color);
-      }
-      section h2 {
-        color: var(--primary-color);
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        margin-bottom: 1.5rem;
-      }
-      section h3 {
-        margin: 1.5rem 0 1rem;
-        color: var(--text-primary);
-        font-size: 1.3rem;
-      }
-      p,
-      ul {
-        margin-bottom: 1rem;
-        color: var(--text-secondary);
-      }
-      ul li {
-        margin-left: 2rem;
-        margin-bottom: 0.5rem;
-        position: relative;
-      }
-      ul li::before {
-        content: "•";
-        color: var(--primary-color);
-        position: absolute;
-        left: -1.5rem;
-      }
-
-      /* Code Blocks */
-      pre,
-      code {
-        background: var(--code-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        font-family: "Consolas", monospace;
-        font-size: 0.9rem;
-      }
-      pre {
-        padding: 1rem;
-        overflow-x: auto;
-        margin-bottom: 1rem;
-      }
-      code {
-        padding: 0.2rem 0.4rem;
-        color: var(--primary-color);
-      }
-
-      /* Table */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 1rem;
-      }
-      th,
-      td {
-        padding: 0.8rem;
-        border: 1px solid var(--border-color);
-        text-align: left;
-      }
-      th {
-        background: var(--primary-color);
-        color: white;
-      }
-      tr:hover {
-        background: var(--background-color);
-      }
-
-      /* Form */
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        max-width: 500px;
-        padding: 1.5rem;
-        background: var(--background-color);
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-      }
-      input,
-      select,
-      textarea {
-        padding: 0.8rem;
-        border: 2px solid var(--border-color);
-        border-radius: 8px;
-        font-size: 1rem;
-      }
-      input:focus,
-      select:focus,
-      textarea:focus {
-        outline: none;
-        border-color: var(--primary-color);
-      }
-      button {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: var(--transition);
-      }
-      button:hover {
-        background: var(--primary-hover);
-        transform: translateY(-2px);
-      }
-
-      /* Position Demo */
-      .position-demo {
-        border: 2px dashed var(--border-color);
-        padding: 1rem;
-        margin: 1rem 0;
-        position: relative;
-        height: 200px;
-        background: var(--background-color);
-      }
-      .box {
-        width: 100px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid var(--primary-color);
-        background: var(--surface-color);
-        font-size: 0.9rem;
-        transition: var(--transition);
-      }
-      .box:hover {
-        transform: scale(1.05);
-      }
-      .static {
-        background: #fef3c7;
-      }
-      .relative {
-        position: relative;
-        top: 20px;
-        left: 30px;
-        background: #fecaca;
-      }
-      .absolute {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: #bbf7d0;
-      }
-      .fixed {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #bfdbfe;
-        z-index: 1000;
-      }
-      .sticky {
-        position: sticky;
-        top: 10px;
-        background: #fde68a;
-      }
-
-      /* Card Hover Effect (Code Trong Hình) */
-      .card {
-        position: relative;
-        max-width: 300px;
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
-        margin: 1rem auto;
-        background: var(--surface-color);
-        transition: var(--transition);
-      }
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-      }
-      .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        transition: var(--transition);
-      }
-      .card:hover img {
-        transform: scale(1.05);
-      }
-      .card-badge {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: var(--accent-color);
-        color: white;
-        padding: 0.4rem 0.8rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-      }
-      .card-content {
-        padding: 1rem;
-      }
-      .card-hover-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.9),
-          rgba(0, 0, 0, 0.7)
-        );
-        color: white;
-        padding: 1.5rem 1rem;
-        transform: translateY(100%);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 3;
-      }
-      .card:hover .card-hover-info {
-        transform: translateY(0);
-      }
-      @media (max-width: 768px) {
-        .card-hover-info {
-          position: static;
-          transform: none;
-          background: var(--surface-color);
-          color: var(--text-primary);
-          display: none;
-        }
-        .card:hover .card-hover-info {
-          display: block;
-        }
-      }
-
-      /* Footer */
-      footer {
-        background: var(--secondary-color);
-        color: white;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-      footer a {
-        color: var(--primary-color);
-        text-decoration: none;
-      }
-      footer a:hover {
-        color: white;
-      }
-
-      /* Loading, Progress Bar, Scroll to Top */
-      .loading {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--surface-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.5s;
-      }
-      .loading.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid var(--border-color);
-        border-top: 4px solid var(--primary-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .progress-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 4px;
-        background: var(--primary-color);
-        z-index: 9999;
-        transition: width 0.1s ease;
-      }
-      .scroll-to-top {
-        position: fixed;
-        bottom: 1.5rem;
-        left: 1.5rem;
-        width: 40px;
-        height: 40px;
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transform: translateY(50px);
-        transition: var(--transition);
-      }
-      .scroll-to-top.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .hamburger {
-          display: flex;
-        }
-        nav ul {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          background: var(--surface-color);
-          flex-direction: column;
-          padding: 1rem;
-        }
-        nav ul.active {
-          display: flex;
-        }
-        section {
-          padding: 1.5rem;
-        }
-        .fixed {
-          display: none;
-        }
-      }
-    </style>
+    <meta
+      property="og:image"
+      content="https://example.com/images/og-image.jpg"
+    />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Học HTML & CSS Toàn Diện" />
+    <meta
+      name="twitter:description"
+      content="Tài liệu học tập hoàn chỉnh cho Frontend Developer"
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/twitter-image.jpg"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Học HTML & CSS Toàn Diện</title>
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
-      <div class="spinner"></div>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-
-    <!-- Scroll to Top -->
-    <button
-      class="scroll-to-top"
-      id="scrollToTop"
-      onclick="scrollToTop()"
-      aria-label="Cuộn lên đầu"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Header -->
-    <header>
-      <h1><i class="fas fa-code"></i> Học HTML & CSS Cơ Bản</h1>
-      <p>Khóa học chuyên nghiệp với kiến thức nền tảng</p>
+    <a href="#main-content" class="skip-link">Bỏ qua tới nội dung chính</a>
+    <header class="header">
+      <h1>Học HTML & CSS Toàn Diện</h1>
+      <p>
+        Từ cơ bản đến nâng cao - Tài liệu học tập hoàn chỉnh cho Frontend
+        Developer
+      </p>
+      <p class="header__academy">Tác giả:Mr.Phong</p>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-      <div class="nav-container">
-        <div class="logo"><i class="fas fa-graduation-cap"></i> WebLearn</div>
-        <ul id="nav-menu">
-          <li>
-            <a href="#html"><i class="fab fa-html5"></i> HTML</a>
-          </li>
-          <li>
-            <a href="#css"><i class="fab fa-css3-alt"></i> CSS</a>
-          </li>
-          <li>
-            <a href="#position"><i class="fas fa-arrows-alt"></i> Position</a>
-          </li>
-          <li>
-            <a href="#tips"><i class="fas fa-lightbulb"></i> Mẹo</a>
-          </li>
-        </ul>
-        <div style="display: flex; align-items: center; gap: 1rem">
-          <button
-            class="theme-toggle"
-            onclick="toggleTheme()"
-            aria-label="Chuyển chế độ sáng/tối"
-          >
-            <i class="fas fa-moon" id="themeIcon"></i>
-          </button>
-          <div class="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
+    <nav class="main-nav" aria-label="Menu chính">
+      <ul class="main-nav__list">
+        <li><a href="#html-co-ban">HTML Cơ Bản</a></li>
+        <li><a href="#html-nang-cao">HTML Nâng Cao</a></li>
+        <li><a href="#css-co-ban">CSS Cơ Bản</a></li>
+        <li><a href="#css-nang-cao">CSS Nâng Cao</a></li>
+        <li><a href="#layout">Layout</a></li>
+        <li><a href="#responsive">Responsive</a></li>
+        <li><a href="#animations">Animations</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+      </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-      <!-- HTML Section -->
-      <section id="html">
-        <h2><i class="fab fa-html5"></i> HTML Cơ Bản</h2>
-        <p>HTML là ngôn ngữ đánh dấu tạo cấu trúc website.</p>
+    <main id="main-content">
+      <section id="html-co-ban" class="section">
+        <h2>HTML Cơ Bản</h2>
+        <p>
+          HTML (HyperText Markup Language) là ngôn ngữ đánh dấu tiêu chuẩn để
+          tạo các trang web. HTML mô tả cấu trúc của trang web bằng cách sử dụng
+          các thẻ (tags).
+        </p>
 
-        <h3>Thẻ HTML</h3>
+        <h3>Cấu trúc cơ bản của HTML</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tiêu đề trang&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Chào mừng đến với HTML&lt;/h1&gt;
+    &lt;p&gt;Đây là đoạn văn đầu tiên.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+        <h3>Các thẻ HTML cơ bản</h3>
+        <h4>Thẻ tiêu đề (Headings)</h4>
+        <h1>Tiêu đề H1 - Quan trọng nhất</h1>
+        <h2>Tiêu đề H2 - Phụ đề chính</h2>
+        <h3>Tiêu đề H3 - Phụ đề cấp 2</h3>
+        <h4>Tiêu đề H4 - Phụ đề cấp 3</h4>
+        <h5>Tiêu đề H5 - Phụ đề cấp 4</h5>
+        <h6>Tiêu đề H6 - Nhỏ nhất</h6>
+        <pre><code>
+&lt;h1&gt;Tiêu đề H1 - Quan trọng nhất&lt;/h1&gt;
+&lt;h2&gt;Tiêu đề H2 - Phụ đề chính&lt;/h2&gt;
+&lt;h3&gt;Tiêu đề H3 - Phụ đề cấp 2&lt;/h3&gt;
+&lt;h4&gt;Tiêu đề H4 - Phụ đề cấp 3&lt;/h4&gt;
+&lt;h5&gt;Tiêu đề H5 - Phụ đề cấp 4&lt;/h5&gt;
+&lt;h6&gt;Tiêu đề H6 - Nhỏ nhất&lt;/h6&gt;
+      </code></pre>
+
+        <h4>Thẻ văn bản</h4>
         <ul>
-          <li><code>&lt;p&gt;</code>: Đoạn văn</li>
-          <li><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>: Tiêu đề</li>
-          <li><code>&lt;a&gt;</code>: Liên kết</li>
-          <li><code>&lt;img&gt;</code>: Hình ảnh</li>
-          <li>
-            <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>,
-            <code>&lt;li&gt;</code>: Danh sách
-          </li>
-          <li>
-            <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>: Container
-          </li>
+          <li><code>&lt;p&gt;</code>: Đoạn văn bản</li>
+          <li><code>&lt;strong&gt;</code>: Văn bản quan trọng (in đậm)</li>
+          <li><code>&lt;em&gt;</code>: Văn bản nhấn mạnh (in nghiêng)</li>
+          <li><code>&lt;b&gt;</code>: Văn bản in đậm (chỉ định dạng)</li>
+          <li><code>&lt;i&gt;</code>: Văn bản in nghiêng (chỉ định dạng)</li>
+          <li><code>&lt;u&gt;</code>: Văn bản gạch chân</li>
+          <li><code>&lt;s&gt;</code>: Văn bản gạch ngang</li>
+          <li><code>&lt;mark&gt;</code>: Văn bản đánh dấu</li>
+          <li><code>&lt;small&gt;</code>: Văn bản nhỏ</li>
+          <li><code>&lt;sub&gt;</code>: Chỉ số dưới (H<sub>2</sub>O)</li>
+          <li><code>&lt;sup&gt;</code>: Chỉ số trên (E=mc<sup>2</sup>)</li>
         </ul>
 
-        <h3>Bảng HTML</h3>
-        <table>
+        <h4>Thẻ liên kết và hình ảnh</h4>
+        <p class="links">
+          <a href="https://www.google.com" target="_blank" rel="noopener"
+            >Liên kết ra trang khác</a
+          >
+          | <a href="#section-id">Liên kết trong trang</a> |
+          <a href="mailto:contact@example.com">Gửi email</a> |
+          <a href="tel:+84123456789">Gọi điện thoại</a>
+        </p>
+        <img
+          src="https://media.istockphoto.com/id/1399506394/vi/vec-to/kh%C3%A1i-ni%E1%BB%87m-n%C3%A2ng-cao-k%E1%BB%B9-n%C4%83ng-v%C3%A0-h%E1%BB%8Dc-t%E1%BA%ADp.jpg?s=612x612&w=0&k=20&c=Y20vqtGnigDlC-oZR-UZTOrmjiW-3NFiiCdBHzJ0hhg="
+          alt="Mô tả hình ảnh"
+          title="Tooltip khi hover"
+          loading="lazy"
+          class="example-image"
+        />
+        <pre><code>
+&lt;a href="https://www.google.com" target="_blank" rel="noopener"&gt;Liên kết ra trang khác&lt;/a&gt;
+&lt;a href="#section-id"&gt;Liên kết trong trang&lt;/a&gt;
+&lt;a href="mailto:contact@example.com"&gt;Gửi email&lt;/a&gt;
+&lt;a href="tel:+84123456789"&gt;Gọi điện thoại&lt;/a&gt;
+
+&lt;img src="images/sample.jpg" 
+     alt="Mô tả hình ảnh" 
+     title="Tooltip khi hover"
+     loading="lazy"&gt;
+      </code></pre>
+
+        <h4>Danh sách</h4>
+        <h5>Danh sách không thứ tự (ul)</h5>
+        <ul class="list-unordered">
+          <li>Mục 1</li>
+          <li>
+            Mục 2
+            <ul>
+              <li>Mục con 2.1</li>
+              <li>Mục con 2.2</li>
+            </ul>
+          </li>
+          <li>Mục 3</li>
+        </ul>
+        <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Mục 1&lt;/li&gt;
+  &lt;li&gt;Mục 2
+    &lt;ul&gt;
+      &lt;li&gt;Mục con 2.1&lt;/li&gt;
+      &lt;li&gt;Mục con 2.2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mục 3&lt;/li&gt;
+&lt;/ul&gt;
+      </code></pre>
+
+        <h5>Danh sách có thứ tự (ol)</h5>
+        <ol class="list-ordered">
+          <li>Bước 1</li>
+          <li>Bước 2</li>
+          <li>Bước 3</li>
+        </ol>
+        <pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Bước 1&lt;/li&gt;
+  &lt;li&gt;Bước 2&lt;/li&gt;
+  &lt;li&gt;Bước 3&lt;/li&gt;
+&lt;/ol&gt;
+      </code></pre>
+
+        <h5>Danh sách định nghĩa (dl)</h5>
+        <dl class="list-definition">
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+          <dt>CSS</dt>
+          <dd>Cascading Style Sheets</dd>
+        </dl>
+        <pre><code>
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+      </code></pre>
+
+        <h4>Bảng HTML</h4>
+        <table class="course-table">
           <caption>
-            Khóa Học 2025
+            Bảng Giá Khóa Học 2025
           </caption>
           <thead>
             <tr>
-              <th>Khóa</th>
-              <th>Giá</th>
+              <th scope="col">Khóa Học</th>
+              <th scope="col">Thời Gian</th>
+              <th scope="col">Giá Gốc</th>
+              <th scope="col">Giá Khuyến Mãi</th>
+              <th scope="col">Trạng Thái</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>HTML & CSS</td>
+              <td>HTML & CSS Cơ Bản</td>
+              <td>4 tuần</td>
               <td>2.500.000₫</td>
+              <td>1.990.000₫</td>
+              <td>Có sẵn</td>
             </tr>
             <tr>
-              <td colspan="2">Đăng ký sớm giảm 10%</td>
+              <td>JavaScript Nâng Cao</td>
+              <td>6 tuần</td>
+              <td>3.500.000₫</td>
+              <td>2.990.000₫</td>
+              <td>Sắp có</td>
+            </tr>
+            <tr>
+              <td>React.js Framework</td>
+              <td>8 tuần</td>
+              <td>4.500.000₫</td>
+              <td>3.990.000₫</td>
+              <td>Hết chỗ</td>
+            </tr>
+            <tr>
+              <td colspan="3">Tổng cộng (đăng ký cả 3 khóa)</td>
+              <td>7.990.000₫</td>
+              <td>Combo</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre><code>
+&lt;table&gt;
+  &lt;caption&gt;Bảng Giá Khóa Học 2025&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Khóa Học&lt;/th&gt;
+      &lt;th scope="col"&gt;Thời Gian&lt;/th&gt;
+      &lt;th scope="col"&gt;Giá Gốc&lt;/th&gt;
+      &lt;th scope="col"&gt;Giá Khuyến Mãi&lt;/th&gt;
+      &lt;th scope="col"&gt;Trạng Thái&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HTML & CSS Cơ Bản&lt;/td&gt;
+      &lt;td&gt;4 tuần&lt;/td&gt;
+      &lt;td&gt;2.500.000₫&lt;/td&gt;
+      &lt;td&gt;1.990.000₫&lt;/td&gt;
+      &lt;td&gt;Có sẵn&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JavaScript Nâng Cao&lt;/td&gt;
+      &lt;td&gt;6 tuần&lt;/td&gt;
+      &lt;td&gt;3.500.000₫&lt;/td&gt;
+      &lt;td&gt;2.990.000₫&lt;/td&gt;
+      &lt;td&gt;Sắp có&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;React.js Framework&lt;/td&gt;
+      &lt;td&gt;8 tuần&lt;/td&gt;
+      &lt;td&gt;4.500.000₫&lt;/td&gt;
+      &lt;td&gt;3.990.000₫&lt;/td&gt;
+      &lt;td&gt;Hết chỗ&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td colspan="3"&gt;Tổng cộng (đăng ký cả 3 khóa)&lt;/td&gt;
+      &lt;td&gt;7.990.000₫&lt;/td&gt;
+      &lt;td&gt;Combo&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+      </code></pre>
+
+        <h4>Form HTML cơ bản</h4>
+        <form action="/submit" method="post" class="form" id="course-form">
+          <div class="form__group">
+            <label for="name">Họ và Tên *:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form__group">
+            <label for="email">Email *:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form__group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <fieldset class="form__group">
+            <legend>Giới tính</legend>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Nữ</label>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Khác</label>
+          </fieldset>
+          <div class="form__group">
+            <label for="course">Khóa học quan tâm:</label>
+            <select id="course" name="course">
+              <option value="">-- Chọn khóa học --</option>
+              <option value="html">HTML & CSS Cơ Bản</option>
+              <option value="js">JavaScript Nâng Cao</option>
+              <option value="react">React.js Framework</option>
+              <option value="node">Node.js Backend</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label>Kỹ năng hiện tại:</label>
+            <input type="checkbox" id="html-skill" name="skills" value="html" />
+            <label for="html-skill">HTML</label>
+            <input type="checkbox" id="css-skill" name="skills" value="css" />
+            <label for="css-skill">CSS</label>
+            <input type="checkbox" id="js-skill" name="skills" value="js" />
+            <label for="js-skill">JavaScript</label>
+            <input
+              type="checkbox"
+              id="react-skill"
+              name="skills"
+              value="react"
+            />
+            <label for="react-skill">React</label>
+          </div>
+          <div class="form__group">
+            <label for="experience">Kinh nghiệm lập trình (năm):</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              value="0"
+            />
+          </div>
+          <div class="form__group">
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <div class="form__group">
+            <label for="goals">Mục tiêu học tập:</label>
+            <textarea id="goals" name="goals" rows="4"></textarea>
+          </div>
+          <div class="form__group">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter">Đăng ký nhận thông tin khóa học mới</label>
+          </div>
+          <div class="form__group">
+            <button type="submit">Đăng Ký Ngay</button>
+            <button type="reset">Làm Lại</button>
+          </div>
+        </form>
+        <pre><code>
+&lt;form action="/submit" method="post"&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;Họ và Tên *:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required aria-required="true"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="email"&gt;Email *:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required aria-required="true"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="phone"&gt;Số điện thoại:&lt;/label&gt;
+    &lt;input type="tel" id="phone" name="phone"&gt;
+  &lt;/div&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Giới tính&lt;/legend&gt;
+    &lt;input type="radio" id="male" name="gender" value="male"&gt;
+    &lt;label for="male"&gt;Nam&lt;/label&gt;
+    &lt;input type="radio" id="female" name="gender" value="female"&gt;
+    &lt;label for="female"&gt;Nữ&lt;/label&gt;
+    &lt;input type="radio" id="other" name="gender" value="other"&gt;
+    &lt;label for="other"&gt;Khác&lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;div&gt;
+    &lt;label for="course"&gt;Khóa học quan tâm:&lt;/label&gt;
+    &lt;select id="course" name="course"&gt;
+      &lt;option value=""&gt;-- Chọn khóa học --&lt;/option&gt;
+      &lt;option value="html"&gt;HTML & CSS Cơ Bản&lt;/option&gt;
+      &lt;option value="js"&gt;JavaScript Nâng Cao&lt;/option&gt;
+      &lt;option value="react"&gt;React.js Framework&lt;/option&gt;
+      &lt;option value="node"&gt;Node.js Backend&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Đăng Ký Ngay&lt;/button&gt;
+&lt;/form&gt;
+      </code></pre>
+      </section>
+
+      <section id="html-nang-cao" class="section">
+        <h2>HTML Nâng Cao</h2>
+        <p>
+          Phần này sẽ giúp bạn hiểu sâu hơn về HTML5 và các kỹ thuật nâng cao để
+          tạo ra các trang web hiện đại, semantic và accessible.
+        </p>
+
+        <h3>HTML5 Semantic Elements</h3>
+        <p>
+          HTML5 cung cấp các thẻ semantic giúp tạo cấu trúc rõ ràng và có ý
+          nghĩa:
+        </p>
+        <ul class="semantic-list">
+          <li><code>&lt;header&gt;</code> - Đầu trang</li>
+          <li><code>&lt;nav&gt;</code> - Menu điều hướng</li>
+          <li>
+            <code>&lt;main&gt;</code> - Nội dung chính
+            <ul>
+              <li><code>&lt;article&gt;</code> - Bài viết</li>
+              <li><code>&lt;section&gt;</code> - Phần</li>
+            </ul>
+          </li>
+          <li><code>&lt;aside&gt;</code> - Sidebar</li>
+          <li><code>&lt;footer&gt;</code> - Chân trang</li>
+        </ul>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Trang Web Semantic&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Tên Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Trang chủ&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;Giới thiệu&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+        &lt;h2&gt;Tiêu đề bài viết&lt;/h2&gt;
+        &lt;time datetime="2025-01-15"&gt;15 tháng 1, 2025&lt;/time&gt;
+      &lt;/header&gt;
+      &lt;p&gt;Nội dung bài viết...&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;section&gt;
+      &lt;h2&gt;Phần liên quan&lt;/h2&gt;
+      &lt;p&gt;Nội dung phần...&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;Sidebar&lt;/h3&gt;
+    &lt;p&gt;Nội dung bên...&lt;/p&gt;
+  &lt;/aside&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 Tên Website&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+        <h3>Meta Tags quan trọng</h3>
+        <p>
+          Meta tags cung cấp thông tin về trang web cho trình duyệt và công cụ
+          tìm kiếm:
+        </p>
+        <pre><code>
+&lt;!-- Charset và Viewport --&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- SEO Meta Tags --&gt;
+&lt;meta name="description" content="Mô tả ngắn gọn về trang web (150-160 ký tự)"&gt;
+&lt;meta name="keywords" content="từ khóa, html, css, web development"&gt;
+&lt;meta name="author" content="Tên tác giả"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+
+&lt;!-- Open Graph (Facebook) --&gt;
+&lt;meta property="og:title" content="Tiêu đề trang"&gt;
+&lt;meta property="og:description" content="Mô tả trang"&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com"&gt;
+&lt;meta property="og:type" content="website"&gt;
+
+&lt;!-- Twitter Cards --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Tiêu đề trang"&gt;
+&lt;meta name="twitter:description" content="Mô tả trang"&gt;
+&lt;meta name="twitter:image" content="https://example.com/image.jpg"&gt;
+
+&lt;!-- Favicon --&gt;
+&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+      </code></pre>
+
+        <h3>HTML5 Input Types</h3>
+        <form class="form input-types">
+          <div class="form__group">
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" name="email" />
+          </div>
+          <div class="form__group">
+            <label for="tel-input">Điện thoại:</label>
+            <input type="tel" id="tel-input" name="phone" />
+          </div>
+          <div class="form__group">
+            <label for="url-input">Website:</label>
+            <input type="url" id="url-input" name="url" />
+          </div>
+          <div class="form__group">
+            <label for="number-input">Số lượng:</label>
+            <input type="number" id="number-input" name="quantity" />
+          </div>
+          <div class="form__group">
+            <label for="range-input">Mức độ (1-10):</label>
+            <input
+              type="range"
+              id="range-input"
+              name="range"
+              min="1"
+              max="10"
+              value="5"
+            />
+            <span>Giá trị: 5</span>
+          </div>
+          <div class="form__group">
+            <label for="date-input">Ngày:</label>
+            <input type="date" id="date-input" name="date" />
+          </div>
+          <div class="form__group">
+            <label for="time-input">Thời gian:</label>
+            <input type="time" id="time-input" name="time" />
+          </div>
+          <div class="form__group">
+            <label for="datetime-input">Ngày giờ:</label>
+            <input type="datetime-local" id="datetime-input" name="datetime" />
+          </div>
+          <div class="form__group">
+            <label for="month-input">Tháng:</label>
+            <input type="month" id="month-input" name="month" />
+          </div>
+          <div class="form__group">
+            <label for="week-input">Tuần:</label>
+            <input type="week" id="week-input" name="week" />
+          </div>
+          <div class="form__group">
+            <label for="color-input">Màu sắc:</label>
+            <input type="color" id="color-input" name="color" />
+          </div>
+          <div class="form__group">
+            <label for="file-input">Tải file:</label>
+            <input type="file" id="file-input" name="file" />
+          </div>
+        </form>
+
+        <h3>HTML5 Media Elements</h3>
+        <h4>Audio</h4>
+        <audio controls class="media-example">
+          <source src="audio/sample.mp3" type="audio/mpeg" />
+          <source src="audio/sample.ogg" type="audio/ogg" />
+          Trình duyệt không hỗ trợ audio.
+        </audio>
+        <pre><code>
+&lt;audio controls&gt;
+  &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio/sample.ogg" type="audio/ogg"&gt;
+  Trình duyệt không hỗ trợ audio.
+&lt;/audio&gt;
+      </code></pre>
+
+        <h4>Video</h4>
+        <video
+          controls
+          width="400"
+          height="300"
+          poster="images/poster.jpg"
+          class="media-example"
+        >
+          <source src="video/sample.mp4" type="video/mp4" />
+          <source src="video/sample.webm" type="video/webm" />
+          <track
+            kind="subtitles"
+            src="subtitles.vtt"
+            srclang="vi"
+            label="Tiếng Việt"
+          />
+          Trình duyệt không hỗ trợ video.
+        </video>
+        <pre><code>
+&lt;video controls width="400" height="300" poster="images/poster.jpg"&gt;
+  &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+  &lt;source src="video/sample.webm" type="video/webm"&gt;
+  &lt;track kind="subtitles" src="subtitles.vtt" srclang="vi" label="Tiếng Việt"&gt;
+  Trình duyệt không hỗ trợ video.
+&lt;/video&gt;
+      </code></pre>
+
+        <h3>Data Attributes</h3>
+        <div
+          data-id="123"
+          data-category="technology"
+          data-price="1990000"
+          id="data-example"
+          class="data-example"
+        >
+          Nội dung với data attributes
+        </div>
+        <button id="show-data-btn">Hiển thị Data</button>
+        <pre><code>
+&lt;div data-id="123" data-category="technology" data-price="1990000" id="data-example"&gt;
+  Nội dung với data attributes
+&lt;/div&gt;
+&lt;script&gt;
+  // Truy cập data attributes
+  const element = document.querySelector('#data-example');
+  console.log(element.dataset.id); // "123"
+  console.log(element.dataset.category); // "technology"
+  console.log(element.dataset.price); // "1990000"
+&lt;/script&gt;
+      </code></pre>
+
+        <h3>Accessibility Attributes</h3>
+        <button aria-label="Đóng hộp thoại" class="close-btn">×</button>
+        <img
+          src="images/003.png"
+          alt="Logo công ty"
+          aria-describedby="logoDesc"
+          class="example-image"
+        />
+        <div id="logoDesc">Logo của công ty ABC</div>
+        <div role="button" tabindex="0" class="custom-btn">Nút tùy chỉnh</div>
+        <div role="alert" class="alert">Thông báo lỗi</div>
+        <nav role="navigation" aria-label="Menu phụ">...</nav>
+        <pre><code>
+&lt;!-- ARIA Labels --&gt;
+&lt;button aria-label="Đóng hộp thoại"&gt;×&lt;/button&gt;
+&lt;img src="images/logo.png" alt="Logo công ty" aria-describedby="logoDesc"&gt;
+&lt;div id="logoDesc"&gt;Logo của công ty ABC&lt;/div&gt;
+
+&lt;!-- ARIA Roles --&gt;
+&lt;div role="button" tabindex="0"&gt;Nút tùy chỉnh&lt;/div&gt;
+&lt;div role="alert"&gt;Thông báo lỗi&lt;/div&gt;
+&lt;nav role="navigation" aria-label="Menu phụ"&gt;...&lt;/nav&gt;
+
+&lt;!-- ARIA States --&gt;
+&lt;button aria-expanded="false" aria-controls="menu"&gt;Menu&lt;/button&gt;
+&lt;input aria-required="true" aria-invalid="false"&gt;
+      </code></pre>
+
+        <h3>Microdata và Schema.org</h3>
+        <div
+          itemscope
+          itemtype="https://schema.org/Person"
+          class="person-schema"
+        >
+          <h1 itemprop="name">Nguyễn Văn A</h1>
+          <p>Chức vụ: <span itemprop="jobTitle">Frontend Developer</span></p>
+          <p>
+            Email:
+            <a href="mailto:contact@example.com" itemprop="email"
+              >contact@example.com</a
+            >
+          </p>
+          <p>Điện thoại: <span itemprop="telephone">0123456789</span></p>
+          <div
+            itemprop="address"
+            itemscope
+            itemtype="https://schema.org/PostalAddress"
+          >
+            <span itemprop="streetAddress">123 Đường ABC</span>,
+            <span itemprop="addressLocality">Hà Nội</span>,
+            <span itemprop="addressCountry">Việt Nam</span>
+          </div>
+        </div>
+        <pre><code>
+&lt;div itemscope itemtype="https://schema.org/Person"&gt;
+  &lt;h1 itemprop="name"&gt;Nguyễn Văn A&lt;/h1&gt;
+  &lt;p&gt;Chức vụ: &lt;span itemprop="jobTitle"&gt;Frontend Developer&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;Email: &lt;a href="mailto:contact@example.com" itemprop="email"&gt;contact@example.com&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Điện thoại: &lt;span itemprop="telephone"&gt;0123456789&lt;/span&gt;&lt;/p&gt;
+  &lt;div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"&gt;
+    &lt;span itemprop="streetAddress"&gt;123 Đường ABC&lt;/span&gt;,
+    &lt;span itemprop="addressLocality"&gt;Hà Nội&lt;/span&gt;,
+    &lt;span itemprop="addressCountry"&gt;Việt Nam&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      </section>
+
+      <section id="css-co-ban" class="section">
+        <h2>CSS Cơ Bản</h2>
+        <p>
+          CSS (Cascading Style Sheets) là ngôn ngữ định dạng giao diện cho HTML.
+          CSS kiểm soát cách các phần tử HTML được hiển thị trên màn hình, giấy,
+          hoặc các phương tiện khác.
+        </p>
+
+        <h3>Các cách áp dụng CSS</h3>
+        <h4>1. Inline CSS</h4>
+        <p style="color: red; font-weight: bold" class="inline-css">
+          Đây là inline CSS - áp dụng trực tiếp trong thẻ HTML
+        </p>
+        <pre><code>
+&lt;p style="color: red; font-weight: bold;"&gt;Inline CSS&lt;/p&gt;
+      </code></pre>
+
+        <h4>2. Internal CSS</h4>
+        <pre><code>
+&lt;head&gt;
+  &lt;style&gt;
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+      </code></pre>
+
+        <h4>3. External CSS</h4>
+        <pre><code>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+/* styles.css */
+p {
+  color: green;
+  font-size: 16px;
+}
+      </code></pre>
+
+        <h3>CSS Selectors</h3>
+        <table class="selector-table">
+          <caption>
+            Các loại CSS Selector
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Selector</th>
+              <th scope="col">Cú pháp</th>
+              <th scope="col">Mô tả</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Universal</td>
+              <td>*</td>
+              <td>Chọn tất cả phần tử</td>
+              <td>* { margin: 0; }</td>
+            </tr>
+            <tr>
+              <td>Type/Element</td>
+              <td>element</td>
+              <td>Chọn theo tên thẻ</td>
+              <td>p { color: blue; }</td>
+            </tr>
+            <tr>
+              <td>Class</td>
+              <td>.class</td>
+              <td>Chọn theo class</td>
+              <td>.highlight { background: yellow; }</td>
+            </tr>
+            <tr>
+              <td>ID</td>
+              <td>#id</td>
+              <td>Chọn theo ID</td>
+              <td>#header { font-size: 24px; }</td>
+            </tr>
+            <tr>
+              <td>Descendant</td>
+              <td>A B</td>
+              <td>B là con của A</td>
+              <td>div p { color: red; }</td>
+            </tr>
+            <tr>
+              <td>Child</td>
+              <td>A > B</td>
+              <td>B là con trực tiếp của A</td>
+              <td>ul > li { list-style: none; }</td>
+            </tr>
+            <tr>
+              <td>Adjacent Sibling</td>
+              <td>A + B</td>
+              <td>B ngay sau A</td>
+              <td>h2 + p { margin-top: 0; }</td>
+            </tr>
+            <tr>
+              <td>General Sibling</td>
+              <td>A ~ B</td>
+              <td>B là anh em của A</td>
+              <td>h2 ~ p { color: gray; }</td>
+            </tr>
+            <tr>
+              <td>Attribute</td>
+              <td>[attr]</td>
+              <td>Có thuộc tính attr</td>
+              <td>[required] { border: 2px solid red; }</td>
+            </tr>
+            <tr>
+              <td>Attribute Value</td>
+              <td>[attr="value"]</td>
+              <td>Thuộc tính = giá trị</td>
+              <td>[type="email"] { color: blue; }</td>
             </tr>
           </tbody>
         </table>
 
-        <h3>Form HTML</h3>
-        <form>
-          <label for="name">Họ Tên:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Nhập họ tên"
-            required
-          />
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@email.com"
-            required
-          />
-          <label>Giới Tính:</label>
-          <div style="display: flex; gap: 1rem">
-            <label><input type="radio" name="gender" value="male" /> Nam</label>
-            <label
-              ><input type="radio" name="gender" value="female" /> Nữ</label
-            >
-          </div>
-          <label for="course">Khóa Học:</label>
-          <select id="course" name="course">
-            <option value="">Chọn khóa học</option>
-            <option value="html">HTML & CSS</option>
-            <option value="js">JavaScript</option>
-          </select>
-          <label for="message">Tin Nhắn:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="3"
-            placeholder="Mục tiêu học tập"
-          ></textarea>
-          <button type="submit">
-            <i class="fas fa-paper-plane"></i> Đăng Ký
-          </button>
-        </form>
-
-        <h3>Nested Layout</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col">Cột 1</div>
-            <div class="col">Cột 2</div>
-          </div>
-        </div>
-        <pre><code>.container { display: flex; }
-.row { display: flex; gap: 1rem; }
-.col { flex: 1; padding: 1rem; background: var(--code-bg); }</code></pre>
-      </section>
-
-      <!-- CSS Section -->
-      <section id="css">
-        <h2><i class="fab fa-css3-alt"></i> CSS Cơ Bản</h2>
-        <p>CSS định dạng giao diện website.</p>
-
-        <h3>Selectors</h3>
-        <ul>
-          <li>Tag: <code>p { color: blue; }</code></li>
-          <li>ID: <code>#header { background: yellow; }</code></li>
-          <li>Class: <code>.btn { font-size: 16px; }</code></li>
-          <li>Descendant: <code>div p { color: green; }</code></li>
-          <li>Child: <code>div > p { color: red; }</code></li>
-          <li>Adjacent Sibling: <code>h2 + p { color: blue; }</code></li>
-          <li>General Sibling: <code>h2 ~ p { color: purple; }</code></li>
-          <li>Pseudo-class: <code>a:hover { color: red; }</code></li>
-          <li>
-            Pseudo-element: <code>p::first-letter { font-size: 2em; }</code>
-          </li>
+        <h3>Pseudo-classes</h3>
+        <p>
+          <a href="#" class="pseudo-example">Hover vào đây để xem hiệu ứng</a>
+        </p>
+        <ul class="pseudo-class-list">
+          <li>Mục đầu tiên (first-child)</li>
+          <li>Mục thứ hai (nth-child even)</li>
+          <li>Mục thứ ba</li>
+          <li>Mục cuối cùng (last-child)</li>
         </ul>
-        <p class="example">Ví dụ: <span class="highlight">Chữ nổi bật</span></p>
-        <pre><code>.highlight { color: var(--primary-color); }
-.example::first-letter { font-weight: bold; }</code></pre>
+        <pre><code>
+/* Pseudo-classes */
+a:hover { color: red; }
+a:active { color: blue; }
+a:visited { color: purple; }
+input:focus { border-color: blue; }
+li:first-child { font-weight: bold; }
+li:last-child { font-style: italic; }
+li:nth-child(odd) { background: #f0f0f0; }
+li:nth-child(even) { background: #e0e0e0; }
+li:nth-child(3n) { color: red; }
+p:not(.special) { color: gray; }
+      </code></pre>
 
-        <h3>Box Model</h3>
-        <p>Mọi phần tử là một hộp với content, padding, border, margin.</p>
-        <div class="box-model-example">Box Model</div>
-        <pre><code>.box-model-example {
-  width: 100px;
-  padding: 10px;
-  border: 2px solid var(--primary-color);
-  margin: 10px;
-}</code></pre>
-
-        <h3>Display</h3>
-        <ul>
-          <li><code>block</code>: Chiếm toàn bộ chiều rộng.</li>
-          <li><code>inline</code>: Nằm cùng dòng.</li>
-          <li><code>inline-block</code>: Nằm cùng dòng, có width/height.</li>
-          <li><code>flex</code>: Sắp xếp linh hoạt.</li>
-          <li><code>grid</code>: Bố cục lưới.</li>
-        </ul>
-        <div class="flex-example">
-          <div>Item 1</div>
-          <div>Item 2</div>
-        </div>
-        <pre><code>.flex-example { display: flex; gap: 1rem; }
-.flex-example div { padding: 0.5rem; background: var(--code-bg); }</code></pre>
-
-        <h3>Media Queries</h3>
-        <p>Responsive design cho các màn hình khác nhau.</p>
-        <pre><code>@media (max-width: 768px) {
-  body { font-size: 14px; }
-}</code></pre>
-
-        <h3>Transition & Animation</h3>
-        <div class="transition-example">Hover tôi!</div>
-        <pre><code>.transition-example {
-  transition: background 0.3s ease;
+        <h3>Pseudo-elements</h3>
+        <p class="pseudo-element-example">Văn bản có pseudo-elements</p>
+        <p class="first-letter-example">
+          Chữ cái đầu tiên của đoạn này sẽ được định dạng đặc biệt. Đây là cách
+          tạo hiệu ứng drop cap trong typography.
+        </p>
+        <p class="first-line-example">
+          Dòng đầu tiên của đoạn văn này sẽ có định dạng khác. Bạn có thể thấy
+          sự khác biệt khi đọc.
+        </p>
+        <pre><code>
+/* Pseudo-elements */
+.pseudo-element-example::before {
+  content: "👉 ";
+  color: blue;
 }
-.transition-example:hover { background: var(--primary-color); color: white; }
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}</code></pre>
+.pseudo-element-example::after {
+  content: " ✨";
+  color: gold;
+}
+.first-letter-example::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+}
+.first-line-example::first-line {
+  font-weight: bold;
+  color: red;
+}
+      </code></pre>
+
+        <h3>CSS Box Model</h3>
+        <p>
+          Box Model là khái niệm cơ bản nhất trong CSS. Mọi phần tử HTML đều là
+          một "hộp" gồm: content, padding, border, và margin.
+        </p>
+        <div class="box-model-example">CONTENT<br />200x100px</div>
+        <ul class="box-model-details">
+          <li>■ Content (200x100)</li>
+          <li>■ Border (5px)</li>
+          <li>■ Padding (20px)</li>
+          <li>■ Margin (30px)</li>
+        </ul>
+        <pre><code>
+/* Box Model */
+.box-model-example {
+  width: 200px;          /* Chiều rộng content */
+  height: 100px;         /* Chiều cao content */
+  padding: 20px;         /* Khoảng cách bên trong */
+  border: 5px solid blue; /* Đường viền */
+  margin: 30px;          /* Khoảng cách bên ngoài */
+}
+
+/* Box-sizing */
+.box-border {
+  box-sizing: border-box; /* Tính width/height bao gồm padding và border */
+}
+
+/* Shorthand properties */
+margin: 10px;                    /* Tất cả 4 phía */
+margin: 10px 20px;               /* Trên/dưới | Trái/phải */
+margin: 10px 20px 15px;          /* Trên | Trái/phải | Dưới */
+margin: 10px 20px 15px 25px;     /* Trên | Phải | Dưới | Trái */
+      </code></pre>
+
+        <h3>CSS Colors</h3>
+        <div class="color-example">
+          <p class="color--named">Named: red</p>
+          <p class="color--hex">Hex: #ff0000</p>
+          <p class="color--rgb">RGB: rgb(255, 0, 0)</p>
+          <p class="color--hsl">HSL: hsl(0, 100%, 50%)</p>
+        </div>
+        <pre><code>
+.color--named { color: red; }
+.color--hex { color: #ff0000; }
+.color--rgb { color: rgb(255, 0, 0); }
+.color--hsl { color: hsl(0, 100%, 50%); }
+.color--rgba { color: rgba(255, 0, 0, 0.5); }
+.color--hsla { color: hsla(0, 100%, 50%, 0.5); }
+      </code></pre>
+
+        <h3>Typography</h3>
+        <p class="font-serif">
+          Font Family: Serif - Đây là font serif, thường dùng cho văn bản dài và
+          in ấn.
+        </p>
+        <p class="font-sans">
+          Font Family: Sans-serif - Đây là font sans-serif, thường dùng cho web
+          và màn hình.
+        </p>
+        <p class="font-mono">
+          Font Family: Monospace - Đây là font monospace, thường dùng cho code.
+        </p>
+        <pre><code>
+/* Font Properties */
+font-family: 'Arial', sans-serif;
+font-size: 16px;                /* Kích thước */
+font-weight: bold;              /* Độ đậm: normal, bold, 100-900 */
+font-style: italic;             /* Kiểu: normal, italic, oblique */
+font-variant: small-caps;       /* Biến thể */
+line-height: 1.5;              /* Chiều cao dòng */
+letter-spacing: 2px;           /* Khoảng cách chữ cái */
+word-spacing: 5px;             /* Khoảng cách từ */
+text-decoration: underline;     /* Trang trí: none, underline, line-through */
+text-transform: uppercase;      /* Chuyển đổi: none, uppercase, lowercase, capitalize */
+text-align: center;            /* Căn chỉnh: left, right, center, justify */
+text-indent: 20px;             /* Thụt lề đầu dòng */
+
+/* Font shorthand */
+font: italic bold 16px/1.5 Arial, sans-serif;
+      </code></pre>
+
+        <h3>CSS Units</h3>
+        <table class="units-table">
+          <caption>
+            Đơn vị đo lường trong CSS
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Loại</th>
+              <th scope="col">Đơn vị</th>
+              <th scope="col">Mô tả</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Absolute</td>
+              <td>px</td>
+              <td>Pixel - đơn vị cố định</td>
+              <td>width: 100px;</td>
+            </tr>
+            <tr>
+              <td>Absolute</td>
+              <td>pt</td>
+              <td>Point (1pt = 1/72 inch)</td>
+              <td>font-size: 12pt;</td>
+            </tr>
+            <tr>
+              <td>Absolute</td>
+              <td>cm</td>
+              <td>Centimeter</td>
+              <td>margin: 2cm;</td>
+            </tr>
+            <tr>
+              <td>Absolute</td>
+              <td>in</td>
+              <td>Inch</td>
+              <td>width: 2in;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>em</td>
+              <td>Tương đối với font-size của phần tử cha</td>
+              <td>padding: 1em;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>rem</td>
+              <td>Tương đối với font-size của root (html)</td>
+              <td>margin: 2rem;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>%</td>
+              <td>Phần trăm của phần tử cha</td>
+              <td>width: 50%;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>vw</td>
+              <td>1% chiều rộng viewport</td>
+              <td>width: 100vw;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>vh</td>
+              <td>1% chiều cao viewport</td>
+              <td>height: 100vh;</td>
+            </tr>
+            <tr>
+              <td>Relative</td>
+              <td>vmin/vmax</td>
+              <td>1% của viewport nhỏ nhất/lớn nhất</td>
+              <td>font-size: 4vmin;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="unit-example">
+          <p style="font-size: 20px">
+            Font-size: 20px (cha)
+            <span style="font-size: 1em">1em = 20px (bằng font-size cha)</span>
+            <span style="font-size: 1.5em">1.5em = 30px (1.5 × 20px)</span>
+            <span style="font-size: 1rem"
+              >1rem = 16px (font-size của html)</span
+            >
+          </p>
+        </div>
       </section>
 
-      <!-- Position Section -->
-      <section id="position">
-        <h2><i class="fas fa-arrows-alt"></i> CSS Position</h2>
-        <p>Position kiểm soát vị trí phần tử.</p>
+      <section id="css-nang-cao" class="section">
+        <h2>CSS Nâng Cao</h2>
+        <p>
+          Phần này sẽ đưa bạn từ mức cơ bản lên nâng cao với các kỹ thuật CSS
+          hiện đại, bao gồm Flexbox, Grid, Transforms, và nhiều tính năng mạnh
+          mẽ khác.
+        </p>
 
-        <h3>Static</h3>
-        <div class="position-demo">
-          <div class="box static">Static</div>
+        <h3>CSS Variables (Custom Properties)</h3>
+        <div class="card card--primary">Card với CSS Variables - Primary</div>
+        <div class="card card--secondary">
+          Card với CSS Variables - Secondary
         </div>
+        <button id="change-color-btn" class="btn">Thay đổi màu sắc</button>
+        <pre><code>
+/* Định nghĩa CSS Variables */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #f59e0b;
+  --border-radius: 8px;
+  --spacing: 1rem;
+}
 
-        <h3>Relative</h3>
-        <div class="position-demo">
-          <div class="box relative">Relative</div>
+/* Sử dụng CSS Variables */
+.card {
+  background: var(--primary-color);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+}
+
+/* CSS Variables với fallback */
+.element {
+  color: var(--text-color, #333); /* Nếu --text-color không tồn tại, dùng #333 */
+}
+
+/* Thay đổi CSS Variables với JavaScript */
+document.documentElement.style.setProperty('--primary-color', '#ff0000');
+      </code></pre>
+
+        <h3>Advanced Selectors</h3>
+        <ul class="advanced-selector-example">
+          <li>Item 1 (odd - nền sáng)</li>
+          <li>Item 2 (even - nền tối)</li>
+          <li>Item 3 (odd - nền sáng)</li>
+          <li>Item 4 (even - nền tối)</li>
+        </ul>
+        <p class="selector-normal">Đoạn văn bình thường</p>
+        <p class="selector-strong">
+          Đoạn văn có <strong>thẻ strong</strong> - sẽ có border trái
+        </p>
+        <pre><code>
+/* Attribute Selectors nâng cao */
+input[type="text"]:not([disabled]) { border: 2px solid green; }
+input[class*="btn"] { padding: 10px; }          /* class chứa "btn" */
+input[class^="btn"] { font-weight: bold; }      /* class bắt đầu với "btn" */
+input[class$="primary"] { color: blue; }        /* class kết thúc với "primary" */
+
+/* Structural Pseudo-classes */
+li:nth-child(odd) { background: #f0f0f0; }      /* Con lẻ */
+li:nth-child(even) { background: #e0e0e0; }     /* Con chẵn */
+li:nth-child(3n) { color: red; }                /* Mỗi 3 phần tử */
+li:nth-child(3n+1) { color: blue; }             /* 1, 4, 7, 10... */
+li:first-of-type { font-weight: bold; }         /* Đầu tiên cùng loại */
+li:last-of-type { font-style: italic; }         /* Cuối cùng cùng loại */
+li:only-child { text-decoration: underline; }   /* Con duy nhất */
+
+/* CSS4 Selectors (mới) */
+p:has(strong) { border-left: 4px solid blue; }  /* p chứa strong */
+:is(h1, h2, h3):hover { color: red; }           /* Bất kỳ h1, h2, h3 nào */
+:where(article, section) p { margin: 1rem 0; }  /* Tương tự :is nhưng specificity = 0 */
+      </code></pre>
+
+        <h3>CSS Functions</h3>
+        <div class="css-function-example css-function-example--calc">
+          width: calc(100% - 2rem)
         </div>
-
-        <h3>Absolute</h3>
-        <div class="position-demo">
-          <div class="box absolute">Absolute</div>
+        <div class="css-function-example css-function-example--clamp">
+          Font size: clamp(1rem, 4vw, 2rem)
         </div>
-
-        <h3>Fixed</h3>
-        <div class="position-demo">
-          <div class="box fixed">Fixed</div>
+        <div class="css-function-example css-function-example--min">
+          width: min(300px, 100%)
         </div>
-
-        <h3>Sticky</h3>
-        <div class="position-demo" style="height: 300px; overflow-y: auto">
-          <div class="box sticky">Sticky</div>
-          <p>Nội dung dài để cuộn...</p>
+        <div class="css-function-example css-function-example--var">
+          Màu fallback khi variable không tồn tại
         </div>
+        <pre><code>
+/* CSS Functions */
+.css-function-example {
+  /* calc() - Tính toán */
+  width: calc(100% - 2rem);
+  height: calc(100vh - 60px);
+  margin: calc(1rem + 5px);
+  
+  /* clamp() - Giới hạn giá trị */
+  font-size: clamp(1rem, 4vw, 2rem); /* min, preferred, max */
+  width: clamp(200px, 50%, 500px);
+  
+  /* min() / max() */
+  width: min(300px, 100%);    /* Chọn giá trị nhỏ hơn */
+  height: max(200px, 50vh);   /* Chọn giá trị lớn hơn */
+  
+  /* var() với fallback */
+  color: var(--text-color, #333);
+  background: var(--bg-color, white);
+}
+      </code></pre>
 
-        <h3>Ví Dụ Thực Tế: Product Card</h3>
-        <div class="card">
-          <div class="card-badge">Mới</div>
+        <h3>CSS Gradients</h3>
+        <div class="gradient-example gradient-example--linear">
+          Linear Gradient
+        </div>
+        <div class="gradient-example gradient-example--radial">
+          Radial Gradient
+        </div>
+        <div class="gradient-example gradient-example--conic">
+          Conic Gradient
+        </div>
+        <div class="gradient-example gradient-example--multiple">
+          Multiple Backgrounds
+        </div>
+        <pre><code>
+/* Linear Gradient */
+.gradient-example--linear {
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+}
+
+/* Radial Gradient */
+.gradient-example--radial {
+  background: radial-gradient(circle, #ff0000, #ffff00, #00ff00);
+}
+
+/* Conic Gradient */
+.gradient-example--conic {
+  background: conic-gradient(from 0deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+}
+
+/* Multiple Backgrounds */
+.gradient-example--multiple {
+  background: 
+    linear-gradient(45deg, rgba(255,0,0,0.3), rgba(0,255,0,0.3)),
+    linear-gradient(-45deg, rgba(0,0,255,0.3), rgba(255,255,0,0.3));
+}
+      </code></pre>
+
+        <h3>CSS Shadows</h3>
+        <div class="shadow-example shadow-example--box">Box Shadow</div>
+        <div class="shadow-example shadow-example--text">Text Shadow</div>
+        <div class="shadow-example shadow-example--inset">Inset Shadow</div>
+        <div class="shadow-example shadow-example--colored">Colored Shadow</div>
+        <pre><code>
+/* Box Shadow */
+.shadow-example--box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Inset Shadow */
+.shadow-example--inset {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Shadow */
+.shadow-example--text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 
+    1px 1px 0px #ccc,
+    2px 2px 0px #c9c9c9,
+    3px 3px 0px #bbb;
+}
+
+/* Colored Shadow */
+.shadow-example--colored {
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+}
+      </code></pre>
+
+        <h3>CSS Filters</h3>
+        <div class="filter-container">
           <img
-            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=180&fit=crop"
-            alt="Sản phẩm"
-            loading="lazy"
+            src="images/1.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--blur"
           />
-          <div class="card-content">
-            <h3>MacBook Pro</h3>
-            <p>Laptop cao cấp.</p>
-            <div style="display: flex; justify-content: space-between">
-              <span style="font-size: 1.2rem; color: var(--primary-color)"
-                >45.990.000₫</span
-              >
-              <span style="text-decoration: line-through">52.990.000₫</span>
+          <img
+            src="images/2.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--brightness"
+          />
+          <img
+            src="images/3.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--contrast"
+          />
+          <img
+            src="images/4.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--grayscale"
+          />
+          <img
+            src="images/5.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--hue"
+          />
+          <img
+            src="images/6.jpg"
+            alt="Hình ảnh với filter"
+            class="filter-example filter-example--drop-shadow"
+          />
+        </div>
+        <pre><code>
+/* CSS Filters */
+.filter-example--blur { filter: blur(5px); }
+.filter-example--brightness { filter: brightness(1.5); }
+.filter-example--contrast { filter: contrast(2); }
+.filter-example--grayscale { filter: grayscale(100%); }
+.filter-example--hue { filter: hue-rotate(90deg); }
+.filter-example--drop-shadow { filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3)); }
+
+/* Kết hợp nhiều filter */
+.filter-example:hover {
+  filter: brightness(1.2) contrast(1.1) saturate(1.3);
+  transition: filter 0.3s ease;
+}
+      </code></pre>
+
+        <h3>CSS Transforms</h3>
+        <div class="transform-container">
+          <div class="transform-example transform-example--translate-x">
+            translateX(50px)
+          </div>
+          <div class="transform-example transform-example--translate-y">
+            translateY(30px)
+          </div>
+          <div class="transform-example transform-example--scale">
+            scale(1.2)
+          </div>
+          <div class="transform-example transform-example--rotate">
+            rotate(45deg)
+          </div>
+          <div class="transform-example transform-example--skew">
+            skew(20deg, 10deg)
+          </div>
+          <div class="transform-example transform-example--multiple">
+            Multiple transforms
+          </div>
+        </div>
+        <pre><code>
+/* 2D Transforms */
+.transform-example--translate-x { transform: translateX(50px); }
+.transform-example--translate-y { transform: translateY(30px); }
+.transform-example--scale { transform: scale(1.2); }
+.transform-example--rotate { transform: rotate(45deg); }
+.transform-example--skew { transform: skew(20deg, 10deg); }
+.transform-example--multiple { transform: translate(50px, 30px) rotate(45deg) scale(1.2); }
+
+/* 3D Transforms */
+.transform-example-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(50px);
+  transform: rotateX(45deg);
+}
+      </code></pre>
+
+        <h3>CSS Clip Path</h3>
+        <div class="clip-path-container">
+          <div class="clip-path-example clip-path-example--circle">Circle</div>
+          <div class="clip-path-example clip-path-example--ellipse">
+            Ellipse
+          </div>
+          <div class="clip-path-example clip-path-example--polygon">
+            Polygon
+          </div>
+          <div class="clip-path-example clip-path-example--inset">Inset</div>
+        </div>
+        <pre><code>
+.clip-path-example--circle { clip-path: circle(50%); }
+.clip-path-example--ellipse { clip-path: ellipse(60px 40px at 50% 50%); }
+.clip-path-example--polygon { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.clip-path-example--inset { clip-path: inset(20px 30px 20px 10px); }
+      </code></pre>
+
+        <h3>CSS Blend Modes</h3>
+        <div class="blend-example blend-example--mix">Mix Blend Mode</div>
+        <div class="blend-example blend-example--bg">Background Blend Mode</div>
+        <pre><code>
+/* Blend Modes */
+.blend-example--mix { mix-blend-mode: multiply; }
+.blend-example--bg {
+  background: linear-gradient(red, blue), url('images/sample.jpg');
+  background-blend-mode: multiply;
+}
+      </code></pre>
+
+        <h3>Modern CSS Features</h3>
+        <h4>Container Queries</h4>
+        <div class="container-query-example">
+          <div class="card-container">
+            <div class="responsive-card">
+              <h3>Card Title</h3>
+              <p>Content adapts based on container size, not viewport size.</p>
             </div>
           </div>
-          <div class="card-hover-info">
-            <h4>Chi Tiết</h4>
-            <ul style="font-size: 0.8rem">
-              <li>Chip M3</li>
-              <li>16GB RAM</li>
-              <li>512GB SSD</li>
-            </ul>
-            <button><i class="fas fa-shopping-cart"></i> Mua Ngay</button>
+        </div>
+        <pre><code>
+/* Container Queries */
+.card-container {
+  container-type: inline-size;
+}
+@container (min-width: 300px) {
+  .card {
+    display: flex;
+    gap: 1rem;
+  }
+}
+      </code></pre>
+
+        <h4>CSS Nesting</h4>
+        <pre><code>
+/* CSS Nesting */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  & .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+      </code></pre>
+
+        <h4>CSS Subgrid</h4>
+        <div class="parent-grid">
+          <div class="subgrid-item">
+            <div>Sub 1</div>
+            <div>Sub 2</div>
           </div>
         </div>
-        <pre><code>.card {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+        <pre><code>
+/* CSS Subgrid */
+.parent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.card-hover-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  color: white;
-  padding: 1.5rem 1rem;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 3;
+.subgrid-item {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: subgrid;
 }
-.card:hover .card-hover-info {
-  transform: translateY(0);
-}</code></pre>
+      </code></pre>
+
+        <h4>CSS Logical Properties</h4>
+        <div class="logical-property-example">
+          LTR in Lọc: margin-inline-start tạo margin bên trái
+        </div>
+        <div class="logical-property-example" dir="rtl">
+          RTL Text: margin-inline-start tạo margin bên phải
+        </div>
+        <pre><code>
+/* CSS Logical Properties */
+.logical-property-example {
+  margin-inline-start: 1rem;
+  padding-block: 0.5rem;
+}
+      </code></pre>
       </section>
 
-      <!-- Tips Section -->
-      <section id="tips">
-        <h2><i class="fas fa-lightbulb"></i> Mẹo & Thủ Thuật</h2>
-        <ul>
-          <li>Áp dụng <code>box-sizing: border-box</code> toàn cục.</li>
-          <li>Thiết kế mobile-first với media queries.</li>
-          <li>Sử dụng shorthand: <code>margin: 10px 20px;</code></li>
+      <section id="layout" class="section">
+        <h2>CSS Layout</h2>
+        <p>
+          Layout là phần quan trọng nhất trong CSS, quyết định cách các phần tử
+          được sắp xếp trên trang. Chúng ta sẽ tìm hiểu từ các phương pháp cơ
+          bản đến hiện đại như Flexbox và Grid.
+        </p>
+
+        <h3>CSS Position</h3>
+        <div class="position-container">
+          <div class="position-example position-example--static">
+            Static (mặc định)
+          </div>
+          <div class="position-example position-example--relative">
+            Relative
+          </div>
+          <div class="position-example position-example--absolute">
+            Absolute
+          </div>
+          <div class="position-example position-example--sticky">Sticky</div>
+          <div class="position-example position-example--fixed">Fixed</div>
+        </div>
+        <pre><code>
+/* CSS Position */
+.position-example--static { position: static; }
+.position-example--relative { position: relative; top: 20px; left: 30px; }
+.position-example--absolute { position: absolute; top: 0; right: 0; z-index: 10; }
+.position-example--fixed { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+.position-example--sticky { position: sticky; top: 0; }
+      </code></pre>
+
+        <h3>CSS Flexbox</h3>
+        <p>
+          Flexbox là phương pháp layout một chiều (1D) mạnh mẽ, hoàn hảo cho
+          việc căn chỉnh và phân phối không gian giữa các phần tử trong
+          container.
+        </p>
+        <h4>Flex Container Properties</h4>
+        <div class="flex-container flex-container--direction">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex-container--justify">
+          <div class="flex-item">A</div>
+          <div class="flex-item">B</div>
+          <div class="flex-item">C</div>
+        </div>
+        <div class="flex-container flex-container--align">
+          <div class="flex-item">X</div>
+          <div class="flex-item">Y</div>
+          <div class="flex-item">Z</div>
+        </div>
+        <pre><code>
+/* Flex Container */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+      </code></pre>
+
+        <h4>Flex Item Properties</h4>
+        <div class="flex-container flex-container--items">
+          <div class="flex-item flex-item--grow">flex-grow: 2</div>
+          <div class="flex-item flex-item--shrink">flex-shrink: 0</div>
+          <div class="flex-item flex-item--basis">flex-basis: 200px</div>
+          <div class="flex-item flex-item--align">align-self: center</div>
+        </div>
+        <pre><code>
+/* Flex Items */
+.flex-item--grow { flex-grow: 2; }
+.flex-item--shrink { flex-shrink: 0; }
+.flex-item--basis { flex-basis: 200px; }
+.flex-item--align { align-self: center; }
+
+/* Flex shorthand */
+.flex-item {
+  flex: 1 1 auto; /* grow shrink basis */
+}
+      </code></pre>
+
+        <h3>CSS Grid</h3>
+        <p>
+          CSS Grid là hệ thống layout hai chiều (2D) mạnh mẽ nhất, cho phép tạo
+          ra các layout phức tạp một cách dễ dàng.
+        </p>
+
+        <h4>Grid Container</h4>
+        <div class="grid-container grid-container--basic">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+        </div>
+        <pre><code>
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 1rem;
+}
+
+/* Grid với named lines */
+.grid-container--named {
+  grid-template-columns: [start] 200px [content-start] 1fr [content-end] 200px [end];
+  grid-template-rows: [header] 80px [main] 1fr [footer] 60px;
+}
+      </code></pre>
+
+        <h4>Grid Areas</h4>
+        <div class="grid-container grid-container--areas">
+          <header class="grid-header">Header</header>
+          <nav class="grid-nav">Navigation</nav>
+          <main class="grid-main">Main Content</main>
+          <aside class="grid-aside">Sidebar</aside>
+          <footer class="grid-footer">Footer</footer>
+        </div>
+        <pre><code>
+/* Grid Template Areas */
+.grid-container--areas {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 80px 1fr 60px;
+  height: 400px;
+}
+
+.grid-header { grid-area: header; }
+.grid-nav { grid-area: nav; }
+.grid-main { grid-area: main; }
+.grid-aside { grid-area: aside; }
+.grid-footer { grid-area: footer; }
+      </code></pre>
+
+        <h4>Grid Item Placement</h4>
+        <div class="grid-container grid-container--placement">
+          <div class="grid-item grid-item--span">Span 2 columns</div>
+          <div class="grid-item">Normal</div>
+          <div class="grid-item grid-item--positioned">Positioned</div>
+          <div class="grid-item">Normal</div>
+          <div class="grid-item">Normal</div>
+        </div>
+        <pre><code>
+/* Grid Item Placement */
+.grid-item--span {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.grid-item--positioned {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+/* Named lines */
+.grid-item--named {
+  grid-column: content-start / content-end;
+  grid-row: main;
+}
+      </code></pre>
+
+        <h3>Float và Clear (Legacy)</h3>
+        <div class="float-example">
+          <img src="images/sample.jpg" alt="Float left" class="float-left" />
+          <p>
+            Đây là đoạn văn bản sẽ được bao quanh hình ảnh float left. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+          <div class="clear"></div>
+          <img src="images/sample.jpg" alt="Float right" class="float-right" />
+          <p>
+            Đây là đoạn văn bản khác sẽ được bao quanh hình ảnh float right.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+        <pre><code>
+/* Float (Legacy method) */
+.float-left { float: left; margin-right: 1rem; }
+.float-right { float: right; margin-left: 1rem; }
+.clear { clear: both; }
+      </code></pre>
+      </section>
+
+      <section id="responsive" class="section">
+        <h2>Responsive Web Design</h2>
+        <p>
+          Responsive Design đảm bảo website hiển thị tốt trên mọi thiết bị từ
+          điện thoại, tablet đến desktop. Đây là kỹ năng bắt buộc cho mọi
+          Frontend Developer.
+        </p>
+
+        <h3>Media Queries</h3>
+        <div class="responsive-example">
+          <div class="responsive-box">
+            Thay đổi kích thước trình duyệt để xem hiệu ứng responsive
+          </div>
+        </div>
+        <pre><code>
+/* Mobile First Approach */
+.responsive-box {
+  background: #ff6b6b;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .responsive-box {
+    background: #4ecdc4;
+    padding: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .responsive-box {
+    background: #45b7d1;
+    padding: 3rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .responsive-box {
+    background: #96ceb4;
+    padding: 4rem;
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  .responsive-box { border-radius: 20px; }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .responsive-box { border: 2px solid #333; }
+}
+      </code></pre>
+
+        <h3>Responsive Images</h3>
+        <picture class="responsive-image">
+          <source media="(min-width: 1024px)" srcset="images/large.jpg" />
+          <source media="(min-width: 768px)" srcset="images/medium.jpg" />
+          <img src="images/small.jpg" alt="Responsive image" loading="lazy" />
+        </picture>
+        <img
+          src="images/sample.jpg"
+          srcset="
+            images/sample-320w.jpg   320w,
+            images/sample-640w.jpg   640w,
+            images/sample-1024w.jpg 1024w
+          "
+          sizes="(max-width: 320px) 280px,
+                  (max-width: 640px) 600px,
+                  1024px"
+          alt="Responsive image with srcset"
+          class="responsive-image"
+        />
+        <pre><code>
+/* Responsive Images */
+/* Picture element */
+&lt;picture&gt;
+  &lt;source media="(min-width: 1024px)" srcset="images/large.jpg"&gt;
+  &lt;source media="(min-width: 768px)" srcset="images/medium.jpg"&gt;
+  &lt;img src="images/small.jpg" alt="Responsive image"&gt;
+&lt;/picture&gt;
+
+/* Srcset attribute */
+&lt;img src="images/sample.jpg" 
+     srcset="images/sample-320w.jpg 320w,
+             images/sample-640w.jpg 640w,
+             images/sample-1024w.jpg 1024w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 640px) 600px,
+            1024px"
+     alt="Responsive image"&gt;
+
+/* CSS */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+      </code></pre>
+
+        <h3>Responsive Typography</h3>
+        <h1 class="responsive-heading">Responsive Heading</h1>
+        <p class="responsive-text">
+          Đây là văn bản responsive sử dụng clamp() để tự động điều chỉnh kích
+          thước font theo viewport. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+        <pre><code>
+/* Responsive Typography */
+.responsive-heading {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.responsive-text {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* Responsive spacing */
+.responsive-section {
+  padding: clamp(1rem, 5vw, 3rem);
+}
+      </code></pre>
+
+        <h3>Container Queries (Modern)</h3>
+        <div class="container-query-demo">
+          <div class="card-container">
+            <div class="responsive-card">
+              <h3>Card Title</h3>
+              <p>
+                Nội dung sẽ thay đổi dựa trên kích thước của phần chứa
+                (container), không phải kích thước của khung nhìn (viewport).
+              </p>
+            </div>
+          </div>
+        </div>
+        <pre><code>
+/* Container Queries */
+.card-container {
+  container-type: inline-size;
+}
+
+@container card (min-width: 300px) {
+  .responsive-card {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@container card (min-width: 500px) {
+  .responsive-card h3 {
+    font-size: 1.5rem;
+  }
+}
+      </code></pre>
+
+        <h3>Common Responsive Patterns</h3>
+        <div class="pattern-grid">
+          <div class="pattern-item">Item 1</div>
+          <div class="pattern-item">Item 2</div>
+          <div class="pattern-item">Item 3</div>
+          <div class="pattern-item">Item 4</div>
+        </div>
+        <pre><code>
+/* Responsive Grid Pattern */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive Flexbox Pattern */
+.pattern-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.pattern-flex > * {
+  flex: 1 1 250px;
+}
+      </code></pre>
+      </section>
+
+      <section id="animations" class="section">
+        <h2>CSS Animations</h2>
+        <p>
+          Animations làm cho website trở nên sống động và thu hút người dùng.
+          CSS cung cấp hai cách chính để tạo animation: Transitions và
+          Keyframes.
+        </p>
+
+        <h3>CSS Transitions</h3>
+        <div class="transition-examples">
+          <button class="btn-transition btn-transition--simple">
+            Simple Hover
+          </button>
+          <button class="btn-transition btn-transition--multiple">
+            Multiple Properties
+          </button>
+          <button class="btn-transition btn-transition--timing">
+            Custom Timing
+          </button>
+          <div class="box-transition">Hover me!</div>
+        </div>
+        <pre><code>
+/* CSS Transitions */
+.btn-transition--simple {
+  background: #3498db;
+  transition: background 0.3s ease;
+}
+.btn-transition--simple:hover {
+  background: #e74c3c;
+}
+
+.btn-transition--multiple {
+  background: #2ecc71;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.btn-transition--multiple:hover {
+  background: #f39c12;
+  transform: scale(1.1);
+}
+
+.btn-transition--timing {
+  background: #9b59b6;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.btn-transition--timing:hover {
+  transform: translateY(-10px);
+}
+
+/* Transition với delay */
+.box-transition {
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+  transition: 
+    background 0.3s ease 0.1s,
+    transform 0.5s ease 0.2s;
+}
+.box-transition:hover {
+  background: #e67e22;
+  transform: rotate(5deg);
+}
+      </code></pre>
+
+        <h3>CSS Keyframe Animations</h3>
+        <div class="animation-examples">
+          <div class="anim-bounce">Bounce</div>
+          <div class="anim-fade">Fade In</div>
+          <div class="anim-slide">Slide In</div>
+          <div class="anim-rotate">Rotate</div>
+          <div class="anim-pulse">Pulse</div>
+          <div class="anim-shake">Shake</div>
+        </div>
+        <pre><code>
+/* Keyframe Animations */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Áp dụng animations */
+.anim-bounce { animation: bounce 2s infinite; }
+.anim-fade { animation: fadeIn 1s ease-in; }
+.anim-slide { animation: slideIn 0.5s ease-out; }
+.anim-rotate { animation: rotate360 2s linear infinite; }
+.anim-pulse { animation: pulse 1.5s ease-in-out infinite; }
+.anim-shake:hover { animation: shake 0.5s ease-in-out; }
+      </code></pre>
+
+        <h3>Loading Animations</h3>
+        <div class="loading-examples">
+          <div class="spinner"></div>
+          <div class="dots">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <pre><code>
+/* Spinner Loading */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Dots Loading */
+.dots {
+  display: flex;
+  gap: 5px;
+}
+.dots div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3498db;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+.dots div:nth-child(1) { animation-delay: -0.32s; }
+.dots div:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  animation: progress 3s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+      </code></pre>
+
+        <h3>Advanced Animation Techniques</h3>
+        <div class="advanced-animations">
+          <div class="parallax-container">
+            <div class="parallax-bg">Background</div>
+            <div class="parallax-fg">Foreground</div>
+          </div>
+          <div class="morphing-shape"></div>
+          <div class="typing-text">Typing animation effect...</div>
+        </div>
+        <pre><code>
+/* Animation Performance Tips */
+.optimized-animation {
+  /* Sử dụng transform và opacity cho performance tốt */
+  transform: translateZ(0); /* Kích hoạt hardware acceleration */
+  will-change: transform, opacity; /* Thông báo browser về thay đổi */
+}
+
+/* Parallax Effect */
+.parallax-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.parallax-bg {
+  animation: parallaxBg 10s linear infinite;
+}
+.parallax-fg {
+  animation: parallaxFg 10s linear infinite;
+}
+
+@keyframes parallaxBg {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes parallaxFg {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Morphing Shape */
+.morphing-shape {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  animation: morph 3s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% { border-radius: 0%; }
+  25% { border-radius: 50% 0% 50% 0%; }
+  50% { border-radius: 50%; }
+  75% { border-radius: 0% 50% 0% 50%; }
+  100% { border-radius: 0%; }
+}
+
+/* Typing Animation */
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid #333;
+  white-space: nowrap;
+  animation: typing 3s steps(26), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+      </code></pre>
+      </section>
+
+      <section id="best-practices" class="section">
+        <h2>Best Practices</h2>
+        <p>
+          Phần này tổng hợp các best practices quan trọng nhất mà mọi Frontend
+          Developer cần biết để viết code chất lượng cao, maintainable và
+          scalable.
+        </p>
+
+        <h3>HTML Best Practices</h3>
+        <ul class="best-practices-list">
           <li>
-            Tối ưu hiệu ứng với <code>transition</code> và
-            <code>transform</code>.
+            <strong>Semantic HTML:</strong> Sử dụng các thẻ HTML5 semantic đúng
+            mục đích
+          </li>
+          <li>
+            <strong>Accessibility:</strong> Luôn cung cấp alt text, ARIA labels,
+            và keyboard navigation
+          </li>
+          <li>
+            <strong>Performance:</strong> Optimize images, lazy loading, và
+            minify code
+          </li>
+          <li>
+            <strong>SEO:</strong> Proper meta tags, structured data, và semantic
+            markup
+          </li>
+          <li>
+            <strong>Validation:</strong> Validate HTML code và fix all errors
           </li>
         </ul>
-        <pre><code>* { box-sizing: border-box; }
-@media (max-width: 768px) { body { font-size: 14px; } }
-div { transition: transform 0.3s ease; }
-div:hover { transform: scale(1.05); }</code></pre>
+        <pre><code>
+&lt;!-- ✅ Good: Semantic và accessible --&gt;
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Tiêu đề bài viết&lt;/h1&gt;
+    &lt;time datetime="2025-01-15"&gt;15 tháng 1, 2025&lt;/time&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Nội dung bài viết...&lt;/p&gt;
+  &lt;img src="image.jpg" alt="Mô tả chi tiết hình ảnh" loading="lazy"&gt;
+&lt;/article&gt;
+
+&lt;!-- ❌ Bad: Không semantic --&gt;
+&lt;div&gt;
+  &lt;div&gt;Tiêu đề bài viết&lt;/div&gt;
+  &lt;div&gt;15 tháng 1, 2025&lt;/div&gt;
+  &lt;div&gt;Nội dung bài viết...&lt;/div&gt;
+  &lt;img src="image.jpg"&gt;
+&lt;/div&gt;
+      </code></pre>
+
+        <h3>CSS Best Practices</h3>
+        <ul class="best-practices-list">
+          <li>
+            <strong>Mobile First:</strong> Thiết kế cho mobile trước, sau đó mở
+            rộng lên desktop
+          </li>
+          <li>
+            <strong>BEM Methodology:</strong> Sử dụng naming convention rõ ràng
+          </li>
+          <li>
+            <strong>CSS Variables:</strong> Sử dụng custom properties cho
+            maintainability
+          </li>
+          <li>
+            <strong>Performance:</strong> Avoid expensive properties và optimize
+            selectors
+          </li>
+          <li>
+            <strong>Consistency:</strong> Maintain consistent spacing, colors,
+            và typography
+          </li>
+        </ul>
+        <pre><code>
+/* ✅ Good: BEM naming, CSS variables, mobile first */
+:root {
+  --primary-color: #3498db;
+  --spacing-unit: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: var(--spacing-unit);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.card__title--large {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+}
+
+/* ❌ Bad: Không có structure, hard-coded values */
+.cardTitle {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #3498db;
+}
+.bigCardTitle {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #3498db;
+}
+      </code></pre>
+
+        <h3>Performance Optimization</h3>
+        <ul class="best-practices-list">
+          <li>
+            <strong>Critical CSS:</strong> Inline critical CSS và lazy load
+            non-critical
+          </li>
+          <li>
+            <strong>Image Optimization:</strong> WebP format, responsive images,
+            lazy loading
+          </li>
+          <li>
+            <strong>CSS Optimization:</strong> Minify, remove unused CSS, use
+            efficient selectors
+          </li>
+          <li>
+            <strong>Fonts:</strong> Font display strategies và preload important
+            fonts
+          </li>
+          <li>
+            <strong>Animations:</strong> Use transform và opacity, avoid layout
+            thrashing
+          </li>
+        </ul>
+        <pre><code>
+&lt;!-- Critical CSS inline --&gt;
+&lt;style&gt;
+  /* Chỉ CSS cho above-the-fold content */
+  .header { /* styles */ }
+  .hero { /* styles */ }
+&lt;/style&gt;
+
+&lt;!-- Non-critical CSS lazy load --&gt;
+&lt;link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"&gt;
+
+&lt;!-- Font optimization --&gt;
+&lt;link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin&gt;
+
+&lt;!-- Image optimization --&gt;
+&lt;img src="image.webp" 
+     srcset="image-320w.webp 320w, image-640w.webp 640w"
+     alt="Description" 
+     loading="lazy"&gt;
+
+/* Performance-friendly animations */
+.optimized-animation {
+  transform: translateZ(0); /* Hardware acceleration */
+  will-change: transform;   /* Inform browser */
+}
+      </code></pre>
+
+        <h3>Code Organization</h3>
+        <div class="file-structure">
+          <h4>Recommended File Structure</h4>
+          <pre><code>
+project/
+├── index.html
+├── css/
+│   ├── main.css
+│   ├── components/
+│   │   ├── buttons.css
+│   │   ├── cards.css
+│   │   └── forms.css
+│   ├── layout/
+│   │   ├── header.css
+│   │   ├── footer.css
+│   │   └── grid.css
+│   └── utilities/
+│       ├── variables.css
+│       ├── mixins.css
+│       └── helpers.css
+├── js/
+│   ├── main.js
+│   └── components/
+├── images/
+└── fonts/
+        </code></pre>
+        </div>
+
+        <h3>Browser Compatibility</h3>
+        <ul class="best-practices-list">
+          <li>
+            <strong>Progressive Enhancement:</strong> Start với basic
+            functionality, enhance với modern features
+          </li>
+          <li>
+            <strong>Feature Detection:</strong> Use @supports để detect CSS
+            features
+          </li>
+          <li>
+            <strong>Fallbacks:</strong> Provide fallbacks cho modern CSS
+            features
+          </li>
+          <li>
+            <strong>Testing:</strong> Test trên multiple browsers và devices
+          </li>
+        </ul>
+        <pre><code>
+/* Progressive Enhancement với @supports */
+.grid-container {
+  /* Fallback for older browsers */
+  display: block;
+}
+
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* CSS với fallbacks */
+.element {
+  background: #3498db; /* Fallback */
+  background: linear-gradient(45deg, #3498db, #2ecc71); /* Modern */
+}
+
+/* Feature detection trong CSS */
+@supports (backdrop-filter: blur(10px)) {
+  .glass-effect {
+    backdrop-filter: blur(10px);
+  }
+}
+      </code></pre>
+
+        <h3>Accessibility (A11y) Guidelines</h3>
+        <ul class="best-practices-list">
+          <li>
+            <strong>Keyboard Navigation:</strong> Ensure all interactive
+            elements accessible via keyboard
+          </li>
+          <li>
+            <strong>Color Contrast:</strong> Maintain WCAG AA contrast ratios
+          </li>
+          <li>
+            <strong>Screen Readers:</strong> Proper ARIA labels và semantic HTML
+          </li>
+          <li>
+            <strong>Focus Management:</strong> Visible focus indicators và
+            logical tab order
+          </li>
+        </ul>
+        <pre><code>
+&lt;!-- Accessible form --&gt;
+&lt;form&gt;
+  &lt;label for="email"&gt;Email Address *&lt;/label&gt;
+  &lt;input type="email" 
+         id="email" 
+         name="email" 
+         required 
+         aria-required="true"
+         aria-describedby="email-error"&gt;
+  &lt;div id="email-error" role="alert"&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Accessible navigation --&gt;
+&lt;nav role="navigation" aria-label="Main menu"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+/* Accessible CSS */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.focus-visible {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+      </code></pre>
+
+        <h3>Tools và Resources</h3>
+        <div class="tools-grid">
+          <div class="tool-category">
+            <h4>Development Tools</h4>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Chrome DevTools</li>
+              <li>Firefox Developer Tools</li>
+              <li>Figma/Adobe XD</li>
+            </ul>
+          </div>
+          <div class="tool-category">
+            <h4>CSS Frameworks</h4>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Tailwind CSS</li>
+              <li>Bulma</li>
+              <li>Foundation</li>
+            </ul>
+          </div>
+          <div class="tool-category">
+            <h4>Build Tools</h4>
+            <ul>
+              <li>Webpack</li>
+              <li>Vite</li>
+              <li>Parcel</li>
+              <li>Rollup</li>
+            </ul>
+          </div>
+          <div class="tool-category">
+            <h4>Testing Tools</h4>
+            <ul>
+              <li>BrowserStack</li>
+              <li>Lighthouse</li>
+              <li>axe DevTools</li>
+              <li>WAVE</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>
-        © 2025 WebLearn.
-        <a href="mailto:contact@weblearn.vn">contact@weblearn.vn</a>
-      </p>
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Tài liệu tham khảo</h3>
+        <ul class="reference-links">
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              rel="noopener"
+              >MDN HTML Documentation</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              rel="noopener"
+              >MDN CSS Documentation</a
+            >
+          </li>
+          <li>
+            <a href="https://css-tricks.com/" target="_blank" rel="noopener"
+              >CSS-Tricks</a
+            >
+          </li>
+          <li>
+            <a href="https://caniuse.com/" target="_blank" rel="noopener"
+              >Can I Use</a
+            >
+          </li>
+          <li>
+            <a href="https://validator.w3.org/" target="_blank" rel="noopener"
+              >W3C HTML Validator</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://jigsaw.w3.org/css-validator/"
+              target="_blank"
+              rel="noopener"
+              >W3C CSS Validator</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Công cụ hữu ích</h3>
+        <ul class="tool-links">
+          <li>
+            <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener"
+              >Flexbox Froggy</a
+            >
+          </li>
+          <li>
+            <a href="https://cssgridgarden.com/" target="_blank" rel="noopener"
+              >CSS Grid Garden</a
+            >
+          </li>
+          <li>
+            <a href="https://color.adobe.com/" target="_blank" rel="noopener"
+              >Adobe Color</a
+            >
+          </li>
+          <li>
+            <a href="https://fonts.google.com/" target="_blank" rel="noopener"
+              >Google Fonts</a
+            >
+          </li>
+          <li>
+            <a href="https://animista.net/" target="_blank" rel="noopener"
+              >Animista</a
+            >
+          </li>
+          <li>
+            <a href="https://cubic-bezier.com/" target="_blank" rel="noopener"
+              >Cubic Bezier</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="widget widget--newsletter">
+        <h3>Nhận thông báo cập nhật</h3>
+        <p>Đăng ký để nhận thông tin về các bài viết mới và tips hữu ích.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email của bạn" required />
+          <button type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__column footer__logo">
+          <img
+            src="images/card-8.jpg"
+            alt="WebLearn Academy Logo"
+            class="footer__logo-img"
+          />
+          <p class="footer__slogan">Học lập trình cùng Phong</p>
+        </div>
+        <div class="footer__column footer__contact">
+          <h4>Liên hệ</h4>
+          <p>📞 <a href="tel:+0123456789">024688888</a></p>
+          <p>
+            ✉️ <a href="mailto:info@weblearn.academy">MilkTead@fe-team.com</a>
+          </p>
+        </div>
+        <div class="footer__column footer__links">
+          <h4>Liên kết</h4>
+          <ul class="footer__link-list">
+            <li><a href="#privacy">Chính sách bảo mật</a></li>
+            <li><a href="#terms">Điều khoản dịch vụ</a></li>
+            <li><a href="#cookies">Chính sách cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__action">
+          <button class="footer__fixed-btn">Fixed</button>
+        </div>
+      </div>
     </footer>
 
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Về đầu trang"
+      title="Về đầu trang"
+    >
+      ↑
+    </button>
+
     <script>
-      // Loading Screen
-      window.addEventListener("load", () => {
-        const loading = document.getElementById("loading");
-        loading.classList.add("hidden");
-        setTimeout(() => loading.remove(), 500);
-      });
+      // Back to top functionality
+      const backToTopBtn = document.getElementById("back-to-top");
 
-      // Progress Bar
       window.addEventListener("scroll", () => {
-        const progressBar = document.getElementById("progressBar");
-        const scrollPercent =
-          (window.pageYOffset /
-            (document.body.scrollHeight - window.innerHeight)) *
-          100;
-        progressBar.style.width = scrollPercent + "%";
-      });
-
-      // Scroll to Top
-      window.addEventListener("scroll", () => {
-        document
-          .getElementById("scrollToTop")
-          .classList.toggle("visible", window.pageYOffset > 300);
-      });
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // Mobile Menu
-      function toggleMenu() {
-        document.getElementById("nav-menu").classList.toggle("active");
-      }
-
-      // Theme Toggle
-      function toggleTheme() {
-        const body = document.body;
-        const themeIcon = document.getElementById("themeIcon");
-        const isDark = body.getAttribute("data-theme") === "dark";
-        body.setAttribute("data-theme", isDark ? "" : "dark");
-        themeIcon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-        localStorage.setItem("theme", isDark ? "light" : "dark");
-      }
-      document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem("theme") === "dark") {
-          document.body.setAttribute("data-theme", "dark");
-          document.getElementById("themeIcon").className = "fas fa-sun";
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
         }
       });
 
-      // Smooth Scrolling
-      document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", (e) => {
-          e.preventDefault();
-          document
-            .querySelector(anchor.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
-          document.getElementById("nav-menu").classList.remove("active");
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
       });
 
-      // Form Submission
-      document.querySelector("form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Đăng ký thành công!");
+      // Range input value display
+      const rangeInput = document.getElementById("range-input");
+      if (rangeInput) {
+        const valueDisplay = rangeInput.nextElementSibling;
+        rangeInput.addEventListener("input", (e) => {
+          valueDisplay.textContent = `Giá trị: ${e.target.value}`;
+        });
+      }
+
+      // Data attributes demo
+      const showDataBtn = document.getElementById("show-data-btn");
+      if (showDataBtn) {
+        showDataBtn.addEventListener("click", () => {
+          const element = document.getElementById("data-example");
+          const data = {
+            id: element.dataset.id,
+            category: element.dataset.category,
+            price: element.dataset.price,
+          };
+          alert(`Data: ${JSON.stringify(data, null, 2)}`);
+        });
+      }
+
+      // Color theme switcher
+      const changeColorBtn = document.getElementById("change-color-btn");
+      if (changeColorBtn) {
+        const colors = ["#6366f1", "#ef4444", "#10b981", "#f59e0b", "#8b5cf6"];
+        let colorIndex = 0;
+
+        changeColorBtn.addEventListener("click", () => {
+          colorIndex = (colorIndex + 1) % colors.length;
+          document.documentElement.style.setProperty(
+            "--primary-color",
+            colors[colorIndex]
+          );
+        });
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
       });
 
-      // Fade-in Animation
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      document.querySelectorAll("section").forEach((section) => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(20px)";
-        section.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+      // Form validation example
+      const courseForm = document.getElementById("course-form");
+      if (courseForm) {
+        courseForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Form submitted successfully! (Demo only)");
+        });
+      }
+
+      // Newsletter form
+      const newsletterForm = document.querySelector(".newsletter-form");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Đăng ký thành công! (Demo only)");
+        });
+      }
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll(".section").forEach((section) => {
         observer.observe(section);
       });
+
+      // Console welcome message
+      console.log(
+        "%c🎉 Chào mừng bạn đến với WebLearn Academy!",
+        "color: #3498db; font-size: 18px; font-weight: bold;"
+      );
+      console.log(
+        "%cĐây là tài liệu học HTML & CSS toàn diện. Chúc bạn học tập hiệu quả!",
+        "color: #2ecc71; font-size: 14px;"
+      );
     </script>
   </body>
 </html>
